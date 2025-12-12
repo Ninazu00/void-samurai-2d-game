@@ -1,5 +1,5 @@
 using UnityEngine;
-
+/*
 public class MemoryEchoField : MonoBehaviour
 {
     public float damagePerSecond = 5f;
@@ -43,3 +43,4 @@ public class MemoryEchoField : MonoBehaviour
         }
     }
 }
+*/

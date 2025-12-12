@@ -4,7 +4,7 @@ using UnityEngine;
 
 using System.Collections;
 using UnityEngine;
-
+/*
 public class MirageEnemyController : EnemyController
 {
     public float detectionRange = 7f;
@@ -106,4 +106,4 @@ public class MirageEnemyController : EnemyController
         }
     }
 }
-
+*/
