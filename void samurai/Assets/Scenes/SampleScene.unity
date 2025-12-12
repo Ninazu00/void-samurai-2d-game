@@ -202,8 +202,10 @@ MonoBehaviour:
   - {fileID: 1177663443}
   - {fileID: 1899786069}
   - {fileID: 1456273771}
-  spriteRenderer: {fileID: 1036127554}
-  newSprite: {fileID: 21300000, guid: 16cc9b12af43a6e418fe2dd0e905d7a5, type: 3}
+  LspriteRenderer: {fileID: 1036127554}
+  LnewSprite: {fileID: 21300000, guid: 16cc9b12af43a6e418fe2dd0e905d7a5, type: 3}
+  RspriteRenderer: {fileID: 1531269679}
+  RnewSprite: {fileID: 21300000, guid: 4012ac2a07588fb49811145c445ea526, type: 3}
 --- !u!61 &165585432
 BoxCollider2D:
   m_ObjectHideFlags: 0
