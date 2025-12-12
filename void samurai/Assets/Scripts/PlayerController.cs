@@ -24,9 +24,9 @@ public class PlayerController : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-        anim.SetFloat("Speed",Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
-        anim.SetFloat("Height", GetComponent<Rigidbody2D>().velocity.y);
-        anim.SetBool("Ground", grounded);
+        //anim.SetFloat("Speed",Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
+        //anim.SetFloat("Height", GetComponent<Rigidbody2D>().velocity.y);
+        //anim.SetBool("Ground", grounded);
         if(Input.GetKeyDown(Spacebar) && grounded) //When user presses the space button ONCE
         {
             Jump(); //see function definition below   
