@@ -892,6 +892,8 @@ MonoBehaviour:
   spawnNovaRight: {fileID: 1632282807}
   spawnNovaDL: {fileID: 898160050}
   spawnNovaDR: {fileID: 1536674452}
+  fallingSwordsCD: 10
+  voidBurstCD: 15
 --- !u!1 &759190198
 GameObject:
   m_ObjectHideFlags: 0
