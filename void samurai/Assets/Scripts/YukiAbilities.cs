@@ -17,6 +17,10 @@ public class YukiAbilities : MonoBehaviour
     public Transform spawnNovaRight;
     public Transform spawnNovaDL;
     public Transform spawnNovaDR;
+    public float fallingSwordsCD;
+    float fallingSwordsTimer = 0;
+    public float voidBurstCD;
+    float voidBurstTimer = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +30,18 @@ public class YukiAbilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        fallingSwordsTimer += Time.deltaTime;
+        voidBurstTimer += Time.deltaTime;
+        if (fallingSwordsTimer >= fallingSwordsCD)
+        {
+            spawnSwords();
+            fallingSwordsTimer = 0;
+        }
+        if (voidBurstTimer >= voidBurstCD)
+        {
+            spawnVoidBurst();
+            voidBurstTimer = 0;
+        }
     }
     
     public void updateImages()
