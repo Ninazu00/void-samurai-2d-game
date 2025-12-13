@@ -593,7 +593,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0.74, z: -10}
+  m_LocalPosition: {x: 0.01, y: 1.09, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -767,6 +767,70 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04538f0b13e55b54fbbdc9b3d26c0064, type: 3}
+--- !u!1 &727829806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 727829807}
+  - component: {fileID: 727829808}
+  m_Layer: 0
+  m_Name: YukiFightManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &727829807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727829806}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.6447269}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &727829808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727829806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf7d5365036a4444bfe53d94f7f9a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swords: {fileID: 5132728486784698572, guid: 56432363b69247e449c43d5534e99616, type: 3}
+  spawnPoints:
+  - {fileID: 1708839883}
+  - {fileID: 100953920}
+  - {fileID: 1622880034}
+  - {fileID: 1407929152}
+  - {fileID: 517621074}
+  - {fileID: 1777464605}
+  - {fileID: 1887993199}
+  - {fileID: 1959817619}
+  - {fileID: 1058328198}
+  - {fileID: 759190199}
+  - {fileID: 477556732}
+  - {fileID: 1177663443}
+  - {fileID: 1899786069}
+  - {fileID: 1456273771}
+  LspriteRenderer: {fileID: 1036127554}
+  LnewSprite: {fileID: 21300000, guid: 16cc9b12af43a6e418fe2dd0e905d7a5, type: 3}
+  RspriteRenderer: {fileID: 1531269679}
+  RnewSprite: {fileID: 21300000, guid: 4012ac2a07588fb49811145c445ea526, type: 3}
 --- !u!1 &759190198
 GameObject:
   m_ObjectHideFlags: 0

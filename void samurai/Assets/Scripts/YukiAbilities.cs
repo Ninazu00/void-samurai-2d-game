@@ -23,12 +23,12 @@ public class YukiAbilities : MonoBehaviour
         
     }
     
-    void updateImages()
+    public void updateImages()
     {
         LspriteRenderer.sprite = LnewSprite;
         RspriteRenderer.sprite = RnewSprite;
     }
-    void spawnSwords()
+    public void spawnSwords()
     {
         foreach (Transform sp in spawnPoints)
             {
