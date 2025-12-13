@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SolidObject
   layers:
   - Default
   - TransparentFX
@@ -43,10 +44,4 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: mid-ground
-    uniqueID: 394272511
-    locked: 0
-  - name: foreground
-    uniqueID: 28683831
     locked: 0
