@@ -140,5 +140,6 @@ public class YukiAbilities : MonoBehaviour
         voidBurstTimer = 0;
         spawnVoidBurst();
         spawnSwords();
+        updateImages();
     }
 }

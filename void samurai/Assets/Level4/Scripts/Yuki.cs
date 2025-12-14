@@ -33,7 +33,8 @@ public class Yuki : EnemyController
     {
         if(currentHealth<= (maxHealth / 2))
         {
-            
+            moveSpeed *= 1.1f;
+            FindObjectOfType<YukiAbilities>().enterPhase2();
         }
     }
 }
