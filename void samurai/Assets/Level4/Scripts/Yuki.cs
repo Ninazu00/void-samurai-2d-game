@@ -6,8 +6,10 @@ public class Yuki : EnemyController
 {
     public Transform target;
     private SpriteRenderer sr;
+    Animator animator;
     protected override void Start()
     {
+        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
@@ -24,6 +26,7 @@ public class Yuki : EnemyController
     }
     void attack()
     {
+        animator.SetTrigger("mATK");
         FindObjectOfType<PlayerStats>().TakeDamage(damage);
     }
 }
