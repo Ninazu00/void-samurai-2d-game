@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class VoidPlatform : MonoBehaviour
@@ -5,15 +7,15 @@ public class VoidPlatform : MonoBehaviour
     public float visibleTime = 2f;
     public float hiddenTime = 2f;
 
-    private Renderer rend;
-    private Collider col;
+    private SpriteRenderer sr;
+    private Collider2D col;
     private float timer;
     private bool isVisible = true;
 
     void Start()
     {
-        rend = GetComponent<Renderer>();
-        col = GetComponent<Collider>();
+        sr = GetComponent<SpriteRenderer>();
+        col = GetComponent<Collider2D>();
         timer = visibleTime;
     }
 
@@ -25,7 +27,7 @@ public class VoidPlatform : MonoBehaviour
         {
             isVisible = !isVisible;
 
-            rend.enabled = isVisible;
+            sr.enabled = isVisible;
             col.enabled = isVisible;
 
             timer = isVisible ? visibleTime : hiddenTime;
