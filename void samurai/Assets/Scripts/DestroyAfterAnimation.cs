@@ -10,7 +10,6 @@ public class DestroyAfterAnimation : MonoBehaviour
               Destroy(gameObject, 
             GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
     }
-
     // Update is called once per frame
     void Update()
     {
