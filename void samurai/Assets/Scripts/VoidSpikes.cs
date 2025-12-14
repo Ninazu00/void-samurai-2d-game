@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
-public class Falldeath : MonoBehaviour
+
+public class VoidSpikes : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -23,4 +23,3 @@ public class Falldeath : MonoBehaviour
         
     }
 }
-*/
