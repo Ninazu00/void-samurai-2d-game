@@ -4,12 +4,12 @@ using UnityEngine;
 
 public abstract class EnemyController : MonoBehaviour
 {
-    public int maxHealth = 100;
+    public int maxHealth;
     public int currentHealth;
-    public float moveSpeed = 2f;
+    public float moveSpeed;
 
-    public int damage = 10;
-    public float attackRange = 1f;
+    public int damage;
+    public float attackRange;
 
     protected Transform player;
     protected Rigidbody2D rb;

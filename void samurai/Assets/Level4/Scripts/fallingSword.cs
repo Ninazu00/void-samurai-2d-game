@@ -22,7 +22,7 @@ public class fallingSword : MonoBehaviour
         if(other.tag == "Player"){
             FindObjectOfType<PlayerStats>().TakeDamage(damage);
         }
-        else
+        else if(other.tag == "SolidObject")
         {
             rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
         }

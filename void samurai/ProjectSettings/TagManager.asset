@@ -39,6 +39,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+<<<<<<< HEAD
+=======
+  - name: Background
+    uniqueID: 1254996601
+    locked: 0
+  - name: Semi-background
+    uniqueID: 2636834987
+    locked: 0
+>>>>>>> 1a5f9fd07802344f126c279645092cc011270b18
   - name: Default
     uniqueID: 0
     locked: 0

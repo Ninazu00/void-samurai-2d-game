@@ -1,0 +1,939 @@
+fileFormatVersion: 2
+guid: d9499b3fc703649408d9b3f5e104ed34
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1410
+        width: 182
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9502ec13560f4cf42b9b6cc2f603b1ba
+      internalID: -394026427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1410
+        width: 178
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75059a88c47a6b6439b624af2d626b87
+      internalID: -1919876198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_2
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1410
+        width: 173
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46c2c20076ad63f4b959bc5913d14476
+      internalID: 519778157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_3
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 1410
+        width: 168
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7fb7fa6c91bde46a7f86e81dc7b494
+      internalID: -2055920628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_4
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1410
+        width: 161
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bea125a21450d014abd01fdf19e6563a
+      internalID: -916467091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_5
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1410
+        width: 159
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a95f7380ee3a94eb518d73aeddb4f8
+      internalID: 299550187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1130
+        width: 144
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415fc99fb18d37f48b97608ca32a3e95
+      internalID: 977835029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_7
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1130
+        width: 143
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba424d0194f8f9c4dbc7e52c661b0d01
+      internalID: -448743791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_8
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1135
+        width: 135
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c905159c6715a4fbc02a6b7cc90004
+      internalID: -110184940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_9
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1135
+        width: 135
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ef6b022f437714783fafb698fe307f
+      internalID: -1890427382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_10
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1135
+        width: 159
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0982ea2b143b24245969753d635cca80
+      internalID: 430873374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_11
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1135
+        width: 161
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53a7dcf49b6a9a4584b38f1f6501247
+      internalID: -1544328471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 850
+        width: 159
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94557c35d1ba8f746a4c5d71f3d3770d
+      internalID: 1823720937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_13
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 850
+        width: 162
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a4f15d8b088854c82b38b0c3ca857f
+      internalID: 1047084719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_14
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 850
+        width: 159
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a4acfae9d28024ab0f0cc283a8be9e
+      internalID: 2080070196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_15
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 850
+        width: 154
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0f78d3d4188594e9a3afaa73b0972b
+      internalID: 1156091784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_16
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 850
+        width: 150
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2a6a594cfe3094ea2c563bacc66d0f
+      internalID: 1092697400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_17
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 850
+        width: 146
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083c306da0ff59144bee08d34bab00ae
+      internalID: -118224246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 570
+        width: 153
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 478aec587cb4c3c4c98aafafc79e2496
+      internalID: -28925725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 570
+        width: 157
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65f3eaceeb71ee3459c24c2812b5e8a0
+      internalID: 530005712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_20
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 570
+        width: 162
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4718bd7e9396d8741bb3034c2649dcc0
+      internalID: 818710538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_21
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 570
+        width: 165
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b6de0069f9738449db4e9659646999
+      internalID: 1787630860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_22
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 570
+        width: 168
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87052dd65ce01664ba97f0cb032b48fe
+      internalID: -1884127014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_23
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 575
+        width: 175
+        height: 264
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f95c15e742cf2c747bfc24f1c1d42157
+      internalID: -1164563376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_24
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 295
+        width: 171
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0acb99b4d0e4e3e4eae55cb1c2b69b49
+      internalID: -964210793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_25
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 295
+        width: 174
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5620c922036f1a54588608804860e486
+      internalID: -976472324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_26
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 290
+        width: 178
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a19f38e2e373744bf57d937c40f1dd
+      internalID: 793016015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_27
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 295
+        width: 182
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8f7ca01359f7d45a67cba46fec587b
+      internalID: -292596935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_28
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 295
+        width: 184
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 903ce42de0eef8d40b127b8f71d88e22
+      internalID: -1562945836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_29
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 290
+        width: 184
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a50afc47e99f33440a433c8260813e19
+      internalID: -1144791798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_30
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 10
+        width: 187
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e79553f5b6ff18148ba452d23a1df6a0
+      internalID: -176906114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_31
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 10
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c3fb60cbd19b946acd85180ab2ff3a
+      internalID: 2034712412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_32
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 10
+        width: 187
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f417892daa168fe4b8d5bcee854cfc3a
+      internalID: 262712030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_33
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 10
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286b63668156ac645b1cca73979b0790
+      internalID: 1421532058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_34
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 10
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be0b3c9200c601468fc12b1f06c998f
+      internalID: 511430155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_35
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 10
+        width: 182
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0754de6aa526f845af7052635ef2a06
+      internalID: -980658649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_32: 262712030
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_33: 1421532058
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_4: -916467091
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_26: 793016015
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_14: 2080070196
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_8: -110184940
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_15: 1156091784
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_22: -1884127014
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_18: -28925725
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_30: -176906114
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_6: 977835029
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_17: -118224246
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_35: -980658649
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_12: 1823720937
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_19: 530005712
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_31: 2034712412
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_20: 818710538
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_7: -448743791
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_10: 430873374
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_24: -964210793
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_16: 1092697400
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_2: 519778157
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_1: -1919876198
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_11: -1544328471
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_28: -1562945836
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_27: -292596935
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_23: -1164563376
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_21: 1787630860
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_0: -394026427
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_13: 1047084719
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_34: 511430155
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_9: -1890427382
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_3: -2055920628
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_5: 299550187
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_29: -1144791798
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_25: -976472324
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
