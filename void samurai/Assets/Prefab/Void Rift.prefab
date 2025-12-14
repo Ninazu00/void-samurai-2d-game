@@ -133,9 +133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 25
-  knockbackForce: 5
+  knockbackForce: 10
   activeDuration: 2
-  inactiveDuration: 3
+  inactiveDuration: 0
 --- !u!61 &6722790883486986591
 BoxCollider2D:
   m_ObjectHideFlags: 0
