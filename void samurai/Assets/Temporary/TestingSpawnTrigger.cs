@@ -15,8 +15,7 @@ public class TestingSpawnTrigger : MonoBehaviour
         if(other.tag == "Player")
         {
             FindObjectOfType<YukiAbilities>().updateImages();
-            FindObjectOfType<YukiAbilities>().spawnSwords();
-            FindObjectOfType<YukiAbilities>().spawnVoidBurst();
+            FindObjectOfType<YukiAbilities>().worldAblaze();
         }
     }
 }
