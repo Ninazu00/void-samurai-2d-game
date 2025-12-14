@@ -1,65 +1,157 @@
-/*
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using System.Collections;
-using UnityEngine;
-
-public class MirageEnemyController : EnemyController
+public class Mirage : EnemyController
 {
+    [Header("Detection & Attack")]
     public float detectionRange = 7f;
     public float visionAngle = 50f;
     public float attackCooldown = 2f;
-
-    public GameObject orbProjectile;
-    public Transform orbSpawnPoint;
+    private SpriteRenderer sr;
+    public float meleeAttackRange = 1.5f;
     public float orbAttackRange = 8f;
 
+    [Header("Ranged Attack")]
+    public GameObject orbProjectile;
+    public Transform orbSpawnPoint;
+    public int orbCount = 3;
+    public float orbDelay = 0.25f;
+    public float orbSpeed = 6f;
+
+    [Header("Floating Motion")]
     public float floatAmplitude = 0.3f;
     public float floatFrequency = 2f;
 
+    [Header("Patrol Settings")]
+    public Transform patrolPointA;
+    public Transform patrolPointB;
+    public float patrolSpeed = 2f;
+
+    private Animator animator;
+    private Vector3 currentTarget;
     private float nextAttackTime;
     private Vector3 floatStartPos;
+    private bool isAttacking;
+    private Vector3 originalScale; // store initial scale to prevent stretching
 
     protected override void Start()
     {
         base.Start();
+        sr = GetComponent<SpriteRenderer>();
         maxHealth = 150;
         currentHealth = maxHealth;
 
         floatStartPos = transform.position;
+
+        animator = GetComponent<Animator>();
+
+        if (patrolPointA != null)
+            currentTarget = patrolPointA.position;
+
+        originalScale = transform.localScale;
     }
 
     protected override void EnemyBehavior()
     {
         FloatingMotion();
 
-        if (!PlayerInVisionCone())
+        if (player == null)
+        {
+            Patrol(); 
             return;
+        }
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        if (distance > attackRange)
+        if (distance <= meleeAttackRange || distance <= orbAttackRange)
         {
-            MoveTowardPlayer();
+            FacePlayer();
+
+            if (Time.time >= nextAttackTime && !isAttacking)
+            {
+                if (distance <= meleeAttackRange)
+                    StartCoroutine(MeleeAttackRoutine());
+                else
+                    StartCoroutine(RangedAttackRoutine());
+            }
+            else
+            {
+                animator.SetBool("IsIdle", true);
+            }
         }
-        else if (Time.time >= nextAttackTime)
+        else
         {
-            StartCoroutine(MeleeScytheAttack());
-            nextAttackTime = Time.time + attackCooldown;
+            Patrol();
+            animator.SetBool("IsIdle", true);
         }
-        else if (distance <= orbAttackRange && Time.time >= nextAttackTime)
+    }
+
+    IEnumerator MeleeAttackRoutine()
+    {
+        isAttacking = true;
+        animator.SetBool("IsIdle", false);
+        animator.SetTrigger("MeleeAttack");
+
+        yield return new WaitForSeconds(0.15f);
+
+        if (Vector2.Distance(transform.position, player.position) <= meleeAttackRange)
         {
-            StartCoroutine(RangedOrbAttack());
-            nextAttackTime = Time.time + attackCooldown;
+            player.GetComponent<PlayerStats>()?.TakeDamage(damage);
         }
+
+        yield return new WaitForSeconds(0.4f);
+
+        EndAttack();
+    }
+
+    IEnumerator RangedAttackRoutine()
+    {
+        isAttacking = true;
+        animator.SetBool("IsIdle", false);
+        animator.SetBool("IsRangedActive", true);
+
+        yield return new WaitForSeconds(0.3f);
+
+        for (int i = 0; i < orbCount; i++)
+        {
+            if (orbProjectile != null && orbSpawnPoint != null)
+            {
+                GameObject orb = Instantiate(
+                    orbProjectile,
+                    orbSpawnPoint.position,
+                    Quaternion.identity
+                );
+
+                Vector2 dir = (player.position - orbSpawnPoint.position).normalized;
+                orb.GetComponent<Rigidbody2D>().velocity = dir * orbSpeed;
+            }
+
+            yield return new WaitForSeconds(orbDelay);
+        }
+
+        animator.SetBool("IsRangedActive", false);
+
+        yield return new WaitForSeconds(0.2f);
+
+        EndAttack();
+    }
+
+    void EndAttack()
+    {
+        nextAttackTime = Time.time + attackCooldown;
+        isAttacking = false;
+        animator.SetBool("IsIdle", true);
     }
 
     private void FloatingMotion()
     {
         float yOffset = Mathf.Sin(Time.time * floatFrequency) * floatAmplitude;
-        transform.position = new Vector3(transform.position.x, floatStartPos.y + yOffset, transform.position.z);
+        transform.position = new Vector3(
+            transform.position.x,
+            floatStartPos.y + yOffset,
+            transform.position.z
+        );
     }
 
     private bool PlayerInVisionCone()
@@ -73,38 +165,30 @@ public class MirageEnemyController : EnemyController
         return angle < visionAngle;
     }
 
-    private void MoveTowardPlayer()
+    private void Patrol()
     {
-        Vector2 direction = (player.position - transform.position).normalized;
-        direction += new Vector2(Random.Range(-0.1f, 0.1f), Random.Range(-0.1f, 0.1f));
-        rb.MovePosition(rb.position + direction * moveSpeed * Time.deltaTime);
+        if (patrolPointA == null || patrolPointB == null)
+            return;
 
-        if (direction.x > 0)
-            transform.localScale = new Vector3(1, 1, 1);
-        else
-            transform.localScale = new Vector3(-1, 1, 1);
-    }
+        float targetX = currentTarget.x;
+        float newX = Mathf.MoveTowards(transform.position.x, targetX, patrolSpeed * Time.deltaTime);
 
-    IEnumerator MeleeAttack()
-    {
-        yield return new WaitForSeconds(0.15f);
-
-        if (PlayerInRange(attackRange))
+        transform.position = new Vector3(
+            newX,
+            transform.position.y,
+            transform.position.z
+        );
+        sr.flipX = !(currentTarget.x < transform.position.x);
+        if (Mathf.Abs(transform.position.x - currentTarget.x) < 0.05f)
         {
-            player.GetComponent<PlayerHealth>()?.TakeDamage(damage);
+            currentTarget =
+                currentTarget == patrolPointA.position
+                ? patrolPointB.position
+                : patrolPointA.position;
         }
     }
-
-    IEnumerator RangedOrbAttack()
+    private void FacePlayer()
     {
-        yield return new WaitForSeconds(0.2f);
-
-        if (orbProjectile != null && orbSpawnPoint != null)
-        {
-            GameObject orb = Instantiate(orbProjectile, orbSpawnPoint.position, Quaternion.identity);
-            Vector2 dir = (player.position - orbSpawnPoint.position).normalized;
-            orb.GetComponent<Rigidbody2D>().velocity = dir * 6f;
-        }
+        sr.flipX = !(player.position.x < transform.position.x);
     }
 }
-*/

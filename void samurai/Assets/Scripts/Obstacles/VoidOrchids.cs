@@ -13,12 +13,18 @@ public class VoidOrchids : MonoBehaviour
     [Header("Animation")]
     public string triggerBoolName = "IsTriggered";
 
+    [Header("Shake Settings")]
+    public float shakeAmount = 0.1f;
+    public float shakeSpeed = 0.05f;
+
     private bool triggered = false;
     private Animator animator;
+    private Vector3 originalPosition;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        originalPosition = transform.position;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,20 +40,39 @@ public class VoidOrchids : MonoBehaviour
 
     private IEnumerator ExplosionRoutine()
     {
-        // Play charging / armed animation (if animator exists)
+        // Play charging animation
         if (animator != null)
         {
             animator.SetBool(triggerBoolName, true);
         }
+
+        // Start shaking
+        StartCoroutine(Shake());
 
         yield return new WaitForSeconds(delayBeforeExplosion);
 
         Explode();
     }
 
+    private IEnumerator Shake()
+    {
+        float elapsed = 0f;
+
+        while (elapsed < delayBeforeExplosion)
+        {
+            Vector2 randomOffset = Random.insideUnitCircle * shakeAmount;
+            transform.position = originalPosition + (Vector3)randomOffset;
+
+            elapsed += shakeSpeed;
+            yield return new WaitForSeconds(shakeSpeed);
+        }
+
+        // Reset position before exploding
+        transform.position = originalPosition;
+    }
+
     private void Explode()
     {
-        // Spawn explosion animation
         if (explosionEffect != null)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
@@ -72,7 +97,6 @@ public class VoidOrchids : MonoBehaviour
             }
         }
 
-        // Remove plant after explosion
         Destroy(gameObject);
     }
 

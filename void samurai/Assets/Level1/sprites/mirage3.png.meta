@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7ca9b5f77a643a94897e0354d1597930
+guid: b9232e4a47bbd564c92d838cbd0b0009
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle_0
+      name: mirage3_0
       rect:
         serializedVersion: 2
-        x: 30
-        y: 310
-        width: 67
-        height: 21
+        x: 41
+        y: 255
+        width: 164
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f119d1b2023f2d4fb3b43504aff0077
-      internalID: -498099027
+      spriteID: 43163a1803c737246b2540cd67f42282
+      internalID: 608264956
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_1
+      name: mirage3_2
       rect:
         serializedVersion: 2
-        x: 159
-        y: 310
-        width: 66
-        height: 21
+        x: 263
+        y: 250
+        width: 189
+        height: 234
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b587c00147aa9834e910d1539af68137
-      internalID: 795700116
+      spriteID: 30189cdf4d1f8b848a55e057b3908fb2
+      internalID: 173977416
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_2
+      name: mirage3_4
       rect:
         serializedVersion: 2
-        x: 286
-        y: 306
-        width: 68
-        height: 27
+        x: 44
+        y: 0
+        width: 170
+        height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45bee50883c6b37439fe5b5dc5c199a6
-      internalID: -2141181041
+      spriteID: ae9fde8b0f6f0de4ea91dc6b32b78eaf
+      internalID: 1788515671
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle_3
+      name: mirage3_5
       rect:
         serializedVersion: 2
-        x: 29
-        y: 175
-        width: 68
-        height: 31
+        x: 269
+        y: 0
+        width: 191
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,113 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 846195d1b2892f545b9554577ddaa23f
-      internalID: -310833475
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_4
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 175
-        width: 63
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1a248efa0d7d84d43ab3027ede7b42b4
-      internalID: 824509663
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_5
-      rect:
-        serializedVersion: 2
-        x: 286
-        y: 178
-        width: 69
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dd4192e12be1c9c4b8c44a40983ac1dc
-      internalID: -1311366595
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_6
-      rect:
-        serializedVersion: 2
-        x: 30
-        y: 53
-        width: 67
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f90d08362b58d814cbabe1cea68b2183
-      internalID: 1966831799
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_7
-      rect:
-        serializedVersion: 2
-        x: 158
-        y: 54
-        width: 67
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6f64d2898baa5a40aa71720d35d8481
-      internalID: 2125102654
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_8
-      rect:
-        serializedVersion: 2
-        x: 286
-        y: 54
-        width: 67
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbd5b1cbb9bf58c47a96550070f294b4
-      internalID: 516680350
+      spriteID: f6f404e438b5ee948a44776885248778
+      internalID: -1521563472
       vertices: []
       indices: 
       edges: []
@@ -304,15 +199,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle_4: 824509663
-      Idle_1: 795700116
-      Idle_8: 516680350
-      Idle_3: -310833475
-      Idle_5: -1311366595
-      Idle_0: -498099027
-      Idle_6: 1966831799
-      Idle_7: 2125102654
-      Idle_2: -2141181041
+      mirage3_2: 173977416
+      mirage3_4: 1788515671
+      mirage3_7: -1703135291
+      mirage3_0: 608264956
+      mirage3_8: -16873315
+      mirage3_1: 726260546
+      mirage3_3: 71290834
+      mirage3_5: -1521563472
+      mirage3_9: -330271236
+      mirage3_6: -513564186
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
