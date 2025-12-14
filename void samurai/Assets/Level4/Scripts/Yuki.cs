@@ -11,7 +11,7 @@ public class Yuki : EnemyController
     float tempMoveSpeed;
     protected override void Start()
     {
-        
+        tempMoveSpeed = moveSpeed;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
@@ -35,6 +35,7 @@ public class Yuki : EnemyController
     public void shellOfWhatWas()
     {
         moveSpeed *= 1.1f;
+        tempMoveSpeed = moveSpeed;
         FindObjectOfType<YukiAbilities>().enterPhase2();
         if(currentHealth<= (maxHealth / 2) && Phase1)
         {
@@ -48,7 +49,6 @@ public class Yuki : EnemyController
     public void freezeForVoidBurst()
     {
         animator.SetTrigger("cATK");
-        tempMoveSpeed = moveSpeed;
         moveSpeed = 0f;
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;

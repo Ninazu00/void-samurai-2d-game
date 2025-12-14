@@ -47,7 +47,9 @@ public class YukiAbilities : MonoBehaviour
         }
         if (voidBurstTimer >= voidBurstCD)
         {
-            spawnVoidBurst();
+            Yuki.position = transform.position;
+            FindObjectOfType<Yuki>().freezeForVoidBurst();
+            Invoke(nameof(spawnVoidBurst), 1f);
             voidBurstTimer = 0;
         }
         if (worldAblazeWarningTimer >= worldAblazeWarningCD)
@@ -79,36 +81,34 @@ public class YukiAbilities : MonoBehaviour
     }
     public void spawnVoidBurst()
     {
-        Yuki.position = transform.position;
-        FindObjectOfType<Yuki>().freezeForVoidBurst();
         Instantiate(voidProjectile, spawnNovaDown.position, spawnNovaDown.transform.rotation);
         Instantiate(voidProjectile, spawnNovaLeft.position, spawnNovaLeft.transform.rotation);
         Instantiate(voidProjectile, spawnNovaRight.position, spawnNovaRight.transform.rotation);
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             float randomZ = Random.Range(-70f, -120f);
             Quaternion randomRotation = Quaternion.Euler(0, 0, randomZ);
             Instantiate(voidProjectile, spawnNovaLeft.position, randomRotation);
         }
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             float randomZ = Random.Range(70f, 120f);
             Quaternion randomRotation = Quaternion.Euler(0, 0, randomZ);
             Instantiate(voidProjectile, spawnNovaRight.position, randomRotation);
         }
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 5; i++)
         {
             float randomZ = Random.Range(-45f, 45f);
             Quaternion randomRotation = Quaternion.Euler(0, 0, randomZ);
             Instantiate(voidProjectile, spawnNovaDown.position, randomRotation);
         }
-        for (int i = 0; i < 50; i+=20)
+        for (int i = 0; i < 100; i+=20)
         {
             float randomZ = Random.Range(-20f-i, -40f-i);
             Quaternion randomRotation = Quaternion.Euler(0, 0, randomZ);
             Instantiate(voidProjectile, spawnNovaDL.position, randomRotation);
         }
-        for (int i = 0; i < 50; i+=20)
+        for (int i = 0; i < 100; i+=20)
         {
             float randomZ = Random.Range(20f+i, 40f+i);
             Quaternion randomRotation = Quaternion.Euler(0, 0, randomZ);
@@ -139,8 +139,10 @@ public class YukiAbilities : MonoBehaviour
         fallingSwordsTimer = 0;
         voidBurstCD = 20;
         voidBurstTimer = 0;
-        spawnVoidBurst();
         spawnSwords();
         updateImages();
+        Yuki.position = transform.position;
+        FindObjectOfType<Yuki>().freezeForVoidBurst();
+        Invoke(nameof(spawnVoidBurst), 1f);
     }
 }
