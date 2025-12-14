@@ -53,7 +53,6 @@ public class VoidOrchids : MonoBehaviour
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
 
-        // Damage in radius
         Collider2D[] hitColliders =
             Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 
