@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - SolidObject
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -12,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 
@@ -40,7 +39,7 @@ TagManager:
   - 
   m_SortingLayers:
   - name: Background
-    uniqueID: 1254996601
+    uniqueID: 1011273957
     locked: 0
   - name: Default
     uniqueID: 0

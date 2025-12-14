@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1bdd3d939e64b7644a6aa229642120e3
+guid: d9499b3fc703649408d9b3f5e104ed34
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 126
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: YukiWalk_0
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_0
       rect:
         serializedVersion: 2
-        x: 28
-        y: 1552
-        width: 240
-        height: 480
+        x: 3
+        y: 1410
+        width: 182
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 376f449ad9d01cd48848bcf9a11d793d
-      internalID: 1611155032
+      spriteID: 9502ec13560f4cf42b9b6cc2f603b1ba
+      internalID: -394026427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_1
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_1
       rect:
         serializedVersion: 2
-        x: 304
-        y: 1548
-        width: 231
-        height: 484
+        x: 195
+        y: 1410
+        width: 178
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2e0c45b7aa86784ba09f6bd77198939
-      internalID: -1592185584
+      spriteID: 75059a88c47a6b6439b624af2d626b87
+      internalID: -1919876198
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_2
       rect:
         serializedVersion: 2
-        x: 603
-        y: 1548
-        width: 244
-        height: 484
+        x: 389
+        y: 1410
+        width: 173
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ba02ddf6f518794b90e8a39cfdfcd74
-      internalID: 1344179430
+      spriteID: 46c2c20076ad63f4b959bc5913d14476
+      internalID: 519778157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_3
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_3
       rect:
         serializedVersion: 2
-        x: 899
-        y: 1552
-        width: 247
-        height: 480
+        x: 586
+        y: 1410
+        width: 168
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab0145cce48f3b8468d34dd9eeb71e9d
-      internalID: 824055276
+      spriteID: 9a7fb7fa6c91bde46a7f86e81dc7b494
+      internalID: -2055920628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_4
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_4
       rect:
         serializedVersion: 2
-        x: 1198
-        y: 1552
-        width: 248
-        height: 480
+        x: 778
+        y: 1410
+        width: 161
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,20 +227,293 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20ae90ad3675b5a45b948cb62105e016
-      internalID: 559375554
+      spriteID: bea125a21450d014abd01fdf19e6563a
+      internalID: -916467091
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_5
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_5
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1410
+        width: 159
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a95f7380ee3a94eb518d73aeddb4f8
+      internalID: 299550187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_6
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1130
+        width: 144
+        height: 267
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415fc99fb18d37f48b97608ca32a3e95
+      internalID: 977835029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_7
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1130
+        width: 143
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba424d0194f8f9c4dbc7e52c661b0d01
+      internalID: -448743791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_8
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1135
+        width: 135
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0c905159c6715a4fbc02a6b7cc90004
+      internalID: -110184940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_9
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1135
+        width: 135
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ef6b022f437714783fafb698fe307f
+      internalID: -1890427382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_10
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1135
+        width: 159
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0982ea2b143b24245969753d635cca80
+      internalID: 430873374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_11
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1135
+        width: 161
+        height: 255
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53a7dcf49b6a9a4584b38f1f6501247
+      internalID: -1544328471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 850
+        width: 159
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94557c35d1ba8f746a4c5d71f3d3770d
+      internalID: 1823720937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_13
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 850
+        width: 162
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a4f15d8b088854c82b38b0c3ca857f
+      internalID: 1047084719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_14
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 850
+        width: 159
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08a4acfae9d28024ab0f0cc283a8be9e
+      internalID: 2080070196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_15
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 850
+        width: 154
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0f78d3d4188594e9a3afaa73b0972b
+      internalID: 1156091784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_16
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 850
+        width: 150
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2a6a594cfe3094ea2c563bacc66d0f
+      internalID: 1092697400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_17
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 850
+        width: 146
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 083c306da0ff59144bee08d34bab00ae
+      internalID: -118224246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_18
       rect:
         serializedVersion: 2
         x: 0
-        y: 1036
-        width: 240
-        height: 484
+        y: 570
+        width: 153
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,20 +521,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 055d1de3aa2e3354db8a731af19a5a69
-      internalID: 1380636956
+      spriteID: 478aec587cb4c3c4c98aafafc79e2496
+      internalID: -28925725
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_6
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_19
       rect:
         serializedVersion: 2
-        x: 300
-        y: 1040
-        width: 239
-        height: 480
+        x: 192
+        y: 570
+        width: 157
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -269,20 +542,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4b3b3b5d86e389a468435ababbbadf3c
-      internalID: 651879209
+      spriteID: 65f3eaceeb71ee3459c24c2812b5e8a0
+      internalID: 530005712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_7
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_20
       rect:
         serializedVersion: 2
-        x: 599
-        y: 1040
-        width: 244
-        height: 480
+        x: 384
+        y: 570
+        width: 162
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -290,20 +563,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c147b212cd40db048aa908b2d3474e18
-      internalID: -685589179
+      spriteID: 4718bd7e9396d8741bb3034c2649dcc0
+      internalID: 818710538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_8
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_21
       rect:
         serializedVersion: 2
-        x: 899
-        y: 1044
-        width: 247
-        height: 476
+        x: 576
+        y: 570
+        width: 165
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -311,20 +584,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cbb27471f6667a429ef3cbc1eec38fd
-      internalID: 1157207820
+      spriteID: 74b6de0069f9738449db4e9659646999
+      internalID: 1787630860
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_9
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_22
       rect:
         serializedVersion: 2
-        x: 1202
-        y: 1036
-        width: 244
-        height: 484
+        x: 771
+        y: 570
+        width: 168
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -332,20 +605,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53a381224c8c5954997e56ad00c17c86
-      internalID: 1996049736
+      spriteID: 87052dd65ce01664ba97f0cb032b48fe
+      internalID: -1884127014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_10
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_23
       rect:
         serializedVersion: 2
-        x: 4
-        y: 520
-        width: 244
-        height: 488
+        x: 963
+        y: 575
+        width: 175
+        height: 264
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -353,20 +626,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a9b3f2d05c50604daf523ebb19b7999
-      internalID: 1754571358
+      spriteID: f95c15e742cf2c747bfc24f1c1d42157
+      internalID: -1164563376
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_11
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_24
       rect:
         serializedVersion: 2
-        x: 300
-        y: 524
-        width: 255
-        height: 488
+        x: 7
+        y: 295
+        width: 171
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,20 +647,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19c763985b2d56b4aa7c3c3224d63e81
-      internalID: -2003504328
+      spriteID: 0acb99b4d0e4e3e4eae55cb1c2b69b49
+      internalID: -964210793
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_12
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_25
       rect:
         serializedVersion: 2
-        x: 607
-        y: 520
-        width: 244
-        height: 492
+        x: 199
+        y: 295
+        width: 174
+        height: 262
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,20 +668,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c70c9abfa8f6a5346b50d95dd9ccd229
-      internalID: 1167104197
+      spriteID: 5620c922036f1a54588608804860e486
+      internalID: -976472324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_13
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_26
       rect:
         serializedVersion: 2
-        x: 911
-        y: 520
-        width: 239
-        height: 492
+        x: 391
+        y: 290
+        width: 178
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -416,20 +689,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3279b4fb027d70a4ca4428ead8d4fdac
-      internalID: 1410868518
+      spriteID: a2a19f38e2e373744bf57d937c40f1dd
+      internalID: 793016015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_14
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_27
       rect:
         serializedVersion: 2
-        x: 1218
-        y: 528
-        width: 244
-        height: 480
+        x: 579
+        y: 295
+        width: 182
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -437,20 +710,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c52e539aaebe79b4688395e4ef740ee8
-      internalID: 529407126
+      spriteID: 3b8f7ca01359f7d45a67cba46fec587b
+      internalID: -292596935
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_15
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_28
       rect:
         serializedVersion: 2
-        x: 16
-        y: 8
-        width: 232
-        height: 484
+        x: 771
+        y: 295
+        width: 184
+        height: 258
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -458,20 +731,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b47527405727984aa674f3a3c5b403f
-      internalID: -97934632
+      spriteID: 903ce42de0eef8d40b127b8f71d88e22
+      internalID: -1562945836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_16
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_29
       rect:
         serializedVersion: 2
-        x: 312
-        y: 8
-        width: 231
-        height: 488
+        x: 963
+        y: 290
+        width: 184
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -479,20 +752,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1b49ba0c7c6d7949b7eee2b2a0a8214
-      internalID: -851696070
+      spriteID: a50afc47e99f33440a433c8260813e19
+      internalID: -1144791798
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_17
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_30
       rect:
         serializedVersion: 2
-        x: 611
-        y: 8
-        width: 244
-        height: 488
+        x: 3
+        y: 10
+        width: 187
+        height: 260
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -500,20 +773,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72ad99154cb9e534bb8b333fd7e095d0
-      internalID: -1223028331
+      spriteID: e79553f5b6ff18148ba452d23a1df6a0
+      internalID: -176906114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_18
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_31
       rect:
         serializedVersion: 2
-        x: 915
-        y: 4
-        width: 239
-        height: 488
+        x: 195
+        y: 10
+        width: 184
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -521,20 +794,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ec218dfdb2bad14a90f7e46fe0cc8b6
-      internalID: -760154841
+      spriteID: 60c3fb60cbd19b946acd85180ab2ff3a
+      internalID: 2034712412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: YukiWalk_19
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_32
       rect:
         serializedVersion: 2
-        x: 1218
-        y: 12
-        width: 248
-        height: 484
+        x: 387
+        y: 10
+        width: 187
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -542,8 +815,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec9e04b38510b954588a86bd3ca6dab2
-      internalID: 1815879156
+      spriteID: f417892daa168fe4b8d5bcee854cfc3a
+      internalID: 262712030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_33
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 10
+        width: 185
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286b63668156ac645b1cca73979b0790
+      internalID: 1421532058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_34
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 10
+        width: 184
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be0b3c9200c601468fc12b1f06c998f
+      internalID: 511430155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_35
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 10
+        width: 182
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0754de6aa526f845af7052635ef2a06
+      internalID: -980658649
       vertices: []
       indices: 
       edges: []
@@ -559,26 +895,42 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      YukiWalk_13: 1410868518
-      YukiWalk_18: -760154841
-      YukiWalk_11: -2003504328
-      YukiWalk_16: -851696070
-      YukiWalk_17: -1223028331
-      YukiWalk_10: 1754571358
-      YukiWalk_19: 1815879156
-      YukiWalk_14: 529407126
-      YukiWalk_8: 1157207820
-      YukiWalk_5: 1380636956
-      YukiWalk_2: 1344179430
-      YukiWalk_12: 1167104197
-      YukiWalk_3: 824055276
-      YukiWalk_0: 1611155032
-      YukiWalk_7: -685589179
-      YukiWalk_4: 559375554
-      YukiWalk_1: -1592185584
-      YukiWalk_9: 1996049736
-      YukiWalk_15: -97934632
-      YukiWalk_6: 651879209
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_32: 262712030
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_33: 1421532058
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_4: -916467091
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_26: 793016015
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_14: 2080070196
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_8: -110184940
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_15: 1156091784
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_22: -1884127014
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_18: -28925725
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_30: -176906114
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_6: 977835029
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_17: -118224246
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_35: -980658649
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_12: 1823720937
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_19: 530005712
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_31: 2034712412
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_20: 818710538
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_7: -448743791
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_10: 430873374
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_24: -964210793
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_16: 1092697400
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_2: 519778157
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_1: -1919876198
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_11: -1544328471
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_28: -1562945836
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_27: -292596935
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_23: -1164563376
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_21: 1787630860
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_0: -394026427
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_13: 1047084719
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_34: 511430155
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_9: -1890427382
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_3: -2055920628
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_5: 299550187
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_29: -1144791798
+      Change-the-figure-to-a-dynamic-stride-facing-right-256px-36 (2)_25: -976472324
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
