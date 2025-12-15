@@ -20,8 +20,16 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-        slider.maxValue = health;
-        slider.value = health;
+
+        if (slider != null)
+        {
+            slider.maxValue = health;
+            slider.value = health;
+        }
+        else
+        {
+            Debug.LogError("Health Slider is NOT assigned in PlayerStats");
+        }
     }
 
     // Update is called once per frame
@@ -68,4 +76,13 @@ public class PlayerStats : MonoBehaviour
             flickerTime = 0;
         }
     }
+
+    public void HealFull()
+    {
+        health = 100;
+
+        if (slider != null)
+            slider.value = health;
+    }
+
 }

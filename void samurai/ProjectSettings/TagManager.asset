@@ -3,18 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-<<<<<<< HEAD
   tags: []
-=======
-  tags:
-  - SolidObject
-  - Enemy
->>>>>>> 94b32c9724ab1edabb1647759bcc31804a1d4379
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
   - 
@@ -44,27 +38,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-<<<<<<< HEAD
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 3522190065
-    locked: 0
-  - name: MiddleGround
-    uniqueID: 4293649723
-    locked: 0
-  - name: Ui
-    uniqueID: 751139955
+  - name: sky
+    uniqueID: 3660905831
     locked: 0
   - name: Player
-    uniqueID: 2551909941
+    uniqueID: 2803465393
     locked: 0
-=======
-  - name: Background
-    uniqueID: 1011273957
-    locked: 0
-  - name: Default
-    uniqueID: 0
-    locked: 0
->>>>>>> 94b32c9724ab1edabb1647759bcc31804a1d4379

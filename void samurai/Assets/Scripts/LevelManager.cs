@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager Instance;
     public GameObject CurrentCheckpoint;
     public Transform Player;
 
@@ -19,8 +20,24 @@ public class LevelManager : MonoBehaviour
 
     }
 
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+    public void SetCheckpoint(GameObject checkpoint)
+    {
+        CurrentCheckpoint = checkpoint;
+    }
+
     public void RespawnPlayer()
     {
-        FindObjectOfType<PlayerController>().transform.position = CurrentCheckpoint.transform.position;
+        Player.position = CurrentCheckpoint.transform.position;
+        Player.GetComponent<PlayerStats>().HealFull();
+
+        // Enemies and hazards can be reset here later
     }
 }
