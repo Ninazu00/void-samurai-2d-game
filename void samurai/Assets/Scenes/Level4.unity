@@ -188,11 +188,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778244042, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: heavyAttackRange
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778244042, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: lightAttackRange
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778244043, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: m_Name
@@ -2835,6 +2835,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 25361211}
+    - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: moveSpeed
       value: 2.5
