@@ -1,0 +1,940 @@
+fileFormatVersion: 2
+guid: b2d44fa691b21914cb9d9f48d6a9bdba
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: YukiAirborne_0
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 2378
+        width: 180
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e4f6663b39b5444bc1c3d29ba00100
+      internalID: -2479315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_1
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 2378
+        width: 185
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cac90cb46571b41a91da7f32c9d4ad
+      internalID: 837835149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_2
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 2378
+        width: 173
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe1be43cffe68b418fc2eff75b569b6
+      internalID: -362774345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_3
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2378
+        width: 169
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb5a7195f16912643a6d0439a3812fda
+      internalID: -339805826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_4
+      rect:
+        serializedVersion: 2
+        x: 1201
+        y: 2389
+        width: 145
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f793dabc87fe3b74faf931392333ebc5
+      internalID: 324685970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_5
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 2464
+        width: 163
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c62f859a482e0845b061501d5b8660b
+      internalID: 1568599755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_6
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 2019
+        width: 187
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b1d747f82464d4faf871e31436e9a9
+      internalID: -2038181850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_7
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 2055
+        width: 193
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc1145654cf51b4cba48e61106a6af2
+      internalID: 2127282207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_8
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 2077
+        width: 211
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24d6c40d102d524d8a2e24190c6ab9e
+      internalID: -1456163502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_9
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 2083
+        width: 217
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca3bd2d9b2698d46bb4941becb64a88
+      internalID: 2067175768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_10
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 2085
+        width: 218
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2693d3aac416e3948be81b175ae01bd2
+      internalID: 1779091051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_11
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 2085
+        width: 227
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba67dc3c60e45ee4295267c25624a5c5
+      internalID: 338617790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_12
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 1615
+        width: 237
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4ff590aeb543a442aee7b0e777c6e99
+      internalID: -395976607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_13
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 1579
+        width: 225
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947dd70ace046dc418fe2ce561888809
+      internalID: -1128483550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_14
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1497
+        width: 201
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed2a12736a6008546baf547fb95b4271
+      internalID: 2126780741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_15
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 1465
+        width: 197
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b9cfa3e3d517643aa9c201f018f627
+      internalID: -243295580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_16
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1465
+        width: 194
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f376e63a32e30bb4ca7228f0dda7a1c9
+      internalID: 657413649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_17
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 1465
+        width: 194
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299a28a48490d0c41aa1195a58d5a252
+      internalID: -1955564454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_18
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 1007
+        width: 193
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138a5f0540fddac459d1bc08324e4dff
+      internalID: 1777619923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_19
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1007
+        width: 166
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c30c82921ef7f7349967f6966404eca0
+      internalID: -503878762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_20
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 1007
+        width: 168
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2805b925fdc79c542ad7b6e10eec9ee8
+      internalID: -1951385817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_21
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 1007
+        width: 152
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c5ffe56f212ad349a3939075261edb0
+      internalID: 1061769618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_23
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 1018
+        width: 146
+        height: 278
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e1b1da01ca2734e95e5f15ec688ba1
+      internalID: -110382926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_24
+      rect:
+        serializedVersion: 2
+        x: 1468
+        y: 1105
+        width: 178
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6053e5f09dbe14b8adf4bc8c4db8d5
+      internalID: -63852568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_25
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 677
+        width: 190
+        height: 231
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d498904cf6e68f843baf203e45d01d36
+      internalID: -626098163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_26
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 696
+        width: 202
+        height: 217
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8808f3caff0af174a89c79920c3962b7
+      internalID: -1679354643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_27
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 707
+        width: 213
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c631b913180ec604881cec0ec5a59c7b
+      internalID: 1480064321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_28
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 712
+        width: 224
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bd3ded4cd2045449a50eaafbf3aafe6
+      internalID: -1677894949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_29
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 714
+        width: 225
+        height: 200
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 403ac5acf46d35445b6f8e195c4834b7
+      internalID: -655263161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_30
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 714
+        width: 225
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d636875316b0d5458db3c0a6ba82223
+      internalID: -411302961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_31
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 230
+        width: 236
+        height: 213
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c1b60c8b4ca2943b5c711103d9ec0b
+      internalID: 1748494576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_32
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 126
+        width: 201
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ebe63379bfa7f54b846860419b1be3d
+      internalID: 473893323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_33
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 94
+        width: 203
+        height: 269
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ee38821cb51014fae2db18832a8d26
+      internalID: -1480662979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_34
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 94
+        width: 190
+        height: 238
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a49cb3c6aaffc40ac0e30236437795
+      internalID: -204386880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_35
+      rect:
+        serializedVersion: 2
+        x: 1164
+        y: 94
+        width: 195
+        height: 249
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc6eb71e2e7a934089f4de5860274dc
+      internalID: -1249991101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiAirborne_36
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 94
+        width: 191
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8079679fb1da65a418a3d9c0501f3cdd
+      internalID: 525074651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      YukiAirborne_9: 2067175768
+      YukiAirborne_32: 473893323
+      YukiAirborne_28: -1677894949
+      YukiAirborne_6: -2038181850
+      YukiAirborne_8: -1456163502
+      YukiAirborne_1: 837835149
+      YukiAirborne_7: 2127282207
+      YukiAirborne_5: 1568599755
+      YukiAirborne_14: 2126780741
+      YukiAirborne_19: -503878762
+      YukiAirborne_21: 1061769618
+      YukiAirborne_26: -1679354643
+      YukiAirborne_22: -1807150033
+      YukiAirborne_29: -655263161
+      YukiAirborne_30: -411302961
+      YukiAirborne_27: 1480064321
+      YukiAirborne_13: -1128483550
+      YukiAirborne_3: -339805826
+      YukiAirborne_4: 324685970
+      YukiAirborne_2: -362774345
+      YukiAirborne_11: 338617790
+      YukiAirborne_16: 657413649
+      YukiAirborne_10: 1779091051
+      YukiAirborne_23: -110382926
+      YukiAirborne_25: -626098163
+      YukiAirborne_24: -63852568
+      YukiAirborne_36: 525074651
+      YukiAirborne_20: -1951385817
+      YukiAirborne_34: -204386880
+      YukiAirborne_12: -395976607
+      YukiAirborne_15: -243295580
+      YukiAirborne_0: -2479315
+      YukiAirborne_17: -1955564454
+      YukiAirborne_31: 1748494576
+      YukiAirborne_33: -1480662979
+      YukiAirborne_18: 1777619923
+      YukiAirborne_35: -1249991101
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

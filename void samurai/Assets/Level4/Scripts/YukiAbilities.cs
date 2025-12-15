@@ -27,6 +27,8 @@ public class YukiAbilities : MonoBehaviour
     private float worldAblazeWarningTimer = 0;
     private float worldAblazeWarningCD;
     float worldAblazeTimer = 0;
+    public float voidlingChance;
+    public Transform voidling;
     // Start is called before the first frame update
     void Start()
     {
@@ -122,6 +124,11 @@ public class YukiAbilities : MonoBehaviour
             Quaternion noRotation = Quaternion.Euler(0, 0, 0);
             Vector3 spawnPosition = new Vector3(i, -2.5f, 0f);
             Instantiate(fireee, spawnPosition, noRotation);
+            float roll = Random.Range(0f, 100f);
+            if (roll < voidlingChance)
+            {
+                Instantiate(voidling, spawnPosition, noRotation);
+            }
         }
     }
     public void worldAblazeWarning()
