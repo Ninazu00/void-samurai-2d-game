@@ -15,6 +15,8 @@ public class BlacksmithNPC : MonoBehaviour
     private PlayerStats playerStats;
     private PlayerController playerController;
     private int upgradesUsed = 0; // Track number of upgrades already used
+    public bool requiresShrineActivation;
+    public ShrineOfClarity requiredShrine;
 
     void Start()
     {
@@ -57,6 +59,8 @@ public class BlacksmithNPC : MonoBehaviour
 
     void Upgrade()
     {
+        if (requiresShrineActivation && !requiredShrine.IsActivated)
+            return;
         if (playerStats != null && playerController != null && upgradesUsed < maxUpgrades)
         {
             // Deduct the ore cost

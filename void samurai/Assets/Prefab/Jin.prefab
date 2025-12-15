@@ -221,6 +221,7 @@ MonoBehaviour:
   LightAttackKey: 306
   HeavyAttackKey: 304
   ParryKey: 122
+  DashKey: 113
   groundCheck: {fileID: 4256423732421258300}
   groundCheckRadius: 0.4
   whatIsGround:
@@ -238,6 +239,12 @@ MonoBehaviour:
     m_Bits: 0
   lightDamage: 10
   heavyDamage: 25
+  perfectParryWindow: 0.2
+  dashDistance: 5
+  dashDuration: 0.2
+  dashCooldown: 1
+  lightAttackCooldown: 1
+  heavyAttackCooldown: 5
 --- !u!95 &4256423732778243633
 Animator:
   serializedVersion: 4

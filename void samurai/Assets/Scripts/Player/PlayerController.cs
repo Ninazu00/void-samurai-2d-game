@@ -17,18 +17,14 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask whatIsGround;
 
-    public Transform lightAttackPoint; 
-    public float lightAttackRange = 0.5f; 
-    public Transform heavyAttackPoint; 
-    public float heavyAttackRange = 0.7f; 
-    public LayerMask Enemy; 
-    public LayerMask Barrel; 
-    public int lightDamage = 10; 
-    public int heavyDamage = 15;
-    public float lightAttackCooldown = 0.4f;
-    public float heavyAttackCooldown = 0.8f;
-    private bool canLightAttack = true;
-    private bool canHeavyAttack = true;
+    public Transform lightAttackPoint;
+    public float lightAttackRange = 0.5f;
+    public Transform heavyAttackPoint;
+    public float heavyAttackRange = 0.7f;
+    public LayerMask Enemy;
+    public LayerMask Barrel;
+    public int lightDamage = 10;
+    public int heavyDamage = 25;
 
     public float perfectParryWindow = 0.2f;
     private bool grounded;
@@ -40,6 +36,10 @@ public class PlayerController : MonoBehaviour
     public float dashCooldown = 1f;
     private bool canDash = true;
     private bool isDashing = false;
+    bool canHeavyAttack = true;
+    bool canLightAttack = true;
+    public int lightAttackCooldown;
+    public int heavyAttackCooldown;
 
     private bool isDead = false;
 
