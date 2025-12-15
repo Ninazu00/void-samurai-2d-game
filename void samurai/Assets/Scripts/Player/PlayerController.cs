@@ -141,7 +141,6 @@ public class PlayerController : MonoBehaviour
     {
         lastDamagedEnemy = null;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightAttackPoint.position, lightAttackRange, Enemy);
-
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
@@ -151,19 +150,13 @@ public class PlayerController : MonoBehaviour
                 lastDamagedEnemy = ec;
             }
         }
-        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
-            lightAttackPoint.position,
-            lightAttackRange,
-            Barrel
-        );
 
+        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(lightAttackPoint.position, lightAttackRange, Barrel);
         foreach (Collider2D barrelCol in hitBarrels)
         {
             BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
-            if (barrel != null)
-                barrel.BarrelDamage();
+            if (barrel != null) barrel.BarrelDamage();
         }
-
 
         anim.SetTrigger("lightAttack");
     }
@@ -172,7 +165,6 @@ public class PlayerController : MonoBehaviour
     {
         lastDamagedEnemy = null;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyAttackPoint.position, heavyAttackRange, Enemy);
-
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
@@ -182,19 +174,13 @@ public class PlayerController : MonoBehaviour
                 lastDamagedEnemy = ec;
             }
         }
-        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
-            heavyAttackPoint.position,
-            heavyAttackRange,
-            Barrel
-        );
 
+        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(heavyAttackPoint.position, heavyAttackRange, Barrel);
         foreach (Collider2D barrelCol in hitBarrels)
         {
             BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
-            if (barrel != null)
-                barrel.BarrelDamage();
+            if (barrel != null) barrel.BarrelDamage();
         }
-
 
         anim.SetTrigger("heavyAttack");
     }
@@ -235,14 +221,35 @@ public class PlayerController : MonoBehaviour
         anim.SetTrigger("death");
         GetComponent<Collider2D>().enabled = false;
 
-        Invoke(nameof(GameOver), 2f);
+        StartCoroutine(DeathAndRespawn());
     }
 
-    private void GameOver()
+    private IEnumerator DeathAndRespawn()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(
-            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
-        );
+        // Wait until Animator enters Death state
+        while (!anim.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        {
+            yield return null;
+        }
+
+        // Wait for full death animation length
+        float deathAnimLength = anim.GetCurrentAnimatorStateInfo(0).length;
+        yield return new WaitForSeconds(deathAnimLength);
+
+        // Respawn player
+        Respawn();
+    }
+
+    private void Respawn()
+    {
+        LevelManager.Instance.RespawnPlayer();
+
+        // Reset player state
+        isDead = false;
+        canLightAttack = true;
+        canHeavyAttack = true;
+        canDash = true;
+        GetComponent<Collider2D>().enabled = true;
     }
 
     private void OnDrawGizmos()
@@ -264,5 +271,6 @@ public class PlayerController : MonoBehaviour
 
 
     public bool IsParrying() => isParrying;
+    public bool IsDead() => isDead;
     public bool IsPerfectParryActive() => perfectParryActive;
 }
