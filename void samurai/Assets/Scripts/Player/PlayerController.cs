@@ -129,16 +129,19 @@ public class PlayerController : MonoBehaviour {
 
         // Detect all enemies in light attack range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightAttackPoint.position, lightAttackRange, Enemy);
-        Debug.Log("LightAttack hits detected: " + hitEnemies.Length);
 
-        Debug.Log("Enemies detected: " + hitEnemies.Length);
-
+        
+        EnemyController lastDamagedEnemy = null;
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Hit Enemy (Light): " + enemy.name);
             EnemyController ec = enemy.GetComponent<EnemyController>();
-            if (ec != null)
+            if (ec != null && ec != lastDamagedEnemy)
+            {
+                Debug.Log("LightAttack hits detected: " + hitEnemies.Length);
                 ec.TakeDamage(lightDamage);
+                lastDamagedEnemy = ec;
+            }
         }
         Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
             lightAttackPoint.position,
@@ -163,14 +166,18 @@ public class PlayerController : MonoBehaviour {
 
         // Detect all enemies in heavy attack range
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyAttackPoint.position, heavyAttackRange, Enemy);
-        Debug.Log("HeavyAttack hits detected: " + hitEnemies.Length);
-
+        
+        EnemyController lastDamagedEnemy = null;
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Hit Enemy (Heavy): " + enemy.name);
             EnemyController ec = enemy.GetComponent<EnemyController>();
-            if (ec != null)
+            if (ec != null && ec != lastDamagedEnemy)
+            {
+                Debug.Log("HeavyAttack hits detected: " + hitEnemies.Length);
                 ec.TakeDamage(heavyDamage);
+                lastDamagedEnemy = ec;
+            }
         }
 
         Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
