@@ -95,11 +95,11 @@ public class Mirage : EnemyController
 
         yield return new WaitForSeconds(0.25f);
 
-        if (player != null &&
-            Vector2.Distance(transform.position, player.position) <= meleeAttackRange)
-        {
-            player.GetComponent<PlayerStats>()?.TakeDamage(damage);
-        }
+        if (player && player.CompareTag("Player") &&
+    Vector2.Distance(transform.position, player.position) <= meleeAttackRange)
+{
+    player.GetComponent<PlayerStats>()?.TakeDamage(damage);
+}
 
         yield return new WaitForSeconds(0.35f);
 

@@ -1897,9 +1897,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2079728649}
   - component: {fileID: 2079728648}
-  - component: {fileID: 2079728650}
   - component: {fileID: 2079728651}
   - component: {fileID: 2079728652}
+  - component: {fileID: 2079728653}
   m_Layer: 0
   m_Name: LostBlacksmith
   m_TagString: Untagged
@@ -1974,21 +1974,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2079728650
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079728647}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b8da794bb31a004b809cde1112fb758, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionRange: 2
-  healthUpgrade: 20
-  levelNumber: 1
 --- !u!95 &2079728651
 Animator:
   serializedVersion: 4
@@ -2035,6 +2020,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.65}
   m_EdgeRadius: 0
+--- !u!114 &2079728653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079728647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8da794bb31a004b809cde1112fb758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionRange: 2
+  requiredVoidsteelOre: 3
+  lightDamageIncrease: 2
+  heavyDamageIncrease: 5
+  healthIncrease: 25
+  maxUpgrades: 3
 --- !u!1001 &5685890310890129357
 PrefabInstance:
   m_ObjectHideFlags: 0
