@@ -110,10 +110,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 3330
-        width: 512
-        height: 378
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,10 +131,10 @@ TextureImporter:
         serializedVersion: 2
         x: 664
         y: 3330
-        width: 501
-        height: 477
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,7 +155,7 @@ TextureImporter:
         width: 552
         height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,10 +173,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2115
         y: 3330
-        width: 442
-        height: 473
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,10 +194,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2755
         y: 3330
-        width: 445
-        height: 439
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -213,12 +213,12 @@ TextureImporter:
       name: RyoMirrorGhost_5
       rect:
         serializedVersion: 2
-        x: 3395
+        x: 3288
         y: 3330
-        width: 445
-        height: 408
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,10 +236,10 @@ TextureImporter:
         serializedVersion: 2
         x: 195
         y: 2690
-        width: 445
-        height: 393
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -256,11 +256,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 835
-        y: 2690
-        width: 445
-        height: 376
+        y: 2699
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,10 +278,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1477
         y: 2690
-        width: 443
-        height: 372
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,10 +299,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2117
         y: 2690
-        width: 443
-        height: 373
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,10 +320,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2757
         y: 2690
-        width: 443
-        height: 378
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -339,12 +339,12 @@ TextureImporter:
       name: RyoMirrorGhost_11
       rect:
         serializedVersion: 2
-        x: 3397
+        x: 3270
         y: 2690
-        width: 443
-        height: 380
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -361,11 +361,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 197
-        y: 2050
-        width: 443
-        height: 381
+        y: 2063
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,10 +383,10 @@ TextureImporter:
         serializedVersion: 2
         x: 823
         y: 2050
-        width: 457
-        height: 384
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -403,11 +403,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1441
-        y: 2050
-        width: 461
-        height: 387
+        y: 2059
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,10 +425,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2079
         y: 2050
-        width: 431
-        height: 385
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,10 +446,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2696
         y: 2050
-        width: 423
-        height: 382
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,10 +467,10 @@ TextureImporter:
         serializedVersion: 2
         x: 3233
         y: 2050
-        width: 438
-        height: 390
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,10 +488,10 @@ TextureImporter:
         serializedVersion: 2
         x: 19
         y: 1410
-        width: 455
-        height: 445
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,10 +509,10 @@ TextureImporter:
         serializedVersion: 2
         x: 640
         y: 1410
-        width: 471
-        height: 454
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,10 +530,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1280
         y: 1410
-        width: 472
-        height: 370
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -549,12 +549,12 @@ TextureImporter:
       name: RyoMirrorGhost_21
       rect:
         serializedVersion: 2
-        x: 1920
+        x: 1933
         y: 1410
-        width: 470
-        height: 370
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,10 +572,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2560
         y: 1410
-        width: 472
-        height: 370
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,10 +593,10 @@ TextureImporter:
         serializedVersion: 2
         x: 3200
         y: 1410
-        width: 473
-        height: 370
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,10 +614,10 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 770
-        width: 480
-        height: 370
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -635,10 +635,10 @@ TextureImporter:
         serializedVersion: 2
         x: 640
         y: 770
-        width: 486
-        height: 372
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -656,10 +656,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1280
         y: 770
-        width: 491
-        height: 375
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -677,10 +677,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1920
         y: 770
-        width: 493
-        height: 377
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -697,11 +697,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2637
-        y: 770
-        width: 414
+        y: 779
+        width: 552
         height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -719,10 +719,10 @@ TextureImporter:
         serializedVersion: 2
         x: 3274
         y: 770
-        width: 417
-        height: 486
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -740,10 +740,10 @@ TextureImporter:
         serializedVersion: 2
         x: 75
         y: 130
-        width: 416
-        height: 440
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -761,10 +761,10 @@ TextureImporter:
         serializedVersion: 2
         x: 720
         y: 130
-        width: 404
-        height: 458
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -782,10 +782,10 @@ TextureImporter:
         serializedVersion: 2
         x: 1395
         y: 130
-        width: 364
-        height: 505
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -802,11 +802,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2013
-        y: 130
-        width: 413
-        height: 492
+        y: 139
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -824,10 +824,10 @@ TextureImporter:
         serializedVersion: 2
         x: 2569
         y: 130
-        width: 502
-        height: 371
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -840,36 +840,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RyoMirrorGhost_35
-      rect:
-        serializedVersion: 2
-        x: 3200
-        y: 373
-        width: 285
-        height: 44
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a4b05f90ef56e69488c860cc1377d007
-      internalID: 1080873605
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: RyoMirrorGhost_36
       rect:
         serializedVersion: 2
-        x: 3389
+        x: 3202
         y: 130
-        width: 336
-        height: 370
+        width: 552
+        height: 510
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -897,7 +876,6 @@ TextureImporter:
       RyoMirrorGhost_18: -521828010
       RyoMirrorGhost_25: 475574803
       RyoMirrorGhost_33: -1838184336
-      RyoMirrorGhost_27: 1122116099
       RyoMirrorGhost_30: 734631284
       RyoMirrorGhost_32: 381172571
       RyoMirrorGhost_15: 223334529
@@ -920,13 +898,14 @@ TextureImporter:
       RyoMirrorGhost_36: -160062546
       RyoMirrorGhost_10: 714210993
       RyoMirrorGhost_12: -653591490
-      RyoMirrorGhost_24: 1556610207
+      RyoMirrorGhost_27: 1122116099
       RyoMirrorGhost_6: -1511779514
       RyoMirrorGhost_31: 1349147806
       RyoMirrorGhost_7: -2129085228
       RyoMirrorGhost_17: -1319173047
-      RyoMirrorGhost_29: -1393716157
+      RyoMirrorGhost_24: 1556610207
       RyoMirrorGhost_23: 990642263
+      RyoMirrorGhost_29: -1393716157
       RyoMirrorGhost_11: -2080871634
       RyoMirrorGhost_0: 1080942108
   spritePackingTag: 

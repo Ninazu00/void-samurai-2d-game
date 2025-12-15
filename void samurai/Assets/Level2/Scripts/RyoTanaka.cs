@@ -36,16 +36,22 @@ public class RyoTanaka : EnemyController
     private float dashTimer = 0f;
     private float dashDuration = 0.5f;
     
+    // Sacrifice Mirror (enhanced phantom dash)
+    private bool isSacrificeDashing = false;
+    private float sacrificeDashTimer = 0f;
+    private float sacrificeDashDuration = 0.7f; // Slightly longer than normal dash
+    
     // Phase tracking
     private bool isLowHealth = false;
+    private bool hasDamagedWithSacrifice = false;
     
     protected override void Start()
     {
         // Set Ryo's stats from the design document
-        moveSpeed = 2f; // Use the custom speed variable
+        moveSpeed = 2f;
         maxHealth = 150;
-        damage = 0; // No base damage - only skill-based damage
-        attackRange = 2f; // Melee range
+        damage = 0;
+        attackRange = 2f;
         
         base.Start();
         
@@ -73,6 +79,19 @@ public class RyoTanaka : EnemyController
         {
             isLowHealth = true;
             currentState = 4; // Trigger Sacrifice Mirror
+            hasDamagedWithSacrifice = false;
+            
+            // Set up the sacrifice dash (like phantom dash but stronger)
+            Vector2 directionToPlayer = (player.position - transform.position).normalized;
+            dashDirection = new Vector2(directionToPlayer.x, 0).normalized;
+            isSacrificeDashing = true;
+            sacrificeDashTimer = 0f;
+            
+            // Flip sprite for dash direction
+            if (sr != null && dashDirection.x != 0)
+                sr.flipX = dashDirection.x > 0;
+            
+            Debug.Log("Ryo Tanaka enters Sacrifice Mirror mode!");
             return;
         }
         
@@ -93,7 +112,7 @@ public class RyoTanaka : EnemyController
                 MirroringGhost();
                 break;
             case 4: // Sacrifice Mirror
-                SacrificeMirror();
+                SacrificeMirror(dist);
                 break;
         }
         
@@ -111,14 +130,12 @@ public class RyoTanaka : EnemyController
         if (dist <= phantomDashRange && phantomDashTimer <= 0)
         {
             currentState = 2;
-            // Calculate horizontal-only dash direction
             Vector2 directionToPlayer = (player.position - transform.position).normalized;
             dashDirection = new Vector2(directionToPlayer.x, 0).normalized;
             isDashing = true;
             dashTimer = 0f;
             phantomDashTimer = phantomDashCooldown;
             
-            // Flip sprite for dash direction
             if (sr != null && dashDirection.x != 0)
                 sr.flipX = dashDirection.x > 0;
             return;
@@ -135,12 +152,10 @@ public class RyoTanaka : EnemyController
             return;
         }
         
-        // Move toward player (only horizontal movement to stay on ground)
+        // Move toward player
         Vector2 dir = (player.position - transform.position).normalized;
-        rb.velocity = new Vector2(dir.x * moveSpeed, rb.velocity.y); // Preserve vertical velocity
+        rb.velocity = new Vector2(dir.x * moveSpeed, rb.velocity.y);
         
-        // Flip sprite based on movement direction
-        // If moving right (positive direction), DON'T flip. If moving left (negative), flip
         if (sr != null && dir.x != 0)
             sr.flipX = dir.x > 0;
     }
@@ -150,14 +165,13 @@ public class RyoTanaka : EnemyController
         if (isDashing)
         {
             dashTimer += Time.deltaTime;
-            // Dash horizontally while preserving gravity
             float dashVelocityX = dashDirection.x * phantomDashSpeed;
             rb.velocity = new Vector2(dashVelocityX, rb.velocity.y);
             
             if (dashTimer >= dashDuration)
             {
                 isDashing = false;
-                currentState = 1; // Return to chase state
+                currentState = 1;
             }
         }
     }
@@ -173,72 +187,68 @@ public class RyoTanaka : EnemyController
                 ghostHitTimer = 0f;
                 ghostHitsRemaining--;
                 
-                // Check if player is in range for hit
                 float dist = Vector2.Distance(transform.position, player.position);
                 if (dist <= attackRange && playerStats != null)
                 {
                     playerStats.TakeDamage(mirroringGhostDamage);
+                    Debug.Log($"Mirroring Ghost hit! {ghostHitsRemaining} hits remaining");
                 }
             }
         }
         else
         {
-            currentState = 1; // Return to chase state
+            currentState = 1;
         }
     }
 
-    void SacrificeMirror()
+    void SacrificeMirror(float dist)
     {
-        // Final desperate attack - mirrors his sacrifice in the war
-        float dist = Vector2.Distance(transform.position, player.position);
-        
-        // Charge toward player with doubled speed (horizontal only)
-        Vector2 dir = (player.position - transform.position).normalized;
-        rb.velocity = new Vector2(dir.x * (moveSpeed * 2f), rb.velocity.y);
-        
-        // If close enough, deal massive damage and transform
-        if (dist <= attackRange && playerStats != null)
+        // Enhanced phantom dash - slower but double damage
+        if (isSacrificeDashing)
         {
-            playerStats.TakeDamage(sacrificeMirrorDamage);
-            TransformToSpirit();
+            sacrificeDashTimer += Time.deltaTime;
+            
+            // Turn red ONLY during the Sacrifice Mirror dash
+            if (sr != null)
+                sr.color = new Color(1f, 0.2f, 0.2f); // Bright intense red
+            
+            // Dash at 80% of normal phantom dash speed (slower)
+            float sacrificeDashSpeed = phantomDashSpeed * 0.8f;
+            float dashVelocityX = dashDirection.x * sacrificeDashSpeed;
+            rb.velocity = new Vector2(dashVelocityX, rb.velocity.y);
+            
+            if (sacrificeDashTimer >= sacrificeDashDuration)
+            {
+                isSacrificeDashing = false;
+                currentState = 1; // Return to chase state
+                
+                // Return to normal white color after dash
+                if (sr != null)
+                    sr.color = Color.white;
+                
+                Debug.Log("Sacrifice Mirror dash ended, returning to chase");
+            }
         }
-    }
-
-    void TransformToSpirit()
-    {
-        // Ryo transforms from void version into his true old self as a spirit
-        Debug.Log("Ryo transforms into spirit form...");
-        
-        // Stop all movement
-        rb.velocity = Vector2.zero;
-        currentState = 0; // Set to idle
-        
-        // Disable combat
-        enabled = false;
-        
-        // Visual transformation effect - blue ethereal color
-        if (sr != null)
-        {
-            sr.color = new Color(0.5f, 0.8f, 1f, 0.7f);
-        }
-        
-        // Could trigger dialogue here
-        // DialogueManager.ShowDialogue("Ryo Spirit", "Jin... you've grown stronger...");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && playerStats != null)
         {
-            // Only deal damage during skill states
             int dmg = 0;
             
             if (currentState == 2) // Phantom Dash
+            {
                 dmg = phantomDashDamage;
-            else if (currentState == 4) // Sacrifice Mirror
-                dmg = sacrificeMirrorDamage;
-            // No damage during idle (0) or chase (1) states
-            // Mirroring Ghost (3) handles damage internally
+                Debug.Log("Phantom Dash collision damage: " + dmg);
+            }
+            else if (currentState == 4 && !hasDamagedWithSacrifice) // Sacrifice Mirror
+            {
+                // Double damage of phantom dash
+                dmg = phantomDashDamage * 2;
+                hasDamagedWithSacrifice = true;
+                Debug.Log("Sacrifice Mirror collision damage: " + dmg + " (DOUBLE DAMAGE!)");
+            }
             
             if (dmg > 0)
                 playerStats.TakeDamage(dmg);
@@ -249,7 +259,9 @@ public class RyoTanaka : EnemyController
     {
         currentHealth -= dmg;
         
-        // Flash effect when damaged
+        Debug.Log($"Ryo Tanaka took {dmg} damage. Health: {currentHealth}/{maxHealth}");
+        
+        // Flash red when damaged
         if (sr != null)
         {
             sr.color = Color.red;
@@ -270,16 +282,7 @@ public class RyoTanaka : EnemyController
 
     protected override void Die()
     {
-        // Transform into spirit before destroying
-        TransformToSpirit();
-        
-        // Wait before cleanup to allow spirit transformation to be visible
-        Invoke("DestroyRyo", 5f);
-    }
-    
-    void DestroyRyo()
-    {
-        // Call base Die to handle combat zone unregistration and cleanup
+        Debug.Log("Ryo Tanaka defeated!");
         base.Die();
     }
 }
