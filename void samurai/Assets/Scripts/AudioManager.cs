@@ -193,4 +193,27 @@ public class AudioManager : MonoBehaviour
     {
         PlayVoiceLine(yukiShortLaugh);
     }
+
+
+            public void FadeOutMEFA(float duration)
+        {
+            StartCoroutine(MEFcoroutihne(duration));
+        }
+
+        IEnumerator MEFcoroutihne(float duration)
+        {
+            float startVolume = voiceLines.volume;
+            float time = 0f;
+
+            while (time < duration)
+            {
+                time += Time.deltaTime;
+                voiceLines.volume = Mathf.Lerp(startVolume, 0f, time / duration);
+                yield return null;
+            }
+
+            voiceLines.volume = startVolume;
+            voiceLines.Stop();
+        }
+
 }

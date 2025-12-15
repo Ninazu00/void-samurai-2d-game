@@ -40,9 +40,10 @@ public class MemoryEchoField : MonoBehaviour
             damageTimer = 0f;
         }
         if (AudioManager.Instance != null)
-    {
-        AudioManager.Instance.voiceLines.Stop();
-    }
+        {
+            AudioManager.Instance.FadeOutMEFA(1.5f);
+        }
+
 
     }
 
