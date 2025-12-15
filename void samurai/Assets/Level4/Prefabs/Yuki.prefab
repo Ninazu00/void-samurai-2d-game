@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2522660011426637017}
   - component: {fileID: 5106860251729769770}
   - component: {fileID: 4942260117411415811}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4828,7 +4828,7 @@ GameObject:
   - component: {fileID: 451718723665166977}
   - component: {fileID: 3145753973344973231}
   - component: {fileID: 451718723665166976}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Yuki
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4945,6 +4945,11 @@ MonoBehaviour:
   phase2Aura: {fileID: 0}
   jumpHeight: 0
   jumpCD: 0
+  groundCheckRadius: 0
+  groundCheck: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!61 &451718723665166977
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5027,7 +5032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4423743229478624587}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: groundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 4162164826716764455, guid: 0000000000000000d000000000000000, type: 0}

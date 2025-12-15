@@ -8796,7 +8796,7 @@ GameObject:
   - component: {fileID: 1334761199}
   - component: {fileID: 1334761201}
   - component: {fileID: 1334761202}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: moving_platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

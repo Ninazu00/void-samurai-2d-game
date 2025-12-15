@@ -66,6 +66,7 @@ public class Yuki : EnemyController
     public void freezeForVoidBurst()
     {
         animator.SetTrigger("cATK");
+        animator.SetBool("CAST", true);
         moveSpeed = 0f;
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;

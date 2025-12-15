@@ -89,10 +89,14 @@ public class PlayerController : MonoBehaviour {
 
         // ----------- ANIMATION (Light & Heavy Attacks) -----------
         if (Input.GetKeyDown(LightAttackKey))
-            anim.SetTrigger("lightAttack"); //trigger light slash animation
+        {
+            LightAttack();
+        }
 
         if (Input.GetKeyDown(HeavyAttackKey))
-            anim.SetTrigger("heavyAttack"); //trigger heavy slash animation
+        {
+            HeavyAttack(); 
+        }
     }
 
     void FixedUpdate()
@@ -126,6 +130,8 @@ public class PlayerController : MonoBehaviour {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightAttackPoint.position, lightAttackRange, Enemy);
         Debug.Log("LightAttack hits detected: " + hitEnemies.Length);
 
+        Debug.Log("Enemies detected: " + hitEnemies.Length);
+
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("Hit Enemy (Light): " + enemy.name);
@@ -133,6 +139,7 @@ public class PlayerController : MonoBehaviour {
             if (ec != null)
                 ec.TakeDamage(lightDamage);
         }
+        anim.SetTrigger("lightAttack"); //trigger light slash animation
     }
 
     // Called from HeavyAttack animation event
@@ -151,6 +158,7 @@ public class PlayerController : MonoBehaviour {
             if (ec != null)
                 ec.TakeDamage(heavyDamage);
         }
+        anim.SetTrigger("heavyAttack"); //trigger heavy slash animation
     }
 
     // Called from animation event to end attack animation

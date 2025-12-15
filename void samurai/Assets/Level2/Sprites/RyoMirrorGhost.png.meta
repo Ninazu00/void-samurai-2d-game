@@ -1,0 +1,937 @@
+fileFormatVersion: 2
+guid: 6dd40ea7c76352341adc4fd4ca79e6d8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RyoMirrorGhost_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3330
+        width: 512
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bcfe1c778f378e4a8363d57ca2e60bb
+      internalID: 1080942108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_1
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 3330
+        width: 501
+        height: 477
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7ca44fb76bb1746b892b5511ae141b
+      internalID: -292623756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_2
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 3330
+        width: 552
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42f408a155b67004ca622394d6035fad
+      internalID: 1650938048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_3
+      rect:
+        serializedVersion: 2
+        x: 2115
+        y: 3330
+        width: 442
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b049319c55160b24299bb5f25de6da71
+      internalID: -622645035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_4
+      rect:
+        serializedVersion: 2
+        x: 2755
+        y: 3330
+        width: 445
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a36e19ad6926f46b142cc23d689a69
+      internalID: 170825418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_5
+      rect:
+        serializedVersion: 2
+        x: 3395
+        y: 3330
+        width: 445
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeded6fe9699b644b64f5df713472aa
+      internalID: -2147346526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 2690
+        width: 445
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2383dd1ee0c42f84ca79fc43e70f91de
+      internalID: -1511779514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_7
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 2690
+        width: 445
+        height: 376
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015e4c6f482aebb42bf5493eaaf9d5fb
+      internalID: -2129085228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_8
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 2690
+        width: 443
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3927450e29b06419dd5f72deb84c52
+      internalID: -2043096996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_9
+      rect:
+        serializedVersion: 2
+        x: 2117
+        y: 2690
+        width: 443
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93aa20b1064e394082b8703c8b9fb1b
+      internalID: 746707091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_10
+      rect:
+        serializedVersion: 2
+        x: 2757
+        y: 2690
+        width: 443
+        height: 378
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb32425a7a2abab4b9a1ac466be0baa2
+      internalID: 714210993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_11
+      rect:
+        serializedVersion: 2
+        x: 3397
+        y: 2690
+        width: 443
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fff91aaf69c3514db12d0ff423652b1
+      internalID: -2080871634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_12
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 2050
+        width: 443
+        height: 381
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6041565ea7e9ce146b30d1ef4d3780bd
+      internalID: -653591490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_13
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 2050
+        width: 457
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19dd1eb6b1a003a4790b2d50ee45ae65
+      internalID: 2049239979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_14
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 2050
+        width: 461
+        height: 387
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff2a881613e4f546be13d343004047d
+      internalID: -1247803478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_15
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 2050
+        width: 431
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7d8caf61e3ba8040a1db95e342bc1a6
+      internalID: 223334529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_16
+      rect:
+        serializedVersion: 2
+        x: 2696
+        y: 2050
+        width: 423
+        height: 382
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63580528337d971448e1fc848a66ed73
+      internalID: 1304985185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_17
+      rect:
+        serializedVersion: 2
+        x: 3233
+        y: 2050
+        width: 438
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8de368acdff3e4382aac301e72f904
+      internalID: -1319173047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_18
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1410
+        width: 455
+        height: 445
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecda1433eb8db694bac8ca891748d75c
+      internalID: -521828010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_19
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1410
+        width: 471
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cbd3ac3abf34b346b5e7c164ad3cd63
+      internalID: -978067762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_20
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 1410
+        width: 472
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce43a5c75feace7408e4b63fa5bb1de9
+      internalID: -981151701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_21
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1410
+        width: 470
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f76dcdba32c7404386bc29fefb0f4aa
+      internalID: 1902556955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_22
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1410
+        width: 472
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b502b402a8f0ec042aa779dfca13d7ba
+      internalID: -1706392261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_23
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 1410
+        width: 473
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8678bea13f29c044a85e7080c3f9d35
+      internalID: 990642263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 770
+        width: 480
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e69ffd4aeda28c48b0d26f0dee9ea8c
+      internalID: 1556610207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_25
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 770
+        width: 486
+        height: 372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4729d2b58d9d2d4b95e6bb08a2a1960
+      internalID: 475574803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_26
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 770
+        width: 491
+        height: 375
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0480172acda1049aaa61fdab48860e
+      internalID: -1835333820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_27
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 770
+        width: 493
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c7816464cc6d74cb06d6a132fae7bf
+      internalID: 1122116099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_28
+      rect:
+        serializedVersion: 2
+        x: 2637
+        y: 770
+        width: 414
+        height: 510
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c806c9f51940846afa58c0860db768
+      internalID: 1519226367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_29
+      rect:
+        serializedVersion: 2
+        x: 3274
+        y: 770
+        width: 417
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7184938f84ff448975c471f1e6eadd
+      internalID: -1393716157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_30
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 130
+        width: 416
+        height: 440
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b43bff2288b5ea45b450c0fd4bc48d8
+      internalID: 734631284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_31
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 130
+        width: 404
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e6388f681b299c428d9dd8df199ac3f
+      internalID: 1349147806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_32
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 130
+        width: 364
+        height: 505
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534464ddc7d89594dbfcca17f960505b
+      internalID: 381172571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_33
+      rect:
+        serializedVersion: 2
+        x: 2013
+        y: 130
+        width: 413
+        height: 492
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c6cba114ad68ba49a21b12a60c40ffa
+      internalID: -1838184336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_34
+      rect:
+        serializedVersion: 2
+        x: 2569
+        y: 130
+        width: 502
+        height: 371
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92463a2ad36007044b883e0a8b6c4eb8
+      internalID: 1037914292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_35
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 373
+        width: 285
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4b05f90ef56e69488c860cc1377d007
+      internalID: 1080873605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoMirrorGhost_36
+      rect:
+        serializedVersion: 2
+        x: 3389
+        y: 130
+        width: 336
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73d49755dd5b1f747a9374ffbcd6d8bb
+      internalID: -160062546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RyoMirrorGhost_34: 1037914292
+      RyoMirrorGhost_4: 170825418
+      RyoMirrorGhost_18: -521828010
+      RyoMirrorGhost_25: 475574803
+      RyoMirrorGhost_33: -1838184336
+      RyoMirrorGhost_27: 1122116099
+      RyoMirrorGhost_30: 734631284
+      RyoMirrorGhost_32: 381172571
+      RyoMirrorGhost_15: 223334529
+      RyoMirrorGhost_26: -1835333820
+      RyoMirrorGhost_3: -622645035
+      RyoMirrorGhost_1: -292623756
+      RyoMirrorGhost_5: -2147346526
+      RyoMirrorGhost_13: 2049239979
+      RyoMirrorGhost_2: 1650938048
+      RyoMirrorGhost_28: 1519226367
+      RyoMirrorGhost_16: 1304985185
+      RyoMirrorGhost_20: -981151701
+      RyoMirrorGhost_8: -2043096996
+      RyoMirrorGhost_35: 1080873605
+      RyoMirrorGhost_22: -1706392261
+      RyoMirrorGhost_19: -978067762
+      RyoMirrorGhost_14: -1247803478
+      RyoMirrorGhost_21: 1902556955
+      RyoMirrorGhost_9: 746707091
+      RyoMirrorGhost_36: -160062546
+      RyoMirrorGhost_10: 714210993
+      RyoMirrorGhost_12: -653591490
+      RyoMirrorGhost_24: 1556610207
+      RyoMirrorGhost_6: -1511779514
+      RyoMirrorGhost_31: 1349147806
+      RyoMirrorGhost_7: -2129085228
+      RyoMirrorGhost_17: -1319173047
+      RyoMirrorGhost_29: -1393716157
+      RyoMirrorGhost_23: 990642263
+      RyoMirrorGhost_11: -2080871634
+      RyoMirrorGhost_0: 1080942108
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
