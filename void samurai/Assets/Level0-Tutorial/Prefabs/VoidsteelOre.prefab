@@ -121,11 +121,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voidOreSound1: {fileID: 8300000, guid: 7141ffd83234aa94ca94b040afe6d322, type: 3}
   voidOreSound2: {fileID: 8300000, guid: d89ffa1021d81b645b626159cacac14b, type: 3}
-  voidOreSound3: {fileID: 8300000, guid: 8c1455a9c4798334dabbc057eec0abc9, type: 3}
-  voidOreSound4: {fileID: 8300000, guid: aceecf65b65db8d4bbca5a4878c0e545, type: 3}
-  voidOreSound5: {fileID: 8300000, guid: 4bfb2c0f08f8c55499f80589b30ef36e, type: 3}
-  voidOreSound6: {fileID: 8300000, guid: 7255d46d99929d14b9e8ea9f1619de04, type: 3}
-  voidOreSound7: {fileID: 8300000, guid: 85411bbb90b5380439687cfb05c23503, type: 3}
+  voidOreSound3: {fileID: 8300000, guid: 4bfb2c0f08f8c55499f80589b30ef36e, type: 3}
+  voidOreSound4: {fileID: 8300000, guid: 85411bbb90b5380439687cfb05c23503, type: 3}
 --- !u!61 &7360418188615159690
 BoxCollider2D:
   m_ObjectHideFlags: 0
