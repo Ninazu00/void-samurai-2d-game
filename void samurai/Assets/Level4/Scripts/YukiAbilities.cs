@@ -33,6 +33,8 @@ public class YukiAbilities : MonoBehaviour
     void Start()
     {
         worldAblazeWarningCD = worldAblazeCD -5;
+        //Phase one music
+        FindObjectOfType<AudioManager>().playYukiOne();
     }
 
     // Update is called once per frame
@@ -142,6 +144,7 @@ public class YukiAbilities : MonoBehaviour
     }
     public void enterPhase2()
     {
+        FindObjectOfType<AudioManager>().playYukiTwo();
         fallingSwordsCD = 25;
         fallingSwordsTimer = 0;
         voidBurstCD = 20;
