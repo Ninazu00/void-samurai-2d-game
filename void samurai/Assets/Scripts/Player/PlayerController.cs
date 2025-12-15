@@ -24,7 +24,7 @@ public class PlayerController : MonoBehaviour {
     public LayerMask Enemy; 
     public LayerMask Barrel; 
     public int lightDamage = 10; 
-    public int heavyDamage = 25; 
+    public int heavyDamage = 15;
 
     public float lightAttackCooldown = 0.4f; 
     public float heavyAttackCooldown = 0.8f; 
