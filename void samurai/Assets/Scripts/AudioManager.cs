@@ -8,12 +8,18 @@ public class AudioManager : MonoBehaviour
 
     public AudioSource musicSource; // Source that plays Background music
     public AudioSource sfxSource; // Source that plays sound effects
-
+    public AudioSource voiceLines; // Source that plays sound effects
     public AudioClip overworldMusic; // Audio clip of background music
+    public AudioClip[] variousSFX; // Array of sound effects clips
     public AudioClip yukiPhaseOne; // Audio clip for the first Phase of the Yuki boss fight
     public AudioClip yukiPhaseTwo; // Audio clip for the second Phase of the Yuki boss fight
-
-    public AudioClip[] variousSFX; // Array of sound effects clips
+    public AudioClip yukiLaugh;
+    public AudioClip swordsRain;
+    public AudioClip voidBurst;
+    public AudioClip voidDrownYou;
+    public AudioClip worldAblaze;
+    public AudioClip yukiMelee;
+    public AudioClip yukiPointlessStruggle;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +50,7 @@ public class AudioManager : MonoBehaviour
     // Public in case another object needs to call for a specific sound effect to begin playing
     public void PlayMusicSFX(AudioClip clip)
     {
+        sfxSource.Stop();
         sfxSource.clip = clip;
         sfxSource.Play();
     }
@@ -55,7 +62,12 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = clip;
         musicSource.Play();
     }
-
+    public void PlayVoiceLine(AudioClip clip)
+    {
+        voiceLines.Stop();
+        voiceLines.clip = clip;
+        voiceLines.Play();
+    }
     // Function takes a bunch of sound clips as paramters
     public void PlayRandomSFX(params AudioClip[] clips)
     {
@@ -76,5 +88,33 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusic(yukiPhaseTwo);
         Debug.Log("Playing Yuki Two");
+    }
+    public void playSwordsRain()
+    {
+        PlayMusicSFX(swordsRain);
+    }
+    public void playVoidBurst()
+    {
+        PlayMusicSFX(voidBurst);
+    }
+    public void playVoidDrownYou()
+    {
+        PlayVoiceLine(voidDrownYou);
+    }
+    public void playWorldAblaze()
+    {
+        PlayMusicSFX(worldAblaze);
+    }
+    public void playYukiLaugh()
+    {
+        PlayVoiceLine(yukiLaugh);
+    }
+    public void playYukiMelee()
+    {
+        PlayMusicSFX(yukiMelee);
+    }
+        public void playYukiTaunt1()
+    {
+        PlayVoiceLine(yukiPointlessStruggle);
     }
 }

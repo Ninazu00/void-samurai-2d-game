@@ -126,6 +126,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactKey: 101
+  combatZone: {fileID: 0}
+  ShrineOfClaritySound1: {fileID: 8300000, guid: cef28c81839e37a4f9d184b1df24bb24, type: 3}
+  ShrineOfClaritySound2: {fileID: 8300000, guid: b7e06ea42ea7b5440be81412955c67f9, type: 3}
+  ShrineOfClaritySound3: {fileID: 8300000, guid: ab73aa47da7a594429b9d8a37df1631c, type: 3}
+  ShrineOfClaritySound4: {fileID: 8300000, guid: a2dc1cc6e21ef83448705e28f55a37a9, type: 3}
 --- !u!95 &7301177436251185596
 Animator:
   serializedVersion: 4

@@ -9,6 +9,10 @@ public class ShrineOfClarity : MonoBehaviour
     private bool isActivated = false;
     private Animator animator;
     public CombatZone combatZone;
+    public AudioClip ShrineOfClaritySound1;
+    public AudioClip ShrineOfClaritySound2;
+    public AudioClip ShrineOfClaritySound3;
+    public AudioClip ShrineOfClaritySound4;
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +46,12 @@ public class ShrineOfClarity : MonoBehaviour
 
         isActivated = true;
 
-        // Play the animation
+        // Play the animation & the sound
         if (animator != null)
+        {
             animator.SetTrigger("Activate");
+            AudioManager.Instance.PlayRandomSFX(ShrineOfClaritySound1, ShrineOfClaritySound2, ShrineOfClaritySound3, ShrineOfClaritySound4);
+        }
     }
 
     public bool IsActivated

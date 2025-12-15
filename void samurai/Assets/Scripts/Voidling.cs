@@ -40,6 +40,11 @@ public class Voidling : EnemyController
         if (player == null) return;
         
         float dist = Vector2.Distance(transform.position, player.position);
+        Vector2 directionToPlayer = (player.position - transform.position).normalized;
+        
+        // Flip sprite to face player
+        if (sr != null)
+            sr.flipX = directionToPlayer.x < 0;
         
         if (currentState == 0)
         {

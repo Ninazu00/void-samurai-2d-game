@@ -50,11 +50,13 @@ public class Yuki : EnemyController
     {
         animator.SetTrigger("mATK");
         FindObjectOfType<PlayerStats>().TakeDamage(damage);
+        FindObjectOfType<AudioManager>().playYukiMelee();
     }
     public void shellOfWhatWas()
     {
         if(currentHealth<= (maxHealth / 2) && Phase1)
         {
+            FindObjectOfType<AudioManager>().playYukiTaunt1();
             sr.color = Color.red;
             phase2Aura.Play();
             Phase1 = false;

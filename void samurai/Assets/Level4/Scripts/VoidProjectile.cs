@@ -17,10 +17,10 @@ public class VoidProjectile : MonoBehaviour
     {
         rb.velocity = -(transform.up * speed);
     }
-
     void OnTriggerEnter2D(Collider2D other){
     if(other.tag == "Player"){
         FindObjectOfType<PlayerStats>().TakeDamage(damage);
+        FindObjectOfType<AudioManager>().playVoidBurst();
     }
     else if(other.tag == "SolidObject")
     {

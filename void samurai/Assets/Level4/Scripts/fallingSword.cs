@@ -33,6 +33,7 @@ public class fallingSword : MonoBehaviour
         }
         else if(other.tag == "SolidObject")
         {
+            FindObjectOfType<AudioManager>().playSwordsRain();
             rb.constraints = RigidbodyConstraints2D.FreezePositionY;
         }
     }
