@@ -13,6 +13,7 @@ public abstract class EnemyController : MonoBehaviour
 
     protected Transform player;
     protected Rigidbody2D rb;
+    protected CombatZone combatZone;
 
     protected virtual void Start()
     {
@@ -24,6 +25,11 @@ public abstract class EnemyController : MonoBehaviour
             player = playerObj.transform;
         }
         currentHealth = maxHealth;
+
+        // Register to combat zone if it exists
+        combatZone = GetComponentInParent<CombatZone>();
+        if (combatZone != null)
+            combatZone.RegisterEnemy(this);
     }
 
     protected virtual void Update()
@@ -42,6 +48,9 @@ public abstract class EnemyController : MonoBehaviour
 
     protected virtual void Die()
     {
+        if (combatZone != null)
+            combatZone.UnregisterEnemy(this);
+            
         Destroy(gameObject);
     }
 

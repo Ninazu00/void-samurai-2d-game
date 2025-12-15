@@ -1,0 +1,1024 @@
+fileFormatVersion: 2
+guid: 3a970a9f8482a9948b764c1983dcc6dd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RyoWalk_0
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 2685
+        width: 241
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cb2111de0d65814bb07465948ca52d2
+      internalID: -391511723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_2
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 2685
+        width: 251
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b4656c6a02e9d4c81dbce81647c974
+      internalID: 1726611817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_4
+      rect:
+        serializedVersion: 2
+        x: 2171
+        y: 2685
+        width: 272
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5acea150b4beff4185de615247c25fb
+      internalID: 898245158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_6
+      rect:
+        serializedVersion: 2
+        x: 2684
+        y: 2685
+        width: 271
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f984ac02419158409504e2a36d9896a
+      internalID: -1791832583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_7
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 2685
+        width: 242
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e843bab436e7aa48b9303f9d3e77647
+      internalID: -1650177116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_8
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 2685
+        width: 240
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa3766d6857c7b4b80fbf39e0aac205
+      internalID: 550231343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_25
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 2173
+        width: 245
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813bd5ab8f21c934ebe6dce1ed94404c
+      internalID: -1437144648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_26
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 2173
+        width: 246
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded003583771ab9409ec08616ac00867
+      internalID: 1211961372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_27
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 2172
+        width: 246
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4471323027fe1cb479f5ac5ece522936
+      internalID: -1438654871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_28
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 2172
+        width: 238
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b40c026426cb14eafe060d4f1f1127
+      internalID: 1004606791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_29
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 2172
+        width: 241
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3879f1a9bbf8494e9afcce3f8a3fb9a
+      internalID: -1748240673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_31
+      rect:
+        serializedVersion: 2
+        x: 2695
+        y: 2172
+        width: 237
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 831aa9a2686478e499e822d75a99637c
+      internalID: -1697290506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_49
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1661
+        width: 241
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df7cb3898df78604886911c251384580
+      internalID: 1580256084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_50
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 1661
+        width: 240
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80bdb3f4bff134f4f8e324c0b86c07c7
+      internalID: -917186157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_51
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 1661
+        width: 242
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af71987fa0c7f144b8c513f5ef874352
+      internalID: 460283593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_53
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 1661
+        width: 240
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db676e3fd3015f14b9c7f99873729da7
+      internalID: -1911938124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_54
+      rect:
+        serializedVersion: 2
+        x: 2695
+        y: 1661
+        width: 248
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f09cf8975ff5340b9712981065a775
+      internalID: -568553037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_55
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1661
+        width: 247
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2cc54f608af30c489b1c3ad9f4a9084
+      internalID: -1639296515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_70
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1149
+        width: 246
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53bdd342182d2f64db3417c3b570ecdb
+      internalID: -1095402446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_72
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 1149
+        width: 250
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ba0e84b4c019746ae02aaa7931b40a
+      internalID: 1241214130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_74
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 1149
+        width: 236
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a0dc45e98e4bd04ca861beef9279ee7
+      internalID: -128175136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_75
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 1149
+        width: 249
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44468dd585c3eee458c944db8dd2499a
+      internalID: 1855580733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_76
+      rect:
+        serializedVersion: 2
+        x: 2696
+        y: 1149
+        width: 238
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba7bb9c04172e80409bc4b1b74cea207
+      internalID: -1260160028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_77
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1149
+        width: 252
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a46e8253719cf6f40b3be746cbb0d92f
+      internalID: 1214944081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_99
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 637
+        width: 260
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88e0b299a1a100428a6dbd862d70b82
+      internalID: -539832388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_100
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 636
+        width: 261
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa28313eb534124195c3beba3a4d483
+      internalID: 145316248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_101
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 636
+        width: 236
+        height: 251
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88ecff1b188c39049ae832a9d58e6217
+      internalID: -1302752239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_103
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 636
+        width: 237
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 450bd7928739c5a468bf16188d16ecd3
+      internalID: -1475661094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_105
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 637
+        width: 237
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 097ce491412a0b24ab86b91968fe9257
+      internalID: 74046448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_106
+      rect:
+        serializedVersion: 2
+        x: 2696
+        y: 637
+        width: 251
+        height: 253
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e15fa892840768e49a7fe1f916f8b58d
+      internalID: 979166642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_119
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 125
+        width: 243
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1997c1113e8bbb4c97b393a14e47b91
+      internalID: 1475519402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_121
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 125
+        width: 251
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 482619fe7b3de61499b9bf68f59e89e7
+      internalID: 1020460921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_122
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 125
+        width: 239
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1795fbfc464287043ba5cb2641ebe5a7
+      internalID: 1185752106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_123
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 125
+        width: 241
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab06b6dbf7073514c957d8b69b041d44
+      internalID: 1269880072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_124
+      rect:
+        serializedVersion: 2
+        x: 2184
+        y: 125
+        width: 239
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5880a0aa8aabdb147b9aca892891757c
+      internalID: 591037432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RyoWalk_126
+      rect:
+        serializedVersion: 2
+        x: 2694
+        y: 125
+        width: 245
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049b7534aa7815c40a46cb5a2be84211
+      internalID: 400807400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RyoWalk_8: 550231343
+      RyoWalk_47: 171062001
+      RyoWalk_72: 1241214130
+      RyoWalk_73: -737717378
+      RyoWalk_41: -813242466
+      RyoWalk_119: 1475519402
+      RyoWalk_5: -1147180103
+      RyoWalk_6: -1791832583
+      RyoWalk_127: -542055340
+      RyoWalk_106: 979166642
+      RyoWalk_31: -1697290506
+      RyoWalk_39: -278170429
+      RyoWalk_61: 548753346
+      RyoWalk_3: 1082765664
+      RyoWalk_2: 1726611817
+      RyoWalk_44: 26755521
+      RyoWalk_125: 2010315490
+      RyoWalk_48: 1343772583
+      RyoWalk_27: -1438654871
+      RyoWalk_36: 1769863752
+      RyoWalk_101: -1302752239
+      RyoWalk_132: 409549004
+      RyoWalk_69: 933058622
+      RyoWalk_133: 1736736497
+      RyoWalk_131: -1719447379
+      RyoWalk_87: -446829479
+      RyoWalk_141: -1484677173
+      RyoWalk_52: -1042233067
+      RyoWalk_23: -1744894238
+      RyoWalk_24: -320616140
+      RyoWalk_0: -391511723
+      RyoWalk_45: 1348582886
+      RyoWalk_34: 1717080385
+      RyoWalk_9: -1935560763
+      RyoWalk_12: 1431332920
+      RyoWalk_129: 314306031
+      RyoWalk_122: 1185752106
+      RyoWalk_56: 318551796
+      RyoWalk_108: 621366545
+      RyoWalk_80: -794375227
+      RyoWalk_76: -1260160028
+      RyoWalk_37: 343479795
+      RyoWalk_142: -2108773262
+      RyoWalk_4: 898245158
+      RyoWalk_54: -568553037
+      RyoWalk_35: 1910292747
+      RyoWalk_115: 1405667852
+      RyoWalk_126: 400807400
+      RyoWalk_144: 250872794
+      RyoWalk_20: -1805398065
+      RyoWalk_30: -748252121
+      RyoWalk_67: 2137707102
+      RyoWalk_78: -473673991
+      RyoWalk_130: -1507227658
+      RyoWalk_138: 677422784
+      RyoWalk_91: -885065935
+      RyoWalk_143: 2006368854
+      RyoWalk_109: 1241147508
+      RyoWalk_89: 1437778811
+      RyoWalk_32: -1465576097
+      RyoWalk_1: -1265459788
+      RyoWalk_66: 192832115
+      RyoWalk_90: 548852783
+      RyoWalk_74: -128175136
+      RyoWalk_92: -1491725644
+      RyoWalk_13: 1899183434
+      RyoWalk_11: 389253949
+      RyoWalk_26: 1211961372
+      RyoWalk_68: 135518576
+      RyoWalk_117: 1174618983
+      RyoWalk_98: 1896850894
+      RyoWalk_96: -273729010
+      RyoWalk_16: 1826079244
+      RyoWalk_82: 77735617
+      RyoWalk_58: -49866437
+      RyoWalk_33: 25093511
+      RyoWalk_137: -94076693
+      RyoWalk_97: 658047166
+      RyoWalk_107: 1488937789
+      RyoWalk_112: 1723604644
+      RyoWalk_94: -1996279793
+      RyoWalk_99: -539832388
+      RyoWalk_21: 592421132
+      RyoWalk_114: 925197360
+      RyoWalk_104: 622501100
+      RyoWalk_136: 1652632884
+      RyoWalk_111: -671766633
+      RyoWalk_25: -1437144648
+      RyoWalk_88: -1445190977
+      RyoWalk_49: 1580256084
+      RyoWalk_95: -483308145
+      RyoWalk_57: -2021095347
+      RyoWalk_139: -564698857
+      RyoWalk_123: 1269880072
+      RyoWalk_29: -1748240673
+      RyoWalk_65: 875290708
+      RyoWalk_38: 1794639907
+      RyoWalk_140: -420997310
+      RyoWalk_84: 1433309567
+      RyoWalk_77: 1214944081
+      RyoWalk_83: -1992437971
+      RyoWalk_102: -890394353
+      RyoWalk_7: -1650177116
+      RyoWalk_110: -1450647327
+      RyoWalk_105: 74046448
+      RyoWalk_40: 2135695156
+      RyoWalk_59: 99670043
+      RyoWalk_10: -1475901941
+      RyoWalk_43: -108294582
+      RyoWalk_46: 710857960
+      RyoWalk_85: -1396900208
+      RyoWalk_81: 928288717
+      RyoWalk_17: -1773136672
+      RyoWalk_63: -303265825
+      RyoWalk_124: 591037432
+      RyoWalk_55: -1639296515
+      RyoWalk_71: 503866779
+      RyoWalk_128: 1911279478
+      RyoWalk_50: -917186157
+      RyoWalk_53: -1911938124
+      RyoWalk_100: 145316248
+      RyoWalk_79: 2050652656
+      RyoWalk_118: 1322534216
+      RyoWalk_15: -1745012785
+      RyoWalk_135: -2027451407
+      RyoWalk_22: -605982017
+      RyoWalk_18: -1150961236
+      RyoWalk_28: 1004606791
+      RyoWalk_70: -1095402446
+      RyoWalk_103: -1475661094
+      RyoWalk_42: 1356939369
+      RyoWalk_93: 1069264551
+      RyoWalk_86: -2002241743
+      RyoWalk_64: 1187281531
+      RyoWalk_120: 1043058863
+      RyoWalk_113: -2059628031
+      RyoWalk_116: 288488382
+      RyoWalk_62: -1138409154
+      RyoWalk_75: 1855580733
+      RyoWalk_134: 331911291
+      RyoWalk_51: 460283593
+      RyoWalk_60: -418315546
+      RyoWalk_14: 172319455
+      RyoWalk_19: -1159721397
+      RyoWalk_121: 1020460921
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

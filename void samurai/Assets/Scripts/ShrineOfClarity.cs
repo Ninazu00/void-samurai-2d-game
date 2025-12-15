@@ -8,6 +8,8 @@ public class ShrineOfClarity : MonoBehaviour
     private bool playerInRange;
     private bool isActivated = false;
     private Animator animator;
+    public CombatZone combatZone;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +30,9 @@ public class ShrineOfClarity : MonoBehaviour
         if (isActivated) // if the shrine already activated, do nothing
             return;
 
-        if (CombatManager.Instance != null && CombatManager.Instance.IsInCombat) // check if there's enemies nearby
+        if (combatZone != null && !combatZone.IsCleared)
             return;
+
 
         // heal player and set checkpoint
         PlayerStats playerStats = FindObjectOfType<PlayerStats>();
@@ -42,6 +45,11 @@ public class ShrineOfClarity : MonoBehaviour
         // Play the animation
         if (animator != null)
             animator.SetTrigger("Activate");
+    }
+
+    public bool IsActivated
+    {
+        get { return isActivated; }
     }
 
 

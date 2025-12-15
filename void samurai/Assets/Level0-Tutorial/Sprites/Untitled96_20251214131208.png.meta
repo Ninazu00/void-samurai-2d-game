@@ -188,6 +188,48 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Untitled96_20251214131208_4
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 1566
+        width: 490
+        height: 482
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8abfb8db24469c42a69d3729f552eef
+      internalID: -839307034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Untitled96_20251214131208_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1566
+        width: 982
+        height: 482
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2e5553cb73e684dbee7fe9ff98dd69
+      internalID: 702639661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -200,7 +242,9 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Untitled96_20251214131208_2: -1444390450
+      Untitled96_20251214131208_5: 702639661
       Untitled96_20251214131208_0: -2117159313
+      Untitled96_20251214131208_4: -839307034
       Untitled96_20251214131208_1: 400577376
       Untitled96_20251214131208_3: 1241089833
   spritePackingTag: 
