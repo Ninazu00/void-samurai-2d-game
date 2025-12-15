@@ -21,12 +21,12 @@ public class PlayerController : MonoBehaviour {
     public Transform heavyAttackPoint; //point for heavy attack
     public float heavyAttackRange = 0.7f; //heavy attack radius
     public LayerMask Enemy; //layers considered as enemies (capital E)
+    public LayerMask Barrel;
     public int lightDamage = 10; //light attack damage
     public int heavyDamage = 25; //heavy attack damage
 
     private bool grounded; //is player on ground
     private bool isParrying; //is player parrying
-    private bool isHit; //is player taking damage
     private Animator anim;
     private Rigidbody2D rb; //reference to Rigidbody2D for velocity access
 
@@ -37,13 +37,6 @@ public class PlayerController : MonoBehaviour {
 
     void Update () {
 
-        // Prevent movement and actions while taking hit
-        if (isHit)
-        {
-            rb.velocity = Vector2.zero;
-            return;
-        }
-
         // ----------- PARRY -----------
         if (Input.GetKeyDown(ParryKey) && grounded && !isParrying)
         {
@@ -51,7 +44,7 @@ public class PlayerController : MonoBehaviour {
             rb.velocity = Vector2.zero; //stop movement instantly
             anim.SetBool("isParrying", true); //set parry state
             anim.SetTrigger("parry"); //play parry animation
-            Invoke(nameof(EndParry), 0.25f); //end parry after animation
+            Invoke(nameof(EndParry), 0.2f); //end parry after animation
         }
 
         // Prevent movement and actions while parrying
@@ -70,14 +63,16 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey(L))
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-            GetComponent<SpriteRenderer>().flipX = true;
+            if(GetComponent<SpriteRenderer>() != null)
+                GetComponent<SpriteRenderer>().flipX = true;
         }
 
         // ----------- MOVE RIGHT -----------
         if (Input.GetKey(R))
         {
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-            GetComponent<SpriteRenderer>().flipX = false;
+            if(GetComponent<SpriteRenderer>() != null)
+                GetComponent<SpriteRenderer>().flipX = false;
         }
 
         // Stop sliding when no movement key is pressed
@@ -130,46 +125,74 @@ public class PlayerController : MonoBehaviour {
     // Called from LightAttack animation event
     public void LightAttack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
-            lightAttackPoint.position,
-            lightAttackRange,
-            Enemy
-        );
+        Debug.Log("LightAttack called"); // function triggered
+
+        // Detect all enemies in light attack range
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightAttackPoint.position, lightAttackRange, Enemy);
+        Debug.Log("LightAttack hits detected: " + hitEnemies.Length);
 
         Debug.Log("Enemies detected: " + hitEnemies.Length);
 
         foreach (Collider2D enemy in hitEnemies)
         {
+            Debug.Log("Hit Enemy (Light): " + enemy.name);
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null)
                 ec.TakeDamage(lightDamage);
         }
+        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
+            lightAttackPoint.position,
+            lightAttackRange,
+            Barrel
+        );
+
+        foreach (Collider2D barrelCol in hitBarrels)
+        {
+            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
+            if (barrel != null)
+                barrel.BarrelDamage();
+        }
+
         anim.SetTrigger("lightAttack"); //trigger light slash animation
     }
 
     // Called from HeavyAttack animation event
     public void HeavyAttack()
     {
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
-            heavyAttackPoint.position,
-            heavyAttackRange,
-            Enemy
-        );
+        Debug.Log("HeavyAttack called"); // function triggered
+
+        // Detect all enemies in heavy attack range
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyAttackPoint.position, heavyAttackRange, Enemy);
+        Debug.Log("HeavyAttack hits detected: " + hitEnemies.Length);
 
         foreach (Collider2D enemy in hitEnemies)
         {
+            Debug.Log("Hit Enemy (Heavy): " + enemy.name);
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null)
                 ec.TakeDamage(heavyDamage);
         }
+
+        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
+            heavyAttackPoint.position,
+            heavyAttackRange,
+            Barrel
+        );
+
+        foreach (Collider2D barrelCol in hitBarrels)
+        {
+            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
+            if (barrel != null)
+                barrel.BarrelDamage();
+        }
+
         anim.SetTrigger("heavyAttack"); //trigger heavy slash animation
     }
 
-    // ----------- HIT CONTROL -----------
-
-    public void SetHitState(bool value)
+    // Called from animation event to end attack animation
+    public void EndAttack()
     {
-        isHit = value;
+        anim.SetBool("isAttacking", false);
     }
 
     // Visualize the attack ranges in the Scene view

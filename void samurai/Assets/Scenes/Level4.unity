@@ -130,9 +130,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4256423732778243635, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 1775772976}
     - target: {fileID: 4256423732778243638, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256423732778243638, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256423732778243638, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778243638, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -175,8 +187,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778244042, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
+      propertyPath: heavyAttackRange
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4256423732778244042, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: lightAttackRange
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778244043, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: m_Name
@@ -581,7 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8704a1d8b2901f4fa1be4a054b1d530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 25361211}
   Camspeed: 2
   minX: -5
   maxX: 5
@@ -885,7 +901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentCheckpoint: {fileID: 1618273975}
-  Player: {fileID: 0}
+  Player: {fileID: 25361211}
 --- !u!114 &727829810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2289,6 +2305,17 @@ Transform:
   m_Father: {fileID: 1126212000}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1775772976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2639859146042979880, guid: 69cc7ea09e121ec44a3f2a675e0f7be5, type: 3}
+  m_PrefabInstance: {fileID: 2115591329}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1777464604
 GameObject:
   m_ObjectHideFlags: 0
