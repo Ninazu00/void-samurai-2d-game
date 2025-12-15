@@ -46,7 +46,10 @@ public class PlayerController : MonoBehaviour {
     private bool isDead = false;
 
     private Animator anim;
-    private Rigidbody2D rb; 
+    private Rigidbody2D rb;
+
+    // ✅ FIX: missing variable
+    private EnemyController lastDamagedEnemy;
 
     void Start () {
         anim = GetComponent<Animator>();
@@ -55,9 +58,9 @@ public class PlayerController : MonoBehaviour {
 
     void Update () {
 
-        if (isDead) return; // block all actions if dead
+        if (isDead) return;
 
-        // ----------- DASH INPUT ----------- 
+        // ----------- DASH INPUT -----------
         if (Input.GetKeyDown(DashKey) && canDash && !isDashing)
         {
             float dashDirection = 0f;
@@ -65,15 +68,10 @@ public class PlayerController : MonoBehaviour {
             else if (Input.GetKey(R)) dashDirection = 1f;
 
             if (dashDirection != 0f)
-            {
-                if (AudioManager.Instance != null)
-                    AudioManager.Instance.PlayDash(); // DASH SFX
-
                 StartCoroutine(PerformDash(dashDirection));
-            }
         }
 
-        // ----------- PARRY ----------- 
+        // ----------- PARRY -----------
         if (Input.GetKeyDown(ParryKey) && grounded && !isParrying && !isDashing)
         {
             isParrying = true; 
@@ -82,31 +80,26 @@ public class PlayerController : MonoBehaviour {
             anim.SetBool("isParrying", true); 
             anim.SetTrigger("parry"); 
 
-            if (AudioManager.Instance != null)
-                AudioManager.Instance.PlayParry(); // PARRY SFX
-
             Invoke(nameof(EndPerfectParry), perfectParryWindow); 
             Invoke(nameof(EndParry), 0.35f); 
         }
 
-        if (isParrying || isDashing) return; // block actions during parry or dash
+        if (isParrying || isDashing) return;
 
-        // ----------- JUMP ----------- 
+        // ----------- JUMP -----------
         if(Input.GetKeyDown(Spacebar) && grounded)
             Jump();
 
-        // ----------- MOVE ----------- 
+        // ----------- MOVE -----------
         if (Input.GetKey(L))
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-            if(GetComponent<SpriteRenderer>() != null)
-                GetComponent<SpriteRenderer>().flipX = true;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         else if (Input.GetKey(R))
         {
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-            if(GetComponent<SpriteRenderer>() != null)
-                GetComponent<SpriteRenderer>().flipX = false;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
         else
         {
@@ -117,14 +110,10 @@ public class PlayerController : MonoBehaviour {
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("isGrounded", grounded);
 
-        // ----------- ATTACK INPUTS ----------- 
+        // ----------- ATTACK INPUTS -----------
         if (Input.GetKeyDown(LightAttackKey) && canLightAttack)
         {
             canLightAttack = false;
-
-            if (AudioManager.Instance != null)
-                AudioManager.Instance.PlayLightSlash(); // LIGHT ATTACK SFX
-
             LightAttack();
             Invoke(nameof(ResetLightAttack), lightAttackCooldown);
         }
@@ -132,10 +121,6 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(HeavyAttackKey) && canHeavyAttack)
         {
             canHeavyAttack = false;
-
-            if (AudioManager.Instance != null)
-                AudioManager.Instance.PlayHeavySlash(); // HEAVY ATTACK SFX
-
             HeavyAttack();
             Invoke(nameof(ResetHeavyAttack), heavyAttackCooldown);
         }
@@ -166,16 +151,17 @@ public class PlayerController : MonoBehaviour {
         anim.SetBool("isParrying", false);
     }
 
-    // ----------- ATTACK FUNCTIONS ----------- 
+    // ----------- ATTACK FUNCTIONS -----------
     public void LightAttack()
     {
+        lastDamagedEnemy = null;
+
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
             lightAttackPoint.position,
             lightAttackRange,
             Enemy
         );
 
-        EnemyController lastDamagedEnemy = null;
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
@@ -191,13 +177,14 @@ public class PlayerController : MonoBehaviour {
 
     public void HeavyAttack()
     {
+        lastDamagedEnemy = null;
+
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
             heavyAttackPoint.position,
             heavyAttackRange,
             Enemy
         );
 
-        EnemyController lastDamagedEnemy = null;
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
@@ -214,11 +201,12 @@ public class PlayerController : MonoBehaviour {
     void ResetLightAttack() => canLightAttack = true;
     void ResetHeavyAttack() => canHeavyAttack = true;
 
-    // ----------- DASH COROUTINE ----------- 
+    // ----------- DASH COROUTINE -----------
     private IEnumerator PerformDash(float direction)
     {
         canDash = false;
         isDashing = true;
+
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(direction * dashDistance / dashDuration, 0f);
@@ -233,7 +221,7 @@ public class PlayerController : MonoBehaviour {
         canDash = true;
     }
 
-    // ----------- DEATH HANDLER ----------- 
+    // ----------- DEATH HANDLER -----------
     public void Die()
     {
         if (isDead) return;
@@ -245,34 +233,18 @@ public class PlayerController : MonoBehaviour {
         canDash = false;
 
         anim.SetTrigger("death");
-
         GetComponent<Collider2D>().enabled = false;
+
         Invoke(nameof(GameOver), 2f);
     }
 
-    public void GameOver()
+    private void GameOver()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
         );
     }
 
-    public void OnDrawGizmos()
-    {
-        if (lightAttackPoint != null)
-            Gizmos.DrawWireSphere(lightAttackPoint.position, lightAttackRange);
-
-        if (heavyAttackPoint != null)
-            Gizmos.DrawWireSphere(heavyAttackPoint.position, heavyAttackRange);
-    }
-
-    public bool IsParrying()
-    {
-        return isParrying;
-    }
-
-    public bool IsPerfectParryActive()
-    {
-        return perfectParryActive;
-    }
+    public bool IsParrying() => isParrying;
+    public bool IsPerfectParryActive() => perfectParryActive;
 }
