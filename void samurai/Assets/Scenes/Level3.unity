@@ -8870,7 +8870,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3595331490437557368, guid: b41994355d890c4458688ea458a19937, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: BlurMEF
       objectReference: {fileID: 0}
     - target: {fileID: 3595331490437557372, guid: b41994355d890c4458688ea458a19937, type: 3}
       propertyPath: m_Pivot.x
