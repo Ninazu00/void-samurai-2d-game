@@ -2,21 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
+    public float moveSpeed;
+    public float jumpHeight;
+    public KeyCode Spacebar;
+    public KeyCode L;
+    public KeyCode R;
+    public KeyCode LightAttackKey;
+    public KeyCode HeavyAttackKey;
+    public KeyCode ParryKey;
+    public KeyCode DashKey = KeyCode.Q;
+    public Transform groundCheck;
+    public float groundCheckRadius;
+    public LayerMask whatIsGround;
 
-    public float moveSpeed; 
-    public float jumpHeight; 
-    public KeyCode Spacebar; 
-    public KeyCode L; 
-    public KeyCode R; 
-    public KeyCode LightAttackKey; 
-    public KeyCode HeavyAttackKey; 
-    public KeyCode ParryKey; 
-    public KeyCode DashKey = KeyCode.Q; // Dash input key
-    public Transform groundCheck; 
-    public float groundCheckRadius; 
-    public LayerMask whatIsGround; 
+    public Transform lightAttackPoint;
+    public float lightAttackRange = 0.5f;
+    public Transform heavyAttackPoint;
+    public float heavyAttackRange = 0.7f;
+    public LayerMask Enemy;
+    public int lightDamage = 10;
+    public int heavyDamage = 25;
 
+<<<<<<< HEAD
     public Transform lightAttackPoint; 
     public float lightAttackRange = 0.5f; 
     public Transform heavyAttackPoint; 
@@ -25,82 +34,80 @@ public class PlayerController : MonoBehaviour {
     public LayerMask Barrel; 
     public int lightDamage = 10; 
     public int heavyDamage = 15;
+=======
+    public float lightAttackCooldown = 0.4f;
+    public float heavyAttackCooldown = 0.8f;
+    private bool canLightAttack = true;
+    private bool canHeavyAttack = true;
+>>>>>>> d10b1a156751bb331961050ad9e4b5e2fbc89201
 
-    public float lightAttackCooldown = 0.4f; 
-    public float heavyAttackCooldown = 0.8f; 
-    private bool canLightAttack = true; 
-    private bool canHeavyAttack = true; 
+    public float perfectParryWindow = 0.2f;
+    private bool grounded;
+    private bool isParrying;
+    private bool perfectParryActive;
 
-    public float perfectParryWindow = 0.2f; 
-    private bool grounded; 
-    private bool isParrying; 
-    private bool perfectParryActive; 
-
-    // -------- DASH SETTINGS ----------- 
     public float dashDistance = 5f;
     public float dashDuration = 0.2f;
     public float dashCooldown = 1f;
     private bool canDash = true;
     private bool isDashing = false;
 
-    // -------- DEATH HANDLING ----------- 
     private bool isDead = false;
 
     private Animator anim;
     private Rigidbody2D rb;
 
-    // ✅ FIX: missing variable
     private EnemyController lastDamagedEnemy;
 
-    void Start () {
+    void Start()
+    {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>(); 
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update () {
-
+    void Update()
+    {
         if (isDead) return;
 
-        // ----------- DASH INPUT -----------
+        // DASH
         if (Input.GetKeyDown(DashKey) && canDash && !isDashing)
         {
-            float dashDirection = 0f;
-            if (Input.GetKey(L)) dashDirection = -1f;
-            else if (Input.GetKey(R)) dashDirection = 1f;
-
+            float dashDirection = Input.GetKey(L) ? -1f : Input.GetKey(R) ? 1f : 0f;
             if (dashDirection != 0f)
                 StartCoroutine(PerformDash(dashDirection));
         }
 
-        // ----------- PARRY -----------
+        // PARRY
         if (Input.GetKeyDown(ParryKey) && grounded && !isParrying && !isDashing)
         {
-            isParrying = true; 
-            perfectParryActive = true; 
-            rb.velocity = Vector2.zero; 
-            anim.SetBool("isParrying", true); 
-            anim.SetTrigger("parry"); 
+            isParrying = true;
+            perfectParryActive = true;
+            rb.velocity = Vector2.zero;
+            anim.SetBool("isParrying", true);
+            anim.SetTrigger("parry");
 
-            Invoke(nameof(EndPerfectParry), perfectParryWindow); 
-            Invoke(nameof(EndParry), 0.35f); 
+            Invoke(nameof(EndPerfectParry), perfectParryWindow);
+            Invoke(nameof(EndParry), 0.35f);
         }
 
         if (isParrying || isDashing) return;
 
-        // ----------- JUMP -----------
-        if(Input.GetKeyDown(Spacebar) && grounded)
+        // JUMP
+        if (Input.GetKeyDown(Spacebar) && grounded)
             Jump();
 
-        // ----------- MOVE -----------
+        // MOVE
         if (Input.GetKey(L))
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-            GetComponent<SpriteRenderer>().flipX = true;
+            if (GetComponent<SpriteRenderer>() != null)
+                GetComponent<SpriteRenderer>().flipX = true;
         }
         else if (Input.GetKey(R))
         {
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-            GetComponent<SpriteRenderer>().flipX = false;
+            if (GetComponent<SpriteRenderer>() != null)
+                GetComponent<SpriteRenderer>().flipX = false;
         }
         else
         {
@@ -111,7 +118,7 @@ public class PlayerController : MonoBehaviour {
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("isGrounded", grounded);
 
-        // ----------- ATTACK INPUTS -----------
+        // ATTACK INPUTS
         if (Input.GetKeyDown(LightAttackKey) && canLightAttack)
         {
             canLightAttack = false;
@@ -129,11 +136,7 @@ public class PlayerController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        grounded = Physics2D.OverlapCircle(
-            groundCheck.position,
-            groundCheckRadius,
-            whatIsGround
-        );
+        grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
     }
 
     void Jump()
@@ -141,27 +144,14 @@ public class PlayerController : MonoBehaviour {
         rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
     }
 
-    void EndPerfectParry()
-    {
-        perfectParryActive = false;
-    }
+    void EndPerfectParry() => perfectParryActive = false;
+    void EndParry() { isParrying = false; anim.SetBool("isParrying", false); }
 
-    void EndParry()
-    {
-        isParrying = false;
-        anim.SetBool("isParrying", false);
-    }
-
-    // ----------- ATTACK FUNCTIONS -----------
+    // ATTACK FUNCTIONS
     public void LightAttack()
     {
         lastDamagedEnemy = null;
-
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
-            lightAttackPoint.position,
-            lightAttackRange,
-            Enemy
-        );
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightAttackPoint.position, lightAttackRange, Enemy);
 
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -192,12 +182,7 @@ public class PlayerController : MonoBehaviour {
     public void HeavyAttack()
     {
         lastDamagedEnemy = null;
-
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
-            heavyAttackPoint.position,
-            heavyAttackRange,
-            Enemy
-        );
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyAttackPoint.position, heavyAttackRange, Enemy);
 
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -228,12 +213,11 @@ public class PlayerController : MonoBehaviour {
     void ResetLightAttack() => canLightAttack = true;
     void ResetHeavyAttack() => canHeavyAttack = true;
 
-    // ----------- DASH COROUTINE -----------
+    // DASH
     private IEnumerator PerformDash(float direction)
     {
         canDash = false;
         isDashing = true;
-
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(direction * dashDistance / dashDuration, 0f);
@@ -248,12 +232,12 @@ public class PlayerController : MonoBehaviour {
         canDash = true;
     }
 
-    // ----------- DEATH HANDLER -----------
+    // DEATH
     public void Die()
     {
         if (isDead) return;
-
         isDead = true;
+
         rb.velocity = Vector2.zero;
         canLightAttack = false;
         canHeavyAttack = false;
@@ -270,6 +254,14 @@ public class PlayerController : MonoBehaviour {
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
         );
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (lightAttackPoint != null)
+            Gizmos.DrawWireSphere(lightAttackPoint.position, lightAttackRange);
+        if (heavyAttackPoint != null)
+            Gizmos.DrawWireSphere(heavyAttackPoint.position, heavyAttackRange);
     }
 
     public bool IsParrying() => isParrying;
