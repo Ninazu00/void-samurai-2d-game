@@ -11,11 +11,7 @@ public class OrbProjectile : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerStats>()?.TakeDamage(damage);
-            Destroy(gameObject); // Destroy orb after hitting player
-        }
-        else if (collision.CompareTag("Environment"))
-        {
-            Destroy(gameObject); // Destroy orb if it hits a wall/ground
+            Destroy(gameObject); 
         }
     }
 }

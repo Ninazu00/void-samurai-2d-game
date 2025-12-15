@@ -1,16 +1,12 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:void samurai/Assets/Level1/sprites/mirage4.png.meta
 guid: 792f8727f02393e4393714ba028db6dc
-=======
-guid: 7732cfdd0c411ec4f89fedaf16330272
->>>>>>> d13947fa9022c9629d32a48aef87cb80b976ddfa:void samurai/Assets/Level1/the mirage.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -40,9 +36,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -55,7 +51,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -66,8 +62,8 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   ignorePngGamma: 0
-  applyGammaDecoding: 0
-  cookieLightType: 0
+  applyGammaDecoding: 1
+  cookieLightType: 2
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -86,7 +82,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,7 +94,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -112,10 +108,10 @@ TextureImporter:
       name: mirage4_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 240
-        width: 219
-        height: 213
+        x: 29
+        y: 248
+        width: 198
+        height: 202
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -123,29 +119,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d6fa23b5f7c7a1479910a4dc959d247
-      internalID: -345164805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mirage4_1
-      rect:
-        serializedVersion: 2
-        x: 246
-        y: 259
-        width: 231
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa8b7ec3137ddaf419b2805b71ffd11b
-      internalID: -44143896
+      spriteID: 63003e30f6e54aa418c72a8e6d0e603d
+      internalID: -1081627078
       vertices: []
       indices: 
       edges: []
@@ -154,10 +129,10 @@ TextureImporter:
       name: mirage4_2
       rect:
         serializedVersion: 2
-        x: 21
-        y: 17
-        width: 217
-        height: 214
+        x: 252
+        y: 265
+        width: 215
+        height: 196
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: baeaa10f2139ed941ab7bf02f4a15137
-      internalID: -1565181545
+      spriteID: 73f8ecd124a11c14495167e03441a5cf
+      internalID: -1458424786
       vertices: []
       indices: 
       edges: []
@@ -175,10 +150,10 @@ TextureImporter:
       name: mirage4_3
       rect:
         serializedVersion: 2
-        x: 251
-        y: 17
-        width: 210
-        height: 224
+        x: 28
+        y: 27
+        width: 203
+        height: 201
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,8 +161,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a91d5060686375f45891ef432129e406
-      internalID: 1884346207
+      spriteID: 8067e391b52f3344aac435d0fd5e058c
+      internalID: 349942214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mirage4_4
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 30
+        width: 212
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec36be3252322654d9db8a22beecf4ea
+      internalID: -1080925239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mirage4_5
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 15
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c6bf289ec5e3b84188fca426d4c3260
+      internalID: 1823376541
       vertices: []
       indices: 
       edges: []
@@ -195,7 +212,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 6c554bdd34a094f428800636f09ec193
     internalID: 0
     vertices: []
     indices: 
@@ -203,10 +220,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mirage4_0: -345164805
-      mirage4_3: 1884346207
-      mirage4_1: -44143896
-      mirage4_2: -1565181545
+      mirage4_0: -1081627078
+      mirage4_4: -1080925239
+      mirage4_3: 349942214
+      mirage4_5: 1823376541
+      mirage4_1: 2613332
+      mirage4_2: -1458424786
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

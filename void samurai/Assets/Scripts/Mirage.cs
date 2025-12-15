@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,6 @@ public class Mirage : EnemyController
     public float detectionRange = 7f;
     public float visionAngle = 50f;
     public float attackCooldown = 2f;
-    private SpriteRenderer sr;
     public float meleeAttackRange = 1.5f;
     public float orbAttackRange = 8f;
 
@@ -16,7 +16,7 @@ public class Mirage : EnemyController
     public GameObject orbProjectile;
     public Transform orbSpawnPoint;
     public int orbCount = 3;
-    public float orbDelay = 0.25f;
+    public float orbDelay = 0.5f;
     public float orbSpeed = 6f;
 
     [Header("Floating Motion")]
@@ -29,27 +29,24 @@ public class Mirage : EnemyController
     public float patrolSpeed = 2f;
 
     private Animator animator;
+    private SpriteRenderer sr;
     private Vector3 currentTarget;
     private float nextAttackTime;
     private Vector3 floatStartPos;
     private bool isAttacking;
-    private Vector3 originalScale; // store initial scale to prevent stretching
 
     protected override void Start()
     {
         base.Start();
-        sr = GetComponent<SpriteRenderer>();
-        maxHealth = 150;
-        currentHealth = maxHealth;
-
-        floatStartPos = transform.position;
 
         animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
+
+        currentHealth = maxHealth;
+        floatStartPos = transform.position;
 
         if (patrolPointA != null)
             currentTarget = patrolPointA.position;
-
-        originalScale = transform.localScale;
     }
 
     protected override void EnemyBehavior()
@@ -58,13 +55,14 @@ public class Mirage : EnemyController
 
         if (player == null)
         {
-            Patrol(); 
+            Patrol();
+            animator.SetBool("IsIdle", true);
             return;
         }
 
         float distance = Vector2.Distance(transform.position, player.position);
 
-        if (distance <= meleeAttackRange || distance <= orbAttackRange)
+        if (distance <= orbAttackRange)
         {
             FacePlayer();
 
@@ -75,7 +73,7 @@ public class Mirage : EnemyController
                 else
                     StartCoroutine(RangedAttackRoutine());
             }
-            else
+            else if (!isAttacking)
             {
                 animator.SetBool("IsIdle", true);
             }
@@ -90,24 +88,31 @@ public class Mirage : EnemyController
     IEnumerator MeleeAttackRoutine()
     {
         isAttacking = true;
+        nextAttackTime = Time.time + attackCooldown;
+
         animator.SetBool("IsIdle", false);
         animator.SetTrigger("MeleeAttack");
 
-        yield return new WaitForSeconds(0.15f);
+        yield return new WaitForSeconds(0.25f);
 
-        if (Vector2.Distance(transform.position, player.position) <= meleeAttackRange)
+        if (player != null &&
+            Vector2.Distance(transform.position, player.position) <= meleeAttackRange)
         {
             player.GetComponent<PlayerStats>()?.TakeDamage(damage);
         }
 
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.35f);
 
-        EndAttack();
+        isAttacking = false;
+        animator.SetBool("IsIdle", true);
+
     }
 
     IEnumerator RangedAttackRoutine()
     {
         isAttacking = true;
+        nextAttackTime = Time.time + attackCooldown;
+
         animator.SetBool("IsIdle", false);
         animator.SetBool("IsRangedActive", true);
 
@@ -115,7 +120,7 @@ public class Mirage : EnemyController
 
         for (int i = 0; i < orbCount; i++)
         {
-            if (orbProjectile != null && orbSpawnPoint != null)
+            if (orbProjectile != null && orbSpawnPoint != null && player != null)
             {
                 GameObject orb = Instantiate(
                     orbProjectile,
@@ -132,16 +137,11 @@ public class Mirage : EnemyController
 
         animator.SetBool("IsRangedActive", false);
 
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
 
-        EndAttack();
-    }
-
-    void EndAttack()
-    {
-        nextAttackTime = Time.time + attackCooldown;
         isAttacking = false;
         animator.SetBool("IsIdle", true);
+
     }
 
     private void FloatingMotion()
@@ -154,17 +154,6 @@ public class Mirage : EnemyController
         );
     }
 
-    private bool PlayerInVisionCone()
-    {
-        Vector2 dirToPlayer = player.position - transform.position;
-
-        if (dirToPlayer.magnitude > detectionRange)
-            return false;
-
-        float angle = Vector2.Angle(transform.right, dirToPlayer);
-        return angle < visionAngle;
-    }
-
     private void Patrol()
     {
         if (patrolPointA == null || patrolPointB == null)
@@ -173,22 +162,21 @@ public class Mirage : EnemyController
         float targetX = currentTarget.x;
         float newX = Mathf.MoveTowards(transform.position.x, targetX, patrolSpeed * Time.deltaTime);
 
-        transform.position = new Vector3(
-            newX,
-            transform.position.y,
-            transform.position.z
-        );
+        transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+
         sr.flipX = !(currentTarget.x < transform.position.x);
+
         if (Mathf.Abs(transform.position.x - currentTarget.x) < 0.05f)
         {
-            currentTarget =
-                currentTarget == patrolPointA.position
+            currentTarget = currentTarget == patrolPointA.position
                 ? patrolPointB.position
                 : patrolPointA.position;
         }
     }
+
     private void FacePlayer()
     {
-        sr.flipX = !(player.position.x < transform.position.x);
+        if (player != null)
+            sr.flipX = !(player.position.x < transform.position.x);
     }
 }

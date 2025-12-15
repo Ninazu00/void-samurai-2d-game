@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     public int health = 100;
-
+    public Slider slider;
     private float flickerTime = 0f;
     public float flickerDuration = 0.1f;
 
@@ -20,6 +20,8 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        slider.maxValue = health;
+        slider.value = health;
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class PlayerStats : MonoBehaviour
         {
 
         health -= damage;
+        slider.value = health;
         if (health < 0)
         health = 0;
         if (health == 0)
