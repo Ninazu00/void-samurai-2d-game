@@ -22,13 +22,11 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>();
-<<<<<<< HEAD
         anim = GetComponent<Animator>();
         pc = GetComponent<PlayerController>();
 
         slider.maxValue = health;
         slider.value = health;
-=======
 
         if (slider != null)
         {
@@ -39,7 +37,6 @@ public class PlayerStats : MonoBehaviour
         {
             Debug.LogError("Health Slider is NOT assigned in PlayerStats");
         }
->>>>>>> 275a530000a84f1661ca8190dcbd91751eeb65ae
     }
 
     void Update()
