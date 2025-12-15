@@ -24,6 +24,12 @@ public class MemoryEchoField : MonoBehaviour
             inside = true;
             playerStats = other.GetComponent<PlayerStats>();
         }
+        if (AudioManager.Instance != null)
+        {
+            AudioManager.Instance.PlayVoiceLine(
+                AudioManager.Instance.Memechoaudio
+            );
+        }
     }
 
     void OnTriggerExit2D(Collider2D other)
@@ -33,6 +39,11 @@ public class MemoryEchoField : MonoBehaviour
             inside = false;
             damageTimer = 0f;
         }
+        if (AudioManager.Instance != null)
+    {
+        AudioManager.Instance.voiceLines.Stop();
+    }
+
     }
 
     void Update()
