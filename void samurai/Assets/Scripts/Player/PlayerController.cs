@@ -17,15 +17,6 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius;
     public LayerMask whatIsGround;
 
-    public Transform lightAttackPoint;
-    public float lightAttackRange = 0.5f;
-    public Transform heavyAttackPoint;
-    public float heavyAttackRange = 0.7f;
-    public LayerMask Enemy;
-    public LayerMask Barrel;
-    public int lightDamage = 10;
-    public int heavyDamage = 25;
-
     public Transform lightAttackPoint; 
     public float lightAttackRange = 0.5f; 
     public Transform heavyAttackPoint; 
