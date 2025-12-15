@@ -18,10 +18,7 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Background music clip is assigned, and volume starts off being zero
-        musicSource.clip = overworldMusic;
-
-        musicSource.Play();
+        
     }
 
     // Update is called once per frame
@@ -54,6 +51,7 @@ public class AudioManager : MonoBehaviour
     // Public in case another object needs to call for a specific soundtrack to begin playing
     public void PlayMusic(AudioClip clip)
     {
+        musicSource.Stop();
         musicSource.clip = clip;
         musicSource.Play();
     }
@@ -67,5 +65,16 @@ public class AudioManager : MonoBehaviour
         // Randomly select a sound clip from the arraylist, then play that clip
         int index = Random.Range(0, variousSFX.Length);
         sfxSource.PlayOneShot(variousSFX[index]);
+    }
+
+    public void playYukiOne()
+    {
+        PlayMusic(yukiPhaseOne);
+        Debug.Log("Playing Yuki One");
+    }
+    public void playYukiTwo()
+    {
+        PlayMusic(yukiPhaseTwo);
+        Debug.Log("Playing Yuki Two");
     }
 }

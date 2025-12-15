@@ -12,7 +12,7 @@ public class MemoryEchoField : MonoBehaviour
 
     private PlayerStats playerStats;
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -21,7 +21,7 @@ public class MemoryEchoField : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
@@ -37,8 +37,21 @@ public class MemoryEchoField : MonoBehaviour
         damageTimer += Time.deltaTime;
         if (damageTimer >= damageInterval)
         {
-            playerStats.TakeDamage(damagePerTick);
+           TakeDamageOverTime(damagePerTick);
             damageTimer = 0f;
         }
     }
+        public void TakeDamageOverTime(int damage)
+        {
+            playerStats.health -= damage;
+            if (playerStats.health < 0)
+                playerStats.health = 0;
+
+            playerStats.slider.value = playerStats.health;
+
+            if (playerStats.health == 0)
+            {
+                FindObjectOfType<LevelManager>().RespawnPlayer();
+            }
+        }
 }
