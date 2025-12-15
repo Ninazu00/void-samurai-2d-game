@@ -8,6 +8,8 @@ public class VoidBarrier : MonoBehaviour
     public bool requiresShrineActivation;
     public ShrineOfClarity requiredShrine;
 
+    public int barrelsRequiredToDestroy = 3; 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,11 @@ public class VoidBarrier : MonoBehaviour
             return false;
 
         if (combatZone != null && !combatZone.IsCleared)
+            return false;
+
+        int barrelsLeft = GameObject.FindGameObjectsWithTag("Barrel").Length;
+        int destroyed = Mathf.Max(0, barrelsRequiredToDestroy - barrelsLeft);
+        if (destroyed != barrelsRequiredToDestroy)
             return false;
 
         return true;
