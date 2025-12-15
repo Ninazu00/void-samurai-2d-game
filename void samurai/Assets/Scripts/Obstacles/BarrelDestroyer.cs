@@ -15,12 +15,6 @@ public class BarrelDestroyer : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-
-    void OnMouseDown()
-    {
-        BarrelDamage();
-    }
-
     void Update()
     {
 

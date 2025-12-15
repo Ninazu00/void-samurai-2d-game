@@ -86,6 +86,14 @@ public class VoidOrchids : MonoBehaviour
                 if (enemy != null)
                     enemy.TakeDamage(damage);
             }
+            else if (hit.CompareTag("Barrel"))
+            {
+                    BarrelDestroyer barrel = hit.GetComponent<BarrelDestroyer>();
+                    if (barrel != null)
+                    {
+                        barrel.BarrelDamage(); 
+                    }
+            }
         }
 
         Destroy(gameObject);
