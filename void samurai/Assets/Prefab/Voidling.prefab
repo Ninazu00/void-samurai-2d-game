@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5685890311288818552}
   m_Layer: 6
   m_Name: Voidling
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -125,6 +125,7 @@ MonoBehaviour:
   moveSpeed: 2
   damage: 15
   attackRange: 1
+  staggerDuration: 0.6
   detectionRange: 8
   chargeDistance: 5
   chargeDelay: 1
