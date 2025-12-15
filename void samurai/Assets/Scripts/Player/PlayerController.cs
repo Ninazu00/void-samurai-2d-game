@@ -11,11 +11,13 @@ public class PlayerController : MonoBehaviour {
     public KeyCode R; //Right movement key
     public KeyCode LightAttackKey; //Light attack key
     public KeyCode HeavyAttackKey; //Heavy attack key
+    public KeyCode ParryKey; //Parry key
     public Transform groundCheck; //ground check position
     public float groundCheckRadius; //ground check radius
     public LayerMask whatIsGround; //what is considered ground
 
     private bool grounded; //is player on ground
+    private bool isParrying; //is player parrying
     private Animator anim;
     private Rigidbody2D rb; //reference to Rigidbody2D for velocity access
 
@@ -25,6 +27,23 @@ public class PlayerController : MonoBehaviour {
     }
 
     void Update () {
+
+        // ----------- PARRY -----------
+
+        if (Input.GetKeyDown(ParryKey) && grounded && !isParrying)
+        {
+            isParrying = true; //lock player state
+            rb.velocity = Vector2.zero; //stop movement instantly
+            anim.SetBool("isParrying", true); //set parry state
+            anim.SetTrigger("parry"); //play parry animation
+            Invoke(nameof(EndParry), 0.2f); //end parry after animation
+        }
+
+        // Prevent movement and actions while parrying
+        if (isParrying)
+        {
+            return;
+        }
 
         // Jump
         if(Input.GetKeyDown(Spacebar) && grounded)
@@ -102,5 +121,11 @@ public class PlayerController : MonoBehaviour {
     {
         rb.velocity =
             new Vector2(rb.velocity.x, jumpHeight); //player character jumps vertically along the y-axis without disrupting horizontal walk
+    }
+
+    void EndParry()
+    {
+        isParrying = false; //unlock player state
+        anim.SetBool("isParrying", false); //return to idle/run
     }
 }
