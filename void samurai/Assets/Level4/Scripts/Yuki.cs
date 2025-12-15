@@ -10,6 +10,7 @@ public class Yuki : EnemyController
     bool Phase1 = true;
     float tempMoveSpeed;
     public ParticleSystem phase2Aura;
+    float fadeDuration = 1.5f;
     protected override void Start()
     {
         tempMoveSpeed = moveSpeed;
@@ -59,5 +60,34 @@ public class Yuki : EnemyController
     {
         moveSpeed = tempMoveSpeed;
         rb.gravityScale = 1f;
+    }
+
+    protected override void Die()
+    {
+        moveSpeed = 0f;
+        rb.gravityScale = 0;
+        rb.velocity = Vector2.zero;
+        animator.SetTrigger("DIE");
+        StartCoroutine(FadeOutAndDestroy());
+        //Invoke(nameof(deleteYuki), 3f);
+    }
+
+    private IEnumerator FadeOutAndDestroy()
+    {
+        float elapsed = 0f;
+        Color c = sr.color;
+
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            c.a = Mathf.Lerp(1f, 0f, elapsed / fadeDuration);
+            sr.color = c;
+            yield return null;
+        }
+        Destroy(gameObject);
+    }
+    void deleteYuki()
+    {
+        Destroy(gameObject);
     }
 }

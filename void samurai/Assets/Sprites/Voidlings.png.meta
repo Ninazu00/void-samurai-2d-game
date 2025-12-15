@@ -129,22 +129,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 
+      name: Voidlings_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
+        x: 128
+        y: 1248
+        width: 260
+        height: 68
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5e97eb03825dee720800000000000000
-      internalID: 2877471580529523173
+      spriteID: b60e60e86499adf40978d6a9ee1c81f2
+      internalID: 530710191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voidlings_1
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1248
+        width: 252
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11d4da4a0a48df540852f04523548004
+      internalID: 923245495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voidlings_2
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 1236
+        width: 256
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af6b99e072aa5c4d98b398bb07f22a4
+      internalID: -1480594719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voidlings_3
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 708
+        width: 264
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25af219f48de2949b10b994fef33d14
+      internalID: -1555655517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voidlings_4
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 708
+        width: 252
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb11f81ff328f7046a617d8b97d4a8bb
+      internalID: -1762667125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voidlings_5
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 720
+        width: 260
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b11bd3e830a5a44b9ef9a84f493baa
+      internalID: -1440625511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voidlings_6
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 224
+        width: 264
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f377757602d7849ba820ac9cd97c19
+      internalID: -950072378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voidlings_7
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 224
+        width: 260
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec7675d3ba03c244bee52d390084ba1
+      internalID: 98171398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Voidlings_8
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 224
+        width: 260
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43027f38914cee347b9b1f289599a751
+      internalID: -1320541041
       vertices: []
       indices: 
       edges: []
@@ -152,7 +320,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 648610e149a528e4392f6e3de224cf97
     internalID: 0
     vertices: []
     indices: 
@@ -160,7 +328,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      : 2877471580529523173
+      Voidlings_3: -1555655517
+      Voidlings_2: -1480594719
+      Voidlings_8: -1320541041
+      Voidlings_0: 530710191
+      Voidlings_1: 923245495
+      Voidlings_4: -1762667125
+      Voidlings_6: -950072378
+      Voidlings_5: -1440625511
+      Voidlings_7: 98171398
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
