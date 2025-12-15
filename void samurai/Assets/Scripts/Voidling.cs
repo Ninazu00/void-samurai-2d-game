@@ -19,7 +19,7 @@ public class Voidling : EnemyController
     private bool flashOn;
     private Color originalColor;
     private SpriteRenderer sr;
-
+    private Animator anim;
     protected override void Start()
     {
         base.Start();
@@ -33,6 +33,7 @@ public class Voidling : EnemyController
         sr = GetComponent<SpriteRenderer>();
         if (sr != null)
             originalColor = sr.color;
+        anim = GetComponent<Animator>();
     }
     protected override void EnemyBehavior()
     {
@@ -95,6 +96,10 @@ public class Voidling : EnemyController
             
             if (dist > 30f)
                 Destroy(gameObject);
+        }
+        if (anim != null)
+        {
+            anim.SetFloat("Speed", Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x));
         }
     }
 

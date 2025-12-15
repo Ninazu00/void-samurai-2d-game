@@ -1,46 +1,44 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-/*
+
 public class MemoryEchoField : MonoBehaviour
 {
-    public float damagePerSecond = 5f;
-    public float staminaDrainPerSecond = 5f;
-    public float blurIncreasePerSecond = 0.5f;
-    public float maxBlur = 5f;
+    public int damagePerTick = 5;
+    public float damageInterval = 1f;
 
-    private bool inside;
-    private float currentBlur = 0f;
+    private bool inside = false;
+    private float damageTimer = 0f;
+
+    private PlayerStats playerStats;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             inside = true;
+            playerStats = other.GetComponent<PlayerStats>();
+        }
     }
 
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             inside = false;
+            damageTimer = 0f;
+        }
     }
 
     void Update()
     {
-        if (!inside) return;
+        if (!inside || playerStats == null) return;
 
-        // Damage
-        PlayerStats stats = PlayerStats.instance;
-        stats.health -= damagePerSecond * Time.deltaTime;
-        stats.stamina -= staminaDrainPerSecond * Time.deltaTime;
-
-        // Blur effect (placeholder variable)
-        currentBlur += blurIncreasePerSecond * Time.deltaTime;
-        currentBlur = Mathf.Clamp(currentBlur, 0, maxBlur);
-        ScreenEffects.BlurAmount = currentBlur;
-
-        // Death
-        if (stats.health <= 0)
+        damageTimer += Time.deltaTime;
+        if (damageTimer >= damageInterval)
         {
-            stats.Die();
+            playerStats.TakeDamage(damagePerTick);
+            damageTimer = 0f;
         }
     }
 }
-*/

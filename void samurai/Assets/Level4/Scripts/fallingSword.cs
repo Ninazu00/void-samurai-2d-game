@@ -8,10 +8,19 @@ public class fallingSword : MonoBehaviour
     public int damage;
     public Rigidbody2D rb; 
     // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer >= 2f)
+        if (timer >= 0.5f)
+        {
+            rb.gravityScale = 15f;
+        }
+
+        if (timer >= 4f)
         {
             Destroy(gameObject);
         }
@@ -24,7 +33,7 @@ public class fallingSword : MonoBehaviour
         }
         else if(other.tag == "SolidObject")
         {
-            rb.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY;
         }
     }
 }

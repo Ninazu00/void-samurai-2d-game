@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -127,7 +127,763 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: YukiCast_0
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2685
+        width: 98
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621ec33b09ddce0498c7f34b7f1a9456
+      internalID: 1116259924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_1
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 2685
+        width: 102
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04322b4b1f8c66040b0b0d88c268bfe4
+      internalID: 1777618885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_2
+      rect:
+        serializedVersion: 2
+        x: 1229
+        y: 2685
+        width: 105
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4018ee12f57814a9b05c5e14900d56
+      internalID: 479073431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_3
+      rect:
+        serializedVersion: 2
+        x: 1739
+        y: 2685
+        width: 111
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12a61a888a82fa8439236a3432f6aa38
+      internalID: 540998025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_4
+      rect:
+        serializedVersion: 2
+        x: 2249
+        y: 2685
+        width: 114
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a126cd4e49e20784b813cf951ade1867
+      internalID: -1009231392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_5
+      rect:
+        serializedVersion: 2
+        x: 2757
+        y: 2685
+        width: 120
+        height: 263
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 735e3ff1457ecb8478a235f3dd9ca4d1
+      internalID: 4434265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_6
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 2171
+        width: 126
+        height: 262
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b35130da83f6de469d7faa2d10b6919
+      internalID: 23289879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_7
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 2171
+        width: 141
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff0942d8224a55e428b910b4de02d95a
+      internalID: 60735486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_8
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 2171
+        width: 152
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70a97eafd686a94a857372421ee194e
+      internalID: 1679329068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_9
+      rect:
+        serializedVersion: 2
+        x: 1718
+        y: 2171
+        width: 151
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7de60e46ec11eb4e9cbd232146ef0e7
+      internalID: -184195298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_10
+      rect:
+        serializedVersion: 2
+        x: 2225
+        y: 2171
+        width: 159
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a26e9a3ebab93748a4f9e35a7731693
+      internalID: -445799647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_11
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 2171
+        width: 166
+        height: 259
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d02cc9219b64e478aae9dd8584675c
+      internalID: 1077359970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_12
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 1659
+        width: 170
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e798cc51e73736147af690d81fc967f6
+      internalID: -2111616670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_13
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1659
+        width: 177
+        height: 260
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71b3ef1003a2e849aeb9b37f0cef62a
+      internalID: -414951203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_14
+      rect:
+        serializedVersion: 2
+        x: 1191
+        y: 1659
+        width: 182
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9afdc658ba506ce429523657209c6697
+      internalID: 853480102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_15
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 1659
+        width: 184
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d7f780e91fa1cc4c8619044a8d51989
+      internalID: -1202671641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_16
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 1659
+        width: 189
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9885878f13c6aa74a83f6ddcad908450
+      internalID: 200815164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_17
+      rect:
+        serializedVersion: 2
+        x: 2717
+        y: 1659
+        width: 202
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01e8be6fa85e5c4c9f2127b17ad241a
+      internalID: -249226336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_18
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 1149
+        width: 203
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17d580a3a0779441b7974eb5d5c77e4
+      internalID: -1299310958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_19
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1149
+        width: 209
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d22e2dbe3e8b344ab59c5bb61ae9e9
+      internalID: -1209747832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_20
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 1149
+        width: 226
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b34576d95b0b9bc4ea4bcf0e22365a70
+      internalID: -625305890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_21
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 1149
+        width: 229
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056557536200a1f4da03ed66ad0db301
+      internalID: 1239957165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_22
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 1149
+        width: 231
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1583bab7dfa1c4d8a92b40324fa2fe
+      internalID: -426305210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_23
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 1149
+        width: 242
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd00c513534e5f84d8d8cb5032ae64eb
+      internalID: -1847758400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_24
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 635
+        width: 253
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87507cd000d27d246896e95b65b800f7
+      internalID: 897025008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_25
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 635
+        width: 256
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2777d5e7b72f47847b923a7a67191abd
+      internalID: 1257430580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_26
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 635
+        width: 252
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60150a9355c10d844a890891bf6275c2
+      internalID: -240303292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_27
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 635
+        width: 235
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810f533a2985242478db8bc1b9873dab
+      internalID: -126772486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_28
+      rect:
+        serializedVersion: 2
+        x: 2198
+        y: 635
+        width: 210
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c230b880c90b83944848ca452cbd5ff9
+      internalID: 1303654038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_30
+      rect:
+        serializedVersion: 2
+        x: 2711
+        y: 635
+        width: 208
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8df3b036b069ad141b1c54f3fa4620cb
+      internalID: -1185612671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_32
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 123
+        width: 207
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea1e68226455628419e2720122eb4deb
+      internalID: 368712047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_34
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 123
+        width: 209
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a28a11000fef24bb12ad2bec737310
+      internalID: -471783468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_36
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 123
+        width: 210
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab61bb64436ee5049ad8c02c5bf88410
+      internalID: 64757454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_38
+      rect:
+        serializedVersion: 2
+        x: 1688
+        y: 123
+        width: 207
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75e00d17a0c91249bd59cf999cb0ac1
+      internalID: 393008532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_39
+      rect:
+        serializedVersion: 2
+        x: 2199
+        y: 123
+        width: 209
+        height: 252
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec68623ee413cfd43896f291758c1678
+      internalID: 929125448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: YukiCast_41
+      rect:
+        serializedVersion: 2
+        x: 2709
+        y: 123
+        width: 210
+        height: 254
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de0f7c0c9349364bba2ff4393f7c8c7
+      internalID: -660044710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -138,7 +894,49 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      YukiCast_16: 200815164
+      YukiCast_41: -660044710
+      YukiCast_2: 479073431
+      YukiCast_5: 4434265
+      YukiCast_27: -126772486
+      YukiCast_28: 1303654038
+      YukiCast_40: -2135661615
+      YukiCast_38: 393008532
+      YukiCast_18: -1299310958
+      YukiCast_32: 368712047
+      YukiCast_19: -1209747832
+      YukiCast_1: 1777618885
+      YukiCast_10: -445799647
+      YukiCast_20: -625305890
+      YukiCast_4: -1009231392
+      YukiCast_13: -414951203
+      YukiCast_22: -426305210
+      YukiCast_17: -249226336
+      YukiCast_26: -240303292
+      YukiCast_30: -1185612671
+      YukiCast_15: -1202671641
+      YukiCast_8: 1679329068
+      YukiCast_24: 897025008
+      YukiCast_34: -471783468
+      YukiCast_3: 540998025
+      YukiCast_0: 1116259924
+      YukiCast_21: 1239957165
+      YukiCast_12: -2111616670
+      YukiCast_39: 929125448
+      YukiCast_35: -1418802846
+      YukiCast_6: 23289879
+      YukiCast_7: 60735486
+      YukiCast_33: 2104805966
+      YukiCast_14: 853480102
+      YukiCast_11: 1077359970
+      YukiCast_9: -184195298
+      YukiCast_23: -1847758400
+      YukiCast_37: 484673153
+      YukiCast_31: 322296009
+      YukiCast_25: 1257430580
+      YukiCast_29: 221788783
+      YukiCast_36: 64757454
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
