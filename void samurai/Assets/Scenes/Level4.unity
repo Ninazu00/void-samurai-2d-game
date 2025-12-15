@@ -2945,6 +2945,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 451718723665166976, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451718723665166976, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
@@ -2974,7 +2978,7 @@ PrefabInstance:
       objectReference: {fileID: 451718724777055325}
     - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: attackSpeed
-      value: 1
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: groundCheck
