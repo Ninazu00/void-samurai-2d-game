@@ -4,31 +4,26 @@ using UnityEngine;
 
 public class OrbProjectile : MonoBehaviour
 {
-    public int damage = 20; // Damage of the projectile
+    public int damage = 20;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Check if it hit the player
-        if (collision.CompareTag("Player"))
+        if (collision.GetComponent<BoxCollider2D>() != null)
         {
-            // Get the PlayerController to check parry state
-            PlayerController player = collision.GetComponent<PlayerController>();
-
-            if (player != null)
+            if (collision.CompareTag("Player"))
             {
-                // ----------- PARRY CHECK -----------
-                // If player is parrying, cancel the projectile
-                if (player.IsParrying())
+                PlayerController player = collision.GetComponent<PlayerController>();
+
+                if (player != null && player.IsParrying())
                 {
                     Debug.Log("Projectile canceled by parry!");
-                    Destroy(gameObject); // Destroy the projectile
-                    return; // Stop execution
+                    Destroy(gameObject);
+                    return; 
                 }
+
+                collision.GetComponent<PlayerStats>()?.TakeDamage(damage);
             }
 
-            // ----------- NORMAL DAMAGE -----------
-            // Deal damage if not parrying
-            collision.GetComponent<PlayerStats>()?.TakeDamage(damage);
             Destroy(gameObject); 
         }
     }
