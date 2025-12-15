@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &531097563489963618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2655266019254964744}
+  m_Layer: 0
+  m_Name: lightAttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2655266019254964744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531097563489963618}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.097, y: -0.134, z: 0}
+  m_LocalScale: {x: 0.3560791, y: 0.4222064, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4256423732778243638}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4256423732421258301
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,11 +76,10 @@ GameObject:
   - component: {fileID: 4256423732778243637}
   - component: {fileID: 4256423732778244042}
   - component: {fileID: 4256423732778243633}
-  - component: {fileID: 4256423732778243632}
   - component: {fileID: 4256423732778243635}
   m_Layer: 0
   m_Name: Jin
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -62,11 +92,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4256423732778244043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.71, y: -2.88, z: 0}
+  m_LocalPosition: {x: -7.675, y: -2.823, z: 0}
   m_LocalScale: {x: 2.8083646, y: 2.3685098, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4256423732421258300}
+  - {fileID: 2655266019254964744}
+  - {fileID: 2104007042222736838}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -194,6 +226,13 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  attackPoint: {fileID: 0}
+  attackRange: 0.5
+  Enemy:
+    serializedVersion: 2
+    m_Bits: 0
+  lightDamage: 10
+  heavyDamage: 25
 --- !u!95 &4256423732778243633
 Animator:
   serializedVersion: 4
@@ -214,24 +253,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4256423732778243632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4256423732778244043}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8704a1d8b2901f4fa1be4a054b1d530, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  Camspeed: 0
-  minX: 0
-  maxX: 0
-  minY: 0
-  maxY: 0
 --- !u!114 &4256423732778243635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +266,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  slider: {fileID: 0}
   flickerDuration: 0.1
   isImmune: 0
   immunityDuration: 1.5
+--- !u!1 &9116081832245551613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104007042222736838}
+  m_Layer: 0
+  m_Name: heavyAttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2104007042222736838
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9116081832245551613}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.14565891, y: -0.059679896, z: -0.003426964}
+  m_LocalScale: {x: 0.3560791, y: 0.4222064, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4256423732778243638}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
