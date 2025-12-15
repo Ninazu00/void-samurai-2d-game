@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b95b40c0fbeafa24ab44ad1ff17cda4f
+guid: fe8a61e311c795d429349e674e351c54
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 2
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,41 +101,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_0
+      name: Jin Attack 2_0
       rect:
         serializedVersion: 2
-        x: 504
-        y: 730
-        width: 248
-        height: 266
+        x: 84
+        y: 78
+        width: 48
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d71eb8e322517f2488a512ca91322778
-      internalID: -1848491310
+      spriteID: 1219d9af8d7110e49a23ab53d1626fe2
+      internalID: -275858843
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_1
+      name: Jin Attack 2_1
       rect:
         serializedVersion: 2
-        x: 1017
-        y: 339
-        width: 111
-        height: 189
+        x: 282
+        y: 78
+        width: 48
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81af2ab51bd7b1048a07c3abf73650e6
-      internalID: -1077295162
+      spriteID: 592a2d2b0f120ba4d84a2a0661e87479
+      internalID: -1109548298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_2
+      name: Jin Attack 2_2
       rect:
         serializedVersion: 2
-        x: 805
-        y: 569
-        width: 185
-        height: 120
+        x: 484
+        y: 78
+        width: 48
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 357d5a65626008c44bf3da07a66f622f
-      internalID: 416544447
+      spriteID: a08a2108ccc648a4e9583a25ff693426
+      internalID: -461259337
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_3
+      name: Jin Attack 2_3
       rect:
         serializedVersion: 2
-        x: 995
-        y: 571
-        width: 259
-        height: 122
+        x: 686
+        y: 78
+        width: 48
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 798f479ed99207a49bcb1295af5fdc84
-      internalID: -1323092063
+      spriteID: a1e1491f2474a0449937268922051cf4
+      internalID: 255108887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bebeb471-48ac-4595-9676-daaed41290fe_4
+      name: Jin Attack 2_4
       rect:
         serializedVersion: 2
-        x: 1266
-        y: 547
-        width: 230
-        height: 144
+        x: 885
+        y: 78
+        width: 109
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,8 +203,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db8d2ddb9e82649449818e8ccb1e823d
-      internalID: 408549096
+      spriteID: 6bdf83fb3033083488da492446e4ec34
+      internalID: -2003992775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Jin Attack 2_5
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 78
+        width: 105
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c833354e9b83e504aa7bce48300fe5e4
+      internalID: -526896052
       vertices: []
       indices: 
       edges: []
@@ -244,11 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bebeb471-48ac-4595-9676-daaed41290fe_4: 408549096
-      bebeb471-48ac-4595-9676-daaed41290fe_0: -1848491310
-      bebeb471-48ac-4595-9676-daaed41290fe_2: 416544447
-      bebeb471-48ac-4595-9676-daaed41290fe_1: -1077295162
-      bebeb471-48ac-4595-9676-daaed41290fe_3: -1323092063
+      Jin Attack 2_3: 255108887
+      Jin Attack 2_4: -2003992775
+      Jin Attack 2_2: -461259337
+      Jin Attack 2_0: -275858843
+      Jin Attack 2_5: -526896052
+      Jin Attack 2_1: -1109548298
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

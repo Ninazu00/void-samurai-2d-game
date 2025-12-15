@@ -37,13 +37,7 @@ public class VoidOrchids : MonoBehaviour
 
     private IEnumerator ExplosionRoutine()
     {
-        // Play charging animation
-        if (animator != null)
-        {
-            animator.SetBool("IsTriggered", true);
-        }
-
-        // Start shaking
+     
         StartCoroutine(Shake());
 
         yield return new WaitForSeconds(delayBeforeExplosion);
