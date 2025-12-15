@@ -43,7 +43,7 @@ public class RyoTanaka : EnemyController
     {
         // Set Ryo's stats from the design document
         moveSpeed = 2f; // Use the custom speed variable
-        maxHealth = 200;
+        maxHealth = 150;
         damage = 0; // No base damage - only skill-based damage
         attackRange = 2f; // Melee range
         

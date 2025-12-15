@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour {
     public LayerMask Enemy; //layers considered as enemies (capital E)
     public LayerMask Barrel;
     public int lightDamage = 10; //light attack damage
-    public int heavyDamage = 25; //heavy attack damage
+    public int heavyDamage = 15; //heavy attack damage
 
     private bool grounded; //is player on ground
     private bool isParrying; //is player parrying
