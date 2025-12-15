@@ -896,7 +896,7 @@ MonoBehaviour:
   spawnNovaDR: {fileID: 1536674452}
   fireee: {fileID: 951159402789170232, guid: 7e75d6f6d8212324a8493ad4447d1bed, type: 3}
   fireeeWarning: {fileID: 1628453092691268939, guid: 92f0940e811cbdf4b8063b9917b2aa11, type: 3}
-  fallingSwordsCD: 45
+  fallingSwordsCD: 30
   voidBurstCD: 20000
   worldAblazeCD: 20
   voidlingChance: 5
@@ -939,8 +939,12 @@ MonoBehaviour:
   voidBurst: {fileID: 8300000, guid: 3c00a2541cd4d17409506095c3eacf76, type: 3}
   voidDrownYou: {fileID: 8300000, guid: 39282a03aafc3ea469bcedfa6cd2f033, type: 3}
   worldAblaze: {fileID: 8300000, guid: 9c464f47baddc0649b53beaa035678b9, type: 3}
-  yukiMelee: {fileID: 8300000, guid: 8f5d01da3b50a20498b208faf5493185, type: 3}
+  yukiMelee: {fileID: 8300000, guid: 513544295a729554fad988647a967e8e, type: 3}
   yukiPointlessStruggle: {fileID: 8300000, guid: a94a51e6bace1084787f9ce448d3a25c, type: 3}
+  yukiFullAttention: {fileID: 8300000, guid: 7f7c86708a95f3c4b819312790eab406, type: 3}
+  yukiTauntPainful: {fileID: 8300000, guid: 5b0d876417f3bef4984f5b348acd20da, type: 3}
+  yukiDeath: {fileID: 8300000, guid: 249221b816867a54684d063733138547, type: 3}
+  yukiShortLaugh: {fileID: 8300000, guid: a5d6c41c5bd9eda4682fea110cbf9bbd, type: 3}
 --- !u!82 &727829811
 AudioSource:
   m_ObjectHideFlags: 0

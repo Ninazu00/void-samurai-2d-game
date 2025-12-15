@@ -20,7 +20,10 @@ public class AudioManager : MonoBehaviour
     public AudioClip worldAblaze;
     public AudioClip yukiMelee;
     public AudioClip yukiPointlessStruggle;
-
+    public AudioClip yukiFullAttention;
+    public AudioClip yukiTauntPainful;
+    public AudioClip yukiDeath;
+    public AudioClip yukiShortLaugh;
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +67,6 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayVoiceLine(AudioClip clip)
     {
-        voiceLines.Stop();
         voiceLines.clip = clip;
         voiceLines.Play();
     }
@@ -113,8 +115,24 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusicSFX(yukiMelee);
     }
-        public void playYukiTaunt1()
+    public void playYukiTaunt1()
+    {
+        PlayVoiceLine(yukiFullAttention);
+    }
+    public void playYukiTaunt2()
     {
         PlayVoiceLine(yukiPointlessStruggle);
+    }
+    public void playYukiTaunt3()
+    {
+        PlayVoiceLine(yukiTauntPainful);
+    }
+    public void playYukiDeath()
+    {
+        PlayVoiceLine(yukiDeath);
+    }
+    public void playYukiShortLaugh()
+    {
+        PlayVoiceLine(yukiShortLaugh);
     }
 }

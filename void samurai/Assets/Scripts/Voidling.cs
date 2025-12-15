@@ -44,7 +44,7 @@ public class Voidling : EnemyController
         
         // Flip sprite to face player
         if (sr != null)
-            sr.flipX = directionToPlayer.x < 0;
+            sr.flipX = directionToPlayer.x > 0;
         
         if (currentState == 0)
         {

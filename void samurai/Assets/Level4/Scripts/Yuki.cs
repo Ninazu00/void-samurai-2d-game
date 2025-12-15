@@ -51,12 +51,12 @@ public class Yuki : EnemyController
         animator.SetTrigger("mATK");
         FindObjectOfType<PlayerStats>().TakeDamage(damage);
         FindObjectOfType<AudioManager>().playYukiMelee();
+        FindObjectOfType<AudioManager>().playYukiShortLaugh();
     }
     public void shellOfWhatWas()
     {
         if(currentHealth<= (maxHealth / 2) && Phase1)
         {
-            FindObjectOfType<AudioManager>().playYukiTaunt1();
             sr.color = Color.red;
             phase2Aura.Play();
             Phase1 = false;
@@ -86,7 +86,9 @@ public class Yuki : EnemyController
         moveSpeed = 0f;
         rb.gravityScale = 0;
         rb.velocity = Vector2.zero;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetTrigger("DIE");
+        FindObjectOfType<AudioManager>().playYukiDeath();
         StartCoroutine(FadeOutAndDestroy());
         //Invoke(nameof(deleteYuki), 3f);
     }
