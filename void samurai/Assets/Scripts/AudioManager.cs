@@ -24,13 +24,18 @@ public class AudioManager : MonoBehaviour
     public AudioClip yukiTauntPainful;
     public AudioClip yukiDeath;
     public AudioClip yukiShortLaugh;
-    // Start is called before the first frame update
+
+    [Header("Player SFX")]
+    public AudioClip lightSlash; // Light attack sound
+    public AudioClip heavySlash; // Heavy attack sound
+    public AudioClip parry;      // Parry sound
+    public AudioClip dash;       // Dash sound
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -65,12 +70,14 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = clip;
         musicSource.Play();
     }
+    
     public void PlayVoiceLine(AudioClip clip)
     {
         voiceLines.clip = clip;
         voiceLines.Play();
     }
-    // Function takes a bunch of sound clips as paramters
+
+    // Function takes a bunch of sound clips as parameters
     public void PlayRandomSFX(params AudioClip[] clips)
     {
         // Assign the incoming array of items to our local arraylist varible called 'variousSFX'
@@ -80,6 +87,32 @@ public class AudioManager : MonoBehaviour
         int index = Random.Range(0, variousSFX.Length);
         sfxSource.PlayOneShot(variousSFX[index]);
     }
+
+    // ---------------- PLAYER ACTIONS SFX ----------------
+    public void PlayLightSlash()
+    {
+        if (lightSlash != null)
+            PlayMusicSFX(lightSlash);
+    }
+
+    public void PlayHeavySlash()
+    {
+        if (heavySlash != null)
+            PlayMusicSFX(heavySlash);
+    }
+
+    public void PlayParry()
+    {
+        if (parry != null)
+            PlayMusicSFX(parry);
+    }
+
+    public void PlayDash()
+    {
+        if (dash != null)
+            PlayMusicSFX(dash);
+    }
+    // ---------------------------------------------------
 
     public void playYukiOne()
     {

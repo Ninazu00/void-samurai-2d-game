@@ -3,7 +3,28 @@ guid: fcadedf8bee17d748a4c5844c9f2aa84
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - musicSource: {instanceID: 0}
+  - sfxSource: {instanceID: 0}
+  - voiceLines: {instanceID: 0}
+  - overworldMusic: {instanceID: 0}
+  - yukiPhaseOne: {instanceID: 0}
+  - yukiPhaseTwo: {instanceID: 0}
+  - yukiLaugh: {instanceID: 0}
+  - swordsRain: {instanceID: 0}
+  - voidBurst: {instanceID: 0}
+  - voidDrownYou: {instanceID: 0}
+  - worldAblaze: {instanceID: 0}
+  - yukiMelee: {instanceID: 0}
+  - yukiPointlessStruggle: {instanceID: 0}
+  - yukiFullAttention: {instanceID: 0}
+  - yukiTauntPainful: {instanceID: 0}
+  - yukiDeath: {instanceID: 0}
+  - yukiShortLaugh: {instanceID: 0}
+  - lightSlash: {fileID: 8300000, guid: 513302d24c6531949b6ff3e12d97be05, type: 3}
+  - heavySlash: {fileID: 8300000, guid: 4066cc8765eea38458078a3b6923fe65, type: 3}
+  - parry: {fileID: 8300000, guid: e20ddf594f7777448bf5f68a7a44c9f1, type: 3}
+  - dash: {fileID: 8300000, guid: e223b2f24847628459ed8916d648e2c8, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

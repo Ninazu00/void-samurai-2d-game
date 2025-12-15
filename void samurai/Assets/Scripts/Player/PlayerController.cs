@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour {
     private bool canDash = true;
     private bool isDashing = false;
 
-    // -------- DEATH HANDLING -----------
+    // -------- DEATH HANDLING ----------- 
     private bool isDead = false;
 
     private Animator anim;
@@ -57,7 +57,7 @@ public class PlayerController : MonoBehaviour {
 
         if (isDead) return; // block all actions if dead
 
-        // ----------- DASH INPUT -----------
+        // ----------- DASH INPUT ----------- 
         if (Input.GetKeyDown(DashKey) && canDash && !isDashing)
         {
             float dashDirection = 0f;
@@ -65,10 +65,15 @@ public class PlayerController : MonoBehaviour {
             else if (Input.GetKey(R)) dashDirection = 1f;
 
             if (dashDirection != 0f)
+            {
+                if (AudioManager.Instance != null)
+                    AudioManager.Instance.PlayDash(); // DASH SFX
+
                 StartCoroutine(PerformDash(dashDirection));
+            }
         }
 
-        // ----------- PARRY -----------
+        // ----------- PARRY ----------- 
         if (Input.GetKeyDown(ParryKey) && grounded && !isParrying && !isDashing)
         {
             isParrying = true; 
@@ -77,17 +82,20 @@ public class PlayerController : MonoBehaviour {
             anim.SetBool("isParrying", true); 
             anim.SetTrigger("parry"); 
 
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayParry(); // PARRY SFX
+
             Invoke(nameof(EndPerfectParry), perfectParryWindow); 
             Invoke(nameof(EndParry), 0.35f); 
         }
 
         if (isParrying || isDashing) return; // block actions during parry or dash
 
-        // ----------- JUMP -----------
+        // ----------- JUMP ----------- 
         if(Input.GetKeyDown(Spacebar) && grounded)
             Jump();
 
-        // ----------- MOVE -----------
+        // ----------- MOVE ----------- 
         if (Input.GetKey(L))
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
@@ -109,10 +117,14 @@ public class PlayerController : MonoBehaviour {
         anim.SetFloat("yVelocity", rb.velocity.y);
         anim.SetBool("isGrounded", grounded);
 
-        // ----------- ATTACK INPUTS -----------
+        // ----------- ATTACK INPUTS ----------- 
         if (Input.GetKeyDown(LightAttackKey) && canLightAttack)
         {
             canLightAttack = false;
+
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayLightSlash(); // LIGHT ATTACK SFX
+
             LightAttack();
             Invoke(nameof(ResetLightAttack), lightAttackCooldown);
         }
@@ -120,6 +132,10 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(HeavyAttackKey) && canHeavyAttack)
         {
             canHeavyAttack = false;
+
+            if (AudioManager.Instance != null)
+                AudioManager.Instance.PlayHeavySlash(); // HEAVY ATTACK SFX
+
             HeavyAttack();
             Invoke(nameof(ResetHeavyAttack), heavyAttackCooldown);
         }
@@ -150,7 +166,7 @@ public class PlayerController : MonoBehaviour {
         anim.SetBool("isParrying", false);
     }
 
-    // ----------- ATTACK FUNCTIONS -----------
+    // ----------- ATTACK FUNCTIONS ----------- 
     public void LightAttack()
     {
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
@@ -158,13 +174,13 @@ public class PlayerController : MonoBehaviour {
             lightAttackRange,
             Enemy
         );
+
         EnemyController lastDamagedEnemy = null;
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null && ec != lastDamagedEnemy)
             {
-                Debug.Log("LightAttack hits detected: " + hitEnemies.Length);
                 ec.TakeDamage(lightDamage);
                 lastDamagedEnemy = ec;
             }
@@ -180,24 +196,25 @@ public class PlayerController : MonoBehaviour {
             heavyAttackRange,
             Enemy
         );
+
         EnemyController lastDamagedEnemy = null;
-        anim.SetTrigger("heavyAttack");
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null && ec != lastDamagedEnemy)
             {
-                Debug.Log("HeavyAttack hits detected: " + hitEnemies.Length);
                 ec.TakeDamage(heavyDamage);
                 lastDamagedEnemy = ec;
             }
         }
+
+        anim.SetTrigger("heavyAttack");
     }
 
     void ResetLightAttack() => canLightAttack = true;
     void ResetHeavyAttack() => canHeavyAttack = true;
 
-    // ----------- DASH COROUTINE -----------
+    // ----------- DASH COROUTINE ----------- 
     private IEnumerator PerformDash(float direction)
     {
         canDash = false;
@@ -205,8 +222,6 @@ public class PlayerController : MonoBehaviour {
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(direction * dashDistance / dashDuration, 0f);
-
-        // Optional: enable invincibility here
 
         yield return new WaitForSeconds(dashDuration);
 
@@ -218,10 +233,10 @@ public class PlayerController : MonoBehaviour {
         canDash = true;
     }
 
-    // ----------- DEATH HANDLER -----------
+    // ----------- DEATH HANDLER ----------- 
     public void Die()
     {
-        if (isDead) return; // prevent multiple triggers
+        if (isDead) return;
 
         isDead = true;
         rb.velocity = Vector2.zero;
@@ -229,18 +244,14 @@ public class PlayerController : MonoBehaviour {
         canHeavyAttack = false;
         canDash = false;
 
-        anim.SetTrigger("death"); // play death animation
+        anim.SetTrigger("death");
 
-        // Disable player collider to avoid further hits
         GetComponent<Collider2D>().enabled = false;
-
-        // Optional: notify LevelManager or reload scene after death animation
-        Invoke(nameof(GameOver), 2f); // 2s death animation
+        Invoke(nameof(GameOver), 2f);
     }
 
     public void GameOver()
     {
-        // Example: reload current scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
         );

@@ -8,19 +8,7 @@ public class LevelManager : MonoBehaviour
     public GameObject CurrentCheckpoint;
     public Transform Player;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    private void Awake()
+    void Awake()
     {
         if (Instance == null)
             Instance = this;
@@ -38,6 +26,6 @@ public class LevelManager : MonoBehaviour
         Player.position = CurrentCheckpoint.transform.position;
         Player.GetComponent<PlayerStats>().HealFull();
 
-        // Enemies and hazards can be reset here later
+        // Optional: reset other states like enemies or hazards
     }
 }

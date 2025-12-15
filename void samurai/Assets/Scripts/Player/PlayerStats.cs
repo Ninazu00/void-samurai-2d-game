@@ -72,13 +72,21 @@ public class PlayerStats : MonoBehaviour
 
         Invoke(nameof(EndHit), 0.2f);
 
+        // -------- DEATH HANDLING --------
         if (health == 0)
         {
-            FindObjectOfType<LevelManager>().RespawnPlayer();
+            // Trigger the death animation in PlayerController
+            if (pc != null)
+            {
+                // Disable further damage
+                isImmune = true;
+                pc.Die();
+            }
         }
 
         Debug.Log("Player Health: " + health);
 
+        // Start immunity for hit effects
         isImmune = true;
         immunityTime = 0f;
     }
@@ -109,5 +117,4 @@ public class PlayerStats : MonoBehaviour
         if (slider != null)
             slider.value = health;
     }
-
 }
