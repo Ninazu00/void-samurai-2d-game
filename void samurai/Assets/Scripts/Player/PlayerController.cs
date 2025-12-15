@@ -181,6 +181,7 @@ public class PlayerController : MonoBehaviour {
             Enemy
         );
         EnemyController lastDamagedEnemy = null;
+        anim.SetTrigger("heavyAttack");
         foreach (Collider2D enemy in hitEnemies)
         {
             EnemyController ec = enemy.GetComponent<EnemyController>();
@@ -190,7 +191,6 @@ public class PlayerController : MonoBehaviour {
                 ec.TakeDamage(heavyDamage);
                 lastDamagedEnemy = ec;
             }
-            anim.SetTrigger("heavyAttack");
         }
     }
 
