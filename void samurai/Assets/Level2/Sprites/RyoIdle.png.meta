@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b410144d93fdb6f4aba10cec015957cc
+guid: b9be471000070fa4680f1ebc65086d33
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,17 +110,17 @@ TextureImporter:
         serializedVersion: 2
         x: 144
         y: 1662
-        width: 223
+        width: 227
         height: 261
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b60754e91639694d80c26909084bbee
-      internalID: -1574887561
+      spriteID: 08b47160de1ff0a43b48d52fba6eee63
+      internalID: -2135497767
       vertices: []
       indices: 
       edges: []
@@ -134,14 +134,14 @@ TextureImporter:
         width: 227
         height: 262
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc0fb471754fa17449c9662a2203d7d3
-      internalID: -207651554
+      spriteID: 54a6a3b070a9f6e4396967f7d6f09ffb
+      internalID: 1319854036
       vertices: []
       indices: 
       edges: []
@@ -155,14 +155,14 @@ TextureImporter:
         width: 227
         height: 263
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d85fde9632425647b072cec955a5927
-      internalID: -720570604
+      spriteID: 3e94b4c6e2f9a8342863f62467ceb442
+      internalID: -1506295075
       vertices: []
       indices: 
       edges: []
@@ -176,14 +176,14 @@ TextureImporter:
         width: 227
         height: 263
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a04d9627f33b444fac6dc2b305a1309
-      internalID: -833125235
+      spriteID: 77fc5ce5fff776c4598a297cc5d0b0e9
+      internalID: -617218207
       vertices: []
       indices: 
       edges: []
@@ -194,17 +194,17 @@ TextureImporter:
         serializedVersion: 2
         x: 144
         y: 1150
-        width: 225
+        width: 227
         height: 265
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c29d91164960994586d2c622eb3c092
-      internalID: -37828246
+      spriteID: 17f3bda6270097b4bbf18e4f3261bf7c
+      internalID: 65360891
       vertices: []
       indices: 
       edges: []
@@ -214,18 +214,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 656
-        y: 1150
+        y: 1149
         width: 227
         height: 265
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88ff862a31a1e3a42a46e15ad134ac22
-      internalID: 2091269220
+      spriteID: 31503260f943ded4699ff66d114284f5
+      internalID: 1878369751
       vertices: []
       indices: 
       edges: []
@@ -239,14 +239,14 @@ TextureImporter:
         width: 227
         height: 264
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15674346212a4464a8756e2cb2ceab6d
-      internalID: -313111010
+      spriteID: 698844e32f4331b4289281fc9b26ef47
+      internalID: -616754849
       vertices: []
       indices: 
       edges: []
@@ -260,14 +260,14 @@ TextureImporter:
         width: 227
         height: 263
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e18db7788f106a429b1dd257a78ab89
-      internalID: -577053444
+      spriteID: 38ecfb17ee6591d4d9110ebeb1befd09
+      internalID: 1735982611
       vertices: []
       indices: 
       edges: []
@@ -278,17 +278,17 @@ TextureImporter:
         serializedVersion: 2
         x: 143
         y: 638
-        width: 226
+        width: 227
         height: 262
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e3ed3f9e6d88b24b9a57d00a702cd39
-      internalID: 520033893
+      spriteID: b0a0640942809da49bfc452e3c27953e
+      internalID: 776194781
       vertices: []
       indices: 
       edges: []
@@ -302,14 +302,14 @@ TextureImporter:
         width: 227
         height: 262
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daaf50b8db39a0f4a84880975b0a0149
-      internalID: -1912558429
+      spriteID: 939d6ae1165c66141ad961ab364635be
+      internalID: 1398786674
       vertices: []
       indices: 
       edges: []
@@ -318,19 +318,19 @@ TextureImporter:
       name: RyoIdle_10
       rect:
         serializedVersion: 2
-        x: 1167
+        x: 1164
         y: 638
         width: 227
         height: 261
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b07954f49a2cf114c8eb7071f3f6a288
-      internalID: -1765143483
+      spriteID: 0e74326b29be05a4e9f3de0bce09f38d
+      internalID: 586865448
       vertices: []
       indices: 
       edges: []
@@ -339,67 +339,67 @@ TextureImporter:
       name: RyoIdle_11
       rect:
         serializedVersion: 2
-        x: 1677
+        x: 1681
         y: 638
         width: 227
         height: 261
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 242c8c93a172428419c3e48c3b8e9c46
-      internalID: -2015029586
+      spriteID: e1fdd3f7ce9859e4cb1f7a50a61e563e
+      internalID: 1532284972
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RyoIdle_22
+      name: RyoIdle_12
       rect:
         serializedVersion: 2
-        x: 132
+        x: 145
         y: 126
-        width: 236
+        width: 227
         height: 261
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 049df1c9a03e93949b25d6cfa9966322
-      internalID: 1972083749
+      spriteID: 48150f6b5af6026478651957ccb16afb
+      internalID: -2137955362
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RyoIdle_23
+      name: RyoIdle_13
       rect:
         serializedVersion: 2
         x: 655
         y: 126
         width: 227
-        height: 259
+        height: 262
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f608b131e03fcb34c9b82812143435b8
-      internalID: 1768503696
+      spriteID: ef9c28412f987eb4e8fc5ec2ae067b4d
+      internalID: -444901400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RyoIdle_25
+      name: RyoIdle_14
       rect:
         serializedVersion: 2
         x: 1168
@@ -407,20 +407,20 @@ TextureImporter:
         width: 227
         height: 262
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ebd80fbea42c3ae41ba0d7ea8162f276
-      internalID: -1552071311
+      spriteID: 2c27347fe7b9d6a42851a2cdfa5703af
+      internalID: 1370112113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RyoIdle_26
+      name: RyoIdle_15
       rect:
         serializedVersion: 2
         x: 1680
@@ -428,14 +428,14 @@ TextureImporter:
         width: 227
         height: 261
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f0be37885ac1fb4dbec637a3903a661
-      internalID: -1804735205
+      spriteID: 13734bcd278cb8848ba2f5bcdeee1c21
+      internalID: 641588562
       vertices: []
       indices: 
       edges: []
@@ -451,33 +451,30 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RyoIdle_22: 1972083749
-      RyoIdle_25: -1552071311
-      RyoIdle_14: 1906248043
-      RyoIdle_19: -981678812
-      RyoIdle_3: -833125235
-      RyoIdle_5: 2091269220
-      RyoIdle_2: -720570604
-      RyoIdle_7: -577053444
-      RyoIdle_0: -1574887561
-      RyoIdle_23: 1768503696
-      RyoIdle_15: -1371294642
-      RyoIdle_13: 110958375
-      RyoIdle_24: -1467375906
-      RyoIdle_16: 1301230618
-      RyoIdle_1: -207651554
-      RyoIdle_21: -1816808334
-      RyoIdle_4: -37828246
-      RyoIdle_26: -1804735205
-      RyoIdle_12: -1273487850
-      RyoIdle_17: 1187629660
-      RyoIdle_9: -1912558429
-      RyoIdle_6: -313111010
-      RyoIdle_18: -992654582
-      RyoIdle_11: -2015029586
-      RyoIdle_10: -1765143483
-      RyoIdle_8: 520033893
-      RyoIdle_20: -423188004
+      RyoIdle_14: 1370112113
+      RyoIdle_19: 896331981
+      RyoIdle_3: -617218207
+      RyoIdle_5: 1878369751
+      RyoIdle_2: -1506295075
+      RyoIdle_7: 1735982611
+      RyoIdle_0: -2135497767
+      RyoIdle_27: -547020450
+      RyoIdle_15: 641588562
+      RyoIdle_13: -444901400
+      RyoIdle_24: 948544814
+      RyoIdle_16: -339503341
+      RyoIdle_1: 1319854036
+      RyoIdle_21: 1939900230
+      RyoIdle_4: 65360891
+      RyoIdle_12: -2137955362
+      RyoIdle_17: -1308544917
+      RyoIdle_9: 1398786674
+      RyoIdle_6: -616754849
+      RyoIdle_18: -1411817194
+      RyoIdle_11: 1532284972
+      RyoIdle_10: 586865448
+      RyoIdle_8: 776194781
+      RyoIdle_20: 1266014836
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
