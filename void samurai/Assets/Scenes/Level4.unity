@@ -140,19 +140,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778243638, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778243638, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778243638, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.659647
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778243638, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3539484
+      value: 5.25
       objectReference: {fileID: 0}
     - target: {fileID: 4256423732778243638, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -357,7 +357,7 @@ Transform:
   m_GameObject: {fileID: 195343973}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.01, y: 0.6719, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.42682788, z: 1}
+  m_LocalScale: {x: 0.52, y: 0.42682788, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -590,7 +590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.59, y: 1.09, z: -10}
+  m_LocalPosition: {x: -6, y: 1.09, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -611,8 +611,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 25361211}
   Camspeed: 2
-  minX: -2.59
-  maxX: 2.59
+  minX: -6
+  maxX: 6
   minY: 0.74
   maxY: 0.75
 --- !u!1 &523863781
@@ -827,7 +827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 727829807}
   - component: {fileID: 727829808}
-  - component: {fileID: 727829809}
+  - component: {fileID: 727829814}
   - component: {fileID: 727829810}
   - component: {fileID: 727829812}
   - component: {fileID: 727829811}
@@ -901,20 +901,6 @@ MonoBehaviour:
   worldAblazeCD: 20
   voidlingChance: 5
   voidling: {fileID: 5685890311288818553, guid: d392cab27993ac24c942447e2fc3c23f, type: 3}
---- !u!114 &727829809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 727829806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67ccd75c84d42784694b8413fb937ef8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CurrentCheckpoint: {fileID: 1618273975}
-  Player: {fileID: 25361211}
 --- !u!114 &727829810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1238,6 +1224,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &727829814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727829806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ccd75c84d42784694b8413fb937ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentCheckpoint: {fileID: 1618273975}
+  Player: {fileID: 25361211}
 --- !u!1 &759190198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,6 +2982,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 451718724777055325}
     - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: YukiManager
+      value: 
+      objectReference: {fileID: 5610114396424167607, guid: a7f02bbb9b01403458bc3a9fb31efbaa, type: 3}
+    - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: attackSpeed
       value: 0.7
       objectReference: {fileID: 0}
@@ -2992,6 +2996,10 @@ PrefabInstance:
     - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: groundCheckRadius
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: YukiManagerLocation
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 451718723665166978, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: whatIsGround.m_Bits
@@ -3032,6 +3040,14 @@ PrefabInstance:
     - target: {fileID: 451718723665166983, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 451718723665166983, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 451718723665166983, guid: 84192429bcc9c194386f08719e27995a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 451718723665166983, guid: 84192429bcc9c194386f08719e27995a, type: 3}
       propertyPath: m_LocalPosition.x

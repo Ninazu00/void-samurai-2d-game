@@ -20,8 +20,11 @@ public class Yuki : EnemyController
     public LayerMask whatIsGround;
     float stayTimer = 0f;
     public float attackSpeed;
+    public Transform YukiManager;
+    public Transform YukiManagerLocation;
     protected override void Start()
     {
+        //Instantiate(YukiManager, YukiManagerLocation.position, YukiManagerLocation.rotation);
         tempMoveSpeed = moveSpeed;
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
