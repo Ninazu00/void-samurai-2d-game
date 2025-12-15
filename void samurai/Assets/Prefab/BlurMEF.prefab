@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 3595331490437557374}
   - component: {fileID: 3595331490437557369}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: BlurMEF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
