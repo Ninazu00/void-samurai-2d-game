@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - SolidObject
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -12,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 
@@ -39,27 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-<<<<<<< HEAD
-=======
-  - name: Background
-    uniqueID: 1254996601
-    locked: 0
-  - name: Semi-background
-    uniqueID: 2636834987
-    locked: 0
->>>>>>> 1a5f9fd07802344f126c279645092cc011270b18
   - name: Default
     uniqueID: 0
     locked: 0
   - name: Background
-    uniqueID: 1254996601
+    uniqueID: 3522190065
     locked: 0
   - name: MiddleGround
-    uniqueID: 915482083
+    uniqueID: 4293649723
+    locked: 0
+  - name: Ui
+    uniqueID: 751139955
     locked: 0
   - name: Player
-    uniqueID: 2049079793
-    locked: 0
-  - name: UI
-    uniqueID: 4099355675
+    uniqueID: 2551909941
     locked: 0
