@@ -46,3 +46,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Painting
+    uniqueID: 3473511543
+    locked: 0
+  - name: Foreground
+    uniqueID: 2876143307
+    locked: 0
+  - name: Player
+    uniqueID: 3118950949
+    locked: 0
