@@ -5222,6 +5222,7 @@ MonoBehaviour:
   heavySlash: {fileID: 8300000, guid: 4066cc8765eea38458078a3b6923fe65, type: 3}
   parry: {fileID: 8300000, guid: e20ddf594f7777448bf5f68a7a44c9f1, type: 3}
   dash: {fileID: 8300000, guid: e223b2f24847628459ed8916d648e2c8, type: 3}
+  Memechoaudio: {fileID: 0}
 --- !u!1 &1174464734
 GameObject:
   m_ObjectHideFlags: 0
@@ -5326,7 +5327,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5533,7 +5534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1215696584}
   sfxSource: {fileID: 1215696584}
-  voiceLines: {fileID: 0}
+  voiceLines: {fileID: 1215696583}
   overworldMusic: {fileID: 0}
   variousSFX: []
   yukiPhaseOne: {fileID: 0}
@@ -5553,6 +5554,7 @@ MonoBehaviour:
   heavySlash: {fileID: 0}
   parry: {fileID: 0}
   dash: {fileID: 0}
+  Memechoaudio: {fileID: 0}
 --- !u!1 &1215970945
 GameObject:
   m_ObjectHideFlags: 0
