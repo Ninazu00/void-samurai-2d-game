@@ -42,11 +42,14 @@ public class PlayerController : MonoBehaviour {
     private bool canDash = true;
     private bool isDashing = false;
 
-    // -------- DEATH HANDLING -----------
+    // -------- DEATH HANDLING ----------- 
     private bool isDead = false;
 
     private Animator anim;
-    private Rigidbody2D rb; 
+    private Rigidbody2D rb;
+
+    // ✅ FIX: missing variable
+    private EnemyController lastDamagedEnemy;
 
     void Start () {
         anim = GetComponent<Animator>();
@@ -55,7 +58,7 @@ public class PlayerController : MonoBehaviour {
 
     void Update () {
 
-        if (isDead) return; // block all actions if dead
+        if (isDead) return;
 
         // ----------- DASH INPUT -----------
         if (Input.GetKeyDown(DashKey) && canDash && !isDashing)
@@ -81,7 +84,7 @@ public class PlayerController : MonoBehaviour {
             Invoke(nameof(EndParry), 0.35f); 
         }
 
-        if (isParrying || isDashing) return; // block actions during parry or dash
+        if (isParrying || isDashing) return;
 
         // ----------- JUMP -----------
         if(Input.GetKeyDown(Spacebar) && grounded)
@@ -91,14 +94,12 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKey(L))
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-            if(GetComponent<SpriteRenderer>() != null)
-                GetComponent<SpriteRenderer>().flipX = true;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         else if (Input.GetKey(R))
         {
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-            if(GetComponent<SpriteRenderer>() != null)
-                GetComponent<SpriteRenderer>().flipX = false;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
         else
         {
@@ -153,6 +154,8 @@ public class PlayerController : MonoBehaviour {
     // ----------- ATTACK FUNCTIONS -----------
     public void LightAttack()
     {
+        lastDamagedEnemy = null;
+
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
             lightAttackPoint.position,
             lightAttackRange,
@@ -164,7 +167,6 @@ public class PlayerController : MonoBehaviour {
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null && ec != lastDamagedEnemy)
             {
-                Debug.Log("LightAttack hits detected: " + hitEnemies.Length);
                 ec.TakeDamage(lightDamage);
                 lastDamagedEnemy = ec;
             }
@@ -175,6 +177,8 @@ public class PlayerController : MonoBehaviour {
 
     public void HeavyAttack()
     {
+        lastDamagedEnemy = null;
+
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
             heavyAttackPoint.position,
             heavyAttackRange,
@@ -186,8 +190,9 @@ public class PlayerController : MonoBehaviour {
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null && ec != lastDamagedEnemy)
             {
-                Debug.Log("HeavyAttack hits detected: " + hitEnemies.Length);
                 ec.TakeDamage(heavyDamage);
+                lastDamagedEnemy = ec;
+            }
         }
 
         anim.SetTrigger("heavyAttack");
@@ -201,11 +206,10 @@ public class PlayerController : MonoBehaviour {
     {
         canDash = false;
         isDashing = true;
+
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(direction * dashDistance / dashDuration, 0f);
-
-        // Optional: enable invincibility here
 
         yield return new WaitForSeconds(dashDuration);
 
@@ -220,7 +224,7 @@ public class PlayerController : MonoBehaviour {
     // ----------- DEATH HANDLER -----------
     public void Die()
     {
-        if (isDead) return; // prevent multiple triggers
+        if (isDead) return;
 
         isDead = true;
         rb.velocity = Vector2.zero;
@@ -228,39 +232,19 @@ public class PlayerController : MonoBehaviour {
         canHeavyAttack = false;
         canDash = false;
 
-        anim.SetTrigger("death"); // play death animation
-
-        // Disable player collider to avoid further hits
+        anim.SetTrigger("death");
         GetComponent<Collider2D>().enabled = false;
 
-        // Optional: notify LevelManager or reload scene after death animation
-        Invoke(nameof(GameOver), 2f); // 2s death animation
+        Invoke(nameof(GameOver), 2f);
     }
 
     private void GameOver()
     {
-        // Example: reload current scene
         UnityEngine.SceneManagement.SceneManager.LoadScene(
             UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
         );
     }
 
-    private void OnDrawGizmos()
-    {
-        if (lightAttackPoint != null)
-            Gizmos.DrawWireSphere(lightAttackPoint.position, lightAttackRange);
-
-        if (heavyAttackPoint != null)
-            Gizmos.DrawWireSphere(heavyAttackPoint.position, heavyAttackRange);
-    }
-
-    public bool IsParrying()
-    {
-        return isParrying;
-    }
-
-    public bool IsPerfectParryActive()
-    {
-        return perfectParryActive;
-    }
+    public bool IsParrying() => isParrying;
+    public bool IsPerfectParryActive() => perfectParryActive;
 }
