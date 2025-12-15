@@ -73,9 +73,9 @@ public class PlayerStats : MonoBehaviour
         Invoke(nameof(EndHit), 0.2f);
 
         if (health == 0)
-        {
-            FindObjectOfType<LevelManager>().RespawnPlayer();
-        }
+            {
+                FindObjectOfType<DeathScreenUI>().ShowDeath();
+            }
 
         Debug.Log("Player Health: " + health);
 

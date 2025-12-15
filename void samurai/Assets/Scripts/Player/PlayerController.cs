@@ -253,6 +253,16 @@ public class PlayerController : MonoBehaviour
             Gizmos.DrawWireSphere(heavyAttackPoint.position, heavyAttackRange);
     }
 
+    public void SetInputEnabled(bool enabled)
+    {
+        isDead = !enabled;
+        if (!enabled)
+        {
+            rb.velocity = Vector2.zero;   
+        }
+    }
+
+
     public bool IsParrying() => isParrying;
     public bool IsPerfectParryActive() => perfectParryActive;
 }
