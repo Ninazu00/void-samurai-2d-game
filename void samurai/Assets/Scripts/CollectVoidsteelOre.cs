@@ -27,8 +27,8 @@ public class CollectVoidsteelOre : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            PlayerStats.score++;
-            AudioManager.Instance.PlayRandomSFX(voidOreSound1, voidOreSound2, voidOreSound3, voidOreSound4);
+            FindObjectOfType<PlayerStats>().score++;
+            FindObjectOfType<AudioManager>().PlayRandomSFX(voidOreSound1, voidOreSound2, voidOreSound3, voidOreSound4);
             Destroy(gameObject);
         }
     }
