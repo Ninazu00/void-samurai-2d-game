@@ -4,99 +4,124 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float moveSpeed; //how fast the character moves
-    public float jumpHeight; //how high the character jumps
-    public KeyCode Spacebar; //Jump key
-    public KeyCode L; //Left movement key
-    public KeyCode R; //Right movement key
-    public KeyCode LightAttackKey; //Light attack key
-    public KeyCode HeavyAttackKey; //Heavy attack key
-    public KeyCode ParryKey; //Parry key
-    public Transform groundCheck; //ground check position
-    public float groundCheckRadius; //ground check radius
-    public LayerMask whatIsGround; //what is considered ground
+    public float moveSpeed; 
+    public float jumpHeight; 
+    public KeyCode Spacebar; 
+    public KeyCode L; 
+    public KeyCode R; 
+    public KeyCode LightAttackKey; 
+    public KeyCode HeavyAttackKey; 
+    public KeyCode ParryKey; 
+    public KeyCode DashKey = KeyCode.Q; // Dash input key
+    public Transform groundCheck; 
+    public float groundCheckRadius; 
+    public LayerMask whatIsGround; 
 
-    public Transform lightAttackPoint; //point for light attack
-    public float lightAttackRange = 0.5f; //light attack radius
-    public Transform heavyAttackPoint; //point for heavy attack
-    public float heavyAttackRange = 0.7f; //heavy attack radius
-    public LayerMask Enemy; //layers considered as enemies (capital E)
-    public LayerMask Barrel;
-    public int lightDamage = 10; //light attack damage
-    public int heavyDamage = 25; //heavy attack damage
+    public Transform lightAttackPoint; 
+    public float lightAttackRange = 0.5f; 
+    public Transform heavyAttackPoint; 
+    public float heavyAttackRange = 0.7f; 
+    public LayerMask Enemy; 
+    public int lightDamage = 10; 
+    public int heavyDamage = 25; 
 
-    private bool grounded; //is player on ground
-    private bool isParrying; //is player parrying
+    public float lightAttackCooldown = 0.4f; 
+    public float heavyAttackCooldown = 0.8f; 
+    private bool canLightAttack = true; 
+    private bool canHeavyAttack = true; 
+
+    public float perfectParryWindow = 0.2f; 
+    private bool grounded; 
+    private bool isParrying; 
+    private bool perfectParryActive; 
+
+    // -------- DASH SETTINGS ----------- 
+    public float dashDistance = 5f;
+    public float dashDuration = 0.2f;
+    public float dashCooldown = 1f;
+    private bool canDash = true;
+    private bool isDashing = false;
+
+    // -------- DEATH HANDLING -----------
+    private bool isDead = false;
+
     private Animator anim;
-    private Rigidbody2D rb; //reference to Rigidbody2D for velocity access
+    private Rigidbody2D rb; 
 
     void Start () {
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>(); //get Rigidbody2D component
+        rb = GetComponent<Rigidbody2D>(); 
     }
 
     void Update () {
 
-        // ----------- PARRY -----------
-        if (Input.GetKeyDown(ParryKey) && grounded && !isParrying)
+        if (isDead) return; // block all actions if dead
+
+        // ----------- DASH INPUT -----------
+        if (Input.GetKeyDown(DashKey) && canDash && !isDashing)
         {
-            isParrying = true; //lock player state
-            rb.velocity = Vector2.zero; //stop movement instantly
-            anim.SetBool("isParrying", true); //set parry state
-            anim.SetTrigger("parry"); //play parry animation
-            Invoke(nameof(EndParry), 0.2f); //end parry after animation
+            float dashDirection = 0f;
+            if (Input.GetKey(L)) dashDirection = -1f;
+            else if (Input.GetKey(R)) dashDirection = 1f;
+
+            if (dashDirection != 0f)
+                StartCoroutine(PerformDash(dashDirection));
         }
 
-        // Prevent movement and actions while parrying
-        if (isParrying)
+        // ----------- PARRY -----------
+        if (Input.GetKeyDown(ParryKey) && grounded && !isParrying && !isDashing)
         {
-            return;
+            isParrying = true; 
+            perfectParryActive = true; 
+            rb.velocity = Vector2.zero; 
+            anim.SetBool("isParrying", true); 
+            anim.SetTrigger("parry"); 
+
+            Invoke(nameof(EndPerfectParry), perfectParryWindow); 
+            Invoke(nameof(EndParry), 0.35f); 
         }
+
+        if (isParrying || isDashing) return; // block actions during parry or dash
 
         // ----------- JUMP -----------
         if(Input.GetKeyDown(Spacebar) && grounded)
-        {
-            Jump();  
-        }
+            Jump();
 
-        // ----------- MOVE LEFT -----------
+        // ----------- MOVE -----------
         if (Input.GetKey(L))
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
             if(GetComponent<SpriteRenderer>() != null)
                 GetComponent<SpriteRenderer>().flipX = true;
         }
-
-        // ----------- MOVE RIGHT -----------
-        if (Input.GetKey(R))
+        else if (Input.GetKey(R))
         {
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
             if(GetComponent<SpriteRenderer>() != null)
                 GetComponent<SpriteRenderer>().flipX = false;
         }
-
-        // Stop sliding when no movement key is pressed
-        if (!Input.GetKey(L) && !Input.GetKey(R))
+        else
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
         }
 
-        // ----------- ANIMATION (Idle <-> Run) -----------
         anim.SetBool("isRunning", Input.GetKey(L) || Input.GetKey(R));
+        anim.SetFloat("yVelocity", rb.velocity.y);
+        anim.SetBool("isGrounded", grounded);
 
-        // ----------- ANIMATION (Jump & Fall Blend Tree) -----------
-        anim.SetFloat("yVelocity", rb.velocity.y); //send Y velocity to blend tree
-        anim.SetBool("isGrounded", grounded); //tell animator if player is on ground
-
-        // ----------- ANIMATION (Light & Heavy Attacks) -----------
-        if (Input.GetKeyDown(LightAttackKey))
+        // ----------- ATTACK INPUTS -----------
+        if (Input.GetKeyDown(LightAttackKey) && canLightAttack)
         {
+            canLightAttack = false;
             LightAttack();
+            Invoke(nameof(ResetLightAttack), lightAttackCooldown);
         }
 
-        if (Input.GetKeyDown(HeavyAttackKey))
+        if (Input.GetKeyDown(HeavyAttackKey) && canHeavyAttack)
         {
-            HeavyAttack(); 
+            canHeavyAttack = false;
+            HeavyAttack();
+            Invoke(nameof(ResetHeavyAttack), heavyAttackCooldown);
         }
     }
 
@@ -106,108 +131,130 @@ public class PlayerController : MonoBehaviour {
             groundCheck.position,
             groundCheckRadius,
             whatIsGround
-        ); //this statement calculates when exactly the character is considered to be standing on the ground
+        );
     }
 
     void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpHeight); //player jumps vertically
+        rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+    }
+
+    void EndPerfectParry()
+    {
+        perfectParryActive = false;
     }
 
     void EndParry()
     {
-        isParrying = false; //unlock player state
-        anim.SetBool("isParrying", false); //return to idle/run
+        isParrying = false;
+        anim.SetBool("isParrying", false);
     }
 
     // ----------- ATTACK FUNCTIONS -----------
-
-    // Called from LightAttack animation event
     public void LightAttack()
     {
-        Debug.Log("LightAttack called"); // function triggered
-
-        // Detect all enemies in light attack range
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightAttackPoint.position, lightAttackRange, Enemy);
-        Debug.Log("LightAttack hits detected: " + hitEnemies.Length);
-
-        Debug.Log("Enemies detected: " + hitEnemies.Length);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
+            lightAttackPoint.position,
+            lightAttackRange,
+            Enemy
+        );
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("Hit Enemy (Light): " + enemy.name);
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null)
                 ec.TakeDamage(lightDamage);
         }
-        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
-            lightAttackPoint.position,
-            lightAttackRange,
-            Barrel
-        );
 
-        foreach (Collider2D barrelCol in hitBarrels)
-        {
-            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
-            if (barrel != null)
-                barrel.BarrelDamage();
-        }
-
-        anim.SetTrigger("lightAttack"); //trigger light slash animation
+        anim.SetTrigger("lightAttack");
     }
 
-    // Called from HeavyAttack animation event
     public void HeavyAttack()
     {
-        Debug.Log("HeavyAttack called"); // function triggered
-
-        // Detect all enemies in heavy attack range
-        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyAttackPoint.position, heavyAttackRange, Enemy);
-        Debug.Log("HeavyAttack hits detected: " + hitEnemies.Length);
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(
+            heavyAttackPoint.position,
+            heavyAttackRange,
+            Enemy
+        );
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log("Hit Enemy (Heavy): " + enemy.name);
             EnemyController ec = enemy.GetComponent<EnemyController>();
             if (ec != null)
                 ec.TakeDamage(heavyDamage);
         }
 
-        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
-            heavyAttackPoint.position,
-            heavyAttackRange,
-            Barrel
-        );
-
-        foreach (Collider2D barrelCol in hitBarrels)
-        {
-            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
-            if (barrel != null)
-                barrel.BarrelDamage();
-        }
-
-        anim.SetTrigger("heavyAttack"); //trigger heavy slash animation
+        anim.SetTrigger("heavyAttack");
     }
 
-    // Called from animation event to end attack animation
-    public void EndAttack()
+    void ResetLightAttack() => canLightAttack = true;
+    void ResetHeavyAttack() => canHeavyAttack = true;
+
+    // ----------- DASH COROUTINE -----------
+    private IEnumerator PerformDash(float direction)
     {
-        anim.SetBool("isAttacking", false);
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0;
+        rb.velocity = new Vector2(direction * dashDistance / dashDuration, 0f);
+
+        // Optional: enable invincibility here
+
+        yield return new WaitForSeconds(dashDuration);
+
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashCooldown);
+        canDash = true;
     }
 
-    // Visualize the attack ranges in the Scene view
+    // ----------- DEATH HANDLER -----------
+    public void Die()
+    {
+        if (isDead) return; // prevent multiple triggers
+
+        isDead = true;
+        rb.velocity = Vector2.zero;
+        canLightAttack = false;
+        canHeavyAttack = false;
+        canDash = false;
+
+        anim.SetTrigger("death"); // play death animation
+
+        // Disable player collider to avoid further hits
+        GetComponent<Collider2D>().enabled = false;
+
+        // Optional: notify LevelManager or reload scene after death animation
+        Invoke(nameof(GameOver), 2f); // 2s death animation
+    }
+
+    private void GameOver()
+    {
+        // Example: reload current scene
+        UnityEngine.SceneManagement.SceneManager.LoadScene(
+            UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex
+        );
+    }
+
     private void OnDrawGizmos()
     {
         if (lightAttackPoint != null)
-        {
-            Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(lightAttackPoint.position, lightAttackRange);
-        }
 
         if (heavyAttackPoint != null)
-        {
-            Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(heavyAttackPoint.position, heavyAttackRange);
-        }
+    }
+
+    public bool IsParrying()
+    {
+        return isParrying;
+    }
+
+    public bool IsPerfectParryActive()
+    {
+        return perfectParryActive;
     }
 }

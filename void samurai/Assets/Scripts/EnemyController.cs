@@ -11,6 +11,10 @@ public abstract class EnemyController : MonoBehaviour
     public int damage;
     public float attackRange;
 
+    // ----------- STAGGER SETTINGS -----------
+    public float staggerDuration = 0.6f;
+    protected bool isStaggered;
+
     protected Transform player;
     protected Rigidbody2D rb;
     protected CombatZone combatZone;
@@ -21,12 +25,10 @@ public abstract class EnemyController : MonoBehaviour
         
         GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
         if (playerObj != null)
-        {
             player = playerObj.transform;
-        }
+
         currentHealth = maxHealth;
 
-        // Register to combat zone if it exists
         combatZone = GetComponentInParent<CombatZone>();
         if (combatZone != null)
             combatZone.RegisterEnemy(this);
@@ -34,6 +36,9 @@ public abstract class EnemyController : MonoBehaviour
 
     protected virtual void Update()
     {
+        if (isStaggered)
+            return; // enemy frozen during stagger
+
         EnemyBehavior();
     }
 
@@ -43,16 +48,33 @@ public abstract class EnemyController : MonoBehaviour
     {
         currentHealth -= dmg;
         Debug.Log("Enemy Took Damage " + dmg);
+
         if (currentHealth <= 0)
             Die();
-        Debug.LogError("Enemy got hit successfully");    
+    }
+
+    public virtual void ApplyStagger()
+    {
+        if (isStaggered)
+            return;
+
+        isStaggered = true;
+        rb.velocity = Vector2.zero;
+        Debug.Log("Enemy Staggered!");
+
+        Invoke(nameof(EndStagger), staggerDuration);
+    }
+
+    void EndStagger()
+    {
+        isStaggered = false;
     }
 
     protected virtual void Die()
     {
         if (combatZone != null)
             combatZone.UnregisterEnemy(this);
-            
+
         Destroy(gameObject);
     }
 
