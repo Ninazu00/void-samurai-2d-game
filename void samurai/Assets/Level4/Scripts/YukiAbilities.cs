@@ -35,6 +35,7 @@ public class YukiAbilities : MonoBehaviour
         worldAblazeWarningCD = worldAblazeCD -5;
         //Phase one music
         FindObjectOfType<AudioManager>().playYukiOne();
+        FindObjectOfType<AudioManager>().playVoidDrownYou();
     }
 
     // Update is called once per frame
@@ -85,6 +86,7 @@ public class YukiAbilities : MonoBehaviour
     }
     public void spawnVoidBurst()
     {
+        FindObjectOfType<AudioManager>().playYukiLaugh();
         Instantiate(voidProjectile, spawnNovaDown.position, spawnNovaDown.transform.rotation);
         Instantiate(voidProjectile, spawnNovaLeft.position, spawnNovaLeft.transform.rotation);
         Instantiate(voidProjectile, spawnNovaRight.position, spawnNovaRight.transform.rotation);
@@ -121,6 +123,7 @@ public class YukiAbilities : MonoBehaviour
     }
     public void worldAblaze()
     {
+        FindObjectOfType<AudioManager>().playWorldAblaze();
         for (float i = -14.33f; i < 15f; i += 1f)
         {
             Quaternion noRotation = Quaternion.Euler(0, 0, 0);
