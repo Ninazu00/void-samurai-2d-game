@@ -1723,6 +1723,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90c1c85c99e722345ba4eb3925525608, type: 3}
+--- !u!1 &458064790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4256423732778244043, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
+  m_PrefabInstance: {fileID: 1036180992}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &485750588
 GameObject:
   m_ObjectHideFlags: 0
@@ -5183,6 +5188,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4256423732778243638, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
   m_PrefabInstance: {fileID: 1036180992}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1163175903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458064790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcadedf8bee17d748a4c5844c9f2aa84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicSource: {fileID: 0}
+  sfxSource: {fileID: 0}
+  voiceLines: {fileID: 0}
+  overworldMusic: {fileID: 0}
+  variousSFX: []
+  yukiPhaseOne: {fileID: 0}
+  yukiPhaseTwo: {fileID: 0}
+  yukiLaugh: {fileID: 0}
+  swordsRain: {fileID: 0}
+  voidBurst: {fileID: 0}
+  voidDrownYou: {fileID: 0}
+  worldAblaze: {fileID: 0}
+  yukiMelee: {fileID: 0}
+  yukiPointlessStruggle: {fileID: 0}
+  yukiFullAttention: {fileID: 0}
+  yukiTauntPainful: {fileID: 0}
+  yukiDeath: {fileID: 0}
+  yukiShortLaugh: {fileID: 0}
+  lightSlash: {fileID: 8300000, guid: 513302d24c6531949b6ff3e12d97be05, type: 3}
+  heavySlash: {fileID: 8300000, guid: 4066cc8765eea38458078a3b6923fe65, type: 3}
+  parry: {fileID: 8300000, guid: e20ddf594f7777448bf5f68a7a44c9f1, type: 3}
+  dash: {fileID: 8300000, guid: e223b2f24847628459ed8916d648e2c8, type: 3}
 --- !u!1 &1174464734
 GameObject:
   m_ObjectHideFlags: 0
@@ -5510,6 +5549,10 @@ MonoBehaviour:
   yukiTauntPainful: {fileID: 0}
   yukiDeath: {fileID: 0}
   yukiShortLaugh: {fileID: 0}
+  lightSlash: {fileID: 0}
+  heavySlash: {fileID: 0}
+  parry: {fileID: 0}
+  dash: {fileID: 0}
 --- !u!1 &1215970945
 GameObject:
   m_ObjectHideFlags: 0

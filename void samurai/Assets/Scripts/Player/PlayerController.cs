@@ -151,6 +151,19 @@ public class PlayerController : MonoBehaviour
                 lastDamagedEnemy = ec;
             }
         }
+        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
+            lightAttackPoint.position,
+            lightAttackRange,
+            Barrel
+        );
+
+        foreach (Collider2D barrelCol in hitBarrels)
+        {
+            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
+            if (barrel != null)
+                barrel.BarrelDamage();
+        }
+
 
         anim.SetTrigger("lightAttack");
     }
@@ -169,6 +182,19 @@ public class PlayerController : MonoBehaviour
                 lastDamagedEnemy = ec;
             }
         }
+        Collider2D[] hitBarrels = Physics2D.OverlapCircleAll(
+            heavyAttackPoint.position,
+            heavyAttackRange,
+            Barrel
+        );
+
+        foreach (Collider2D barrelCol in hitBarrels)
+        {
+            BarrelDestroyer barrel = barrelCol.GetComponent<BarrelDestroyer>();
+            if (barrel != null)
+                barrel.BarrelDamage();
+        }
+
 
         anim.SetTrigger("heavyAttack");
     }
