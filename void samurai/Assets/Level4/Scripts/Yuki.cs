@@ -101,7 +101,7 @@ public class Yuki : EnemyController
         animator.SetTrigger("DIE");
         FindObjectOfType<AudioManager>().playYukiDeath();
         StartCoroutine(FadeOutAndDestroy());
-        //Invoke(nameof(deleteYuki), 3f);
+        FindObjectOfType<AudioManager>().yukiFadeOut();
     }
 
     private IEnumerator FadeOutAndDestroy()
@@ -116,10 +116,6 @@ public class Yuki : EnemyController
             sr.color = c;
             yield return null;
         }
-        Destroy(gameObject);
-    }
-    void deleteYuki()
-    {
         Destroy(gameObject);
     }
 

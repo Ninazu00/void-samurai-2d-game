@@ -61,6 +61,7 @@ public class AudioManager : MonoBehaviour
     // Public in case another object needs to call for a specific soundtrack to begin playing
     public void PlayMusic(AudioClip clip)
     {
+        musicSource.volume = 1f;
         musicSource.Stop();
         musicSource.clip = clip;
         musicSource.Play();
@@ -81,6 +82,25 @@ public class AudioManager : MonoBehaviour
         sfxSource.PlayOneShot(variousSFX[index]);
     }
 
+    private IEnumerator yukiFadeOutCoroutine(float duration)
+    {
+        float startVolume = musicSource.volume;
+        float time = 0f;
+
+        while (time < duration)
+        {
+            time += Time.deltaTime;
+            musicSource.volume = Mathf.Lerp(startVolume, 0f, time / duration);
+            yield return null;
+        }
+
+        musicSource.volume = 0f;
+        musicSource.Stop();
+    }
+    public void yukiFadeOut()
+    {
+        StartCoroutine(yukiFadeOutCoroutine(3f));
+    }
     public void playYukiOne()
     {
         PlayMusic(yukiPhaseOne);
