@@ -25,26 +25,19 @@ public class AudioManager : MonoBehaviour
     public AudioClip yukiDeath;
     public AudioClip yukiShortLaugh;
 
-
     [Header("Player SFX")]
     public AudioClip lightSlash; // Light attack sound
     public AudioClip heavySlash; // Heavy attack sound
     public AudioClip parry;      // Parry sound
     public AudioClip dash;       // Dash sound
+    public AudioClip jumpSound;  // Jump sound
 
     [Header("Memory Echo")]
     public AudioClip Memechoaudio;
 
+    void Start() { }
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+    void Update() { }
 
     void Awake()
     {
@@ -78,10 +71,7 @@ public class AudioManager : MonoBehaviour
     // Function takes a bunch of sound clips as parameters
     public void PlayRandomSFX(params AudioClip[] clips)
     {
-        // Assign the incoming array of items to our local arraylist varible called 'variousSFX'
         variousSFX = clips;
-
-        // Randomly select a sound clip from the arraylist, then play that clip
         int index = Random.Range(0, variousSFX.Length);
         sfxSource.PlayOneShot(variousSFX[index]);
     }
@@ -110,6 +100,12 @@ public class AudioManager : MonoBehaviour
         if (dash != null)
             PlayMusicSFX(dash);
     }
+
+    public void PlayJump()
+    {
+        if (jumpSound != null)
+            PlayMusicSFX(jumpSound);
+    }
     // ---------------------------------------------------
 
     private IEnumerator yukiFadeOutCoroutine(float duration)
@@ -127,85 +123,40 @@ public class AudioManager : MonoBehaviour
         musicSource.volume = 0f;
         musicSource.Stop();
     }
-    public void yukiFadeOut()
-    {
-        StartCoroutine(yukiFadeOutCoroutine(3f));
-    }
-    public void playYukiOne()
-    {
-        PlayMusic(yukiPhaseOne);
-        Debug.Log("Playing Yuki One");
-    }
-    public void playYukiTwo()
-    {
-        PlayMusic(yukiPhaseTwo);
-        Debug.Log("Playing Yuki Two");
-    }
-    public void playSwordsRain()
-    {
-        PlayMusicSFX(swordsRain);
-    }
-    public void playVoidBurst()
-    {
-        PlayMusicSFX(voidBurst);
-    }
-    public void playVoidDrownYou()
-    {
-        PlayVoiceLine(voidDrownYou);
-    }
-    public void playWorldAblaze()
-    {
-        PlayMusicSFX(worldAblaze);
-    }
-    public void playYukiLaugh()
-    {
-        PlayVoiceLine(yukiLaugh);
-    }
-    public void playYukiMelee()
-    {
-        PlayMusicSFX(yukiMelee);
-    }
-    public void playYukiTaunt1()
-    {
-        PlayVoiceLine(yukiFullAttention);
-    }
-    public void playYukiTaunt2()
-    {
-        PlayVoiceLine(yukiPointlessStruggle);
-    }
-    public void playYukiTaunt3()
-    {
-        PlayVoiceLine(yukiTauntPainful);
-    }
-    public void playYukiDeath()
-    {
-        PlayVoiceLine(yukiDeath);
-    }
-    public void playYukiShortLaugh()
-    {
-        PlayVoiceLine(yukiShortLaugh);
+
+    public void yukiFadeOut() { StartCoroutine(yukiFadeOutCoroutine(3f)); }
+    public void playYukiOne() { PlayMusic(yukiPhaseOne); Debug.Log("Playing Yuki One"); }
+    public void playYukiTwo() { PlayMusic(yukiPhaseTwo); Debug.Log("Playing Yuki Two"); }
+    public void playSwordsRain() { PlayMusicSFX(swordsRain); }
+    public void playVoidBurst() { PlayMusicSFX(voidBurst); }
+    public void playVoidDrownYou() { PlayVoiceLine(voidDrownYou); }
+    public void playWorldAblaze() { PlayMusicSFX(worldAblaze); }
+    public void playYukiLaugh() { PlayVoiceLine(yukiLaugh); }
+    public void playYukiMelee() { PlayMusicSFX(yukiMelee); }
+    public void playYukiTaunt1() { PlayVoiceLine(yukiFullAttention); }
+    public void playYukiTaunt2() { PlayVoiceLine(yukiPointlessStruggle); }
+    public void playYukiTaunt3() { PlayVoiceLine(yukiTauntPainful); }
+    public void playYukiDeath() { PlayVoiceLine(yukiDeath); }
+    public void playYukiShortLaugh() 
+    { 
+        PlayVoiceLine(yukiShortLaugh); 
     }
 
+    public void FadeOutMEFA(float duration) { StartCoroutine(MEFcoroutihne(duration)); }
 
-            public void FadeOutMEFA(float duration)
+    IEnumerator MEFcoroutihne(float duration)
+    {
+        float startVolume = voiceLines.volume;
+        float time = 0f;
+
+        while (time < duration)
         {
-            StartCoroutine(MEFcoroutihne(duration));
+            time += Time.deltaTime;
+            voiceLines.volume = Mathf.Lerp(startVolume, 0f, time / duration);
+            yield return null;
         }
 
-        IEnumerator MEFcoroutihne(float duration)
-        {
-            float startVolume = voiceLines.volume;
-            float time = 0f;
-
-            while (time < duration)
-            {
-                time += Time.deltaTime;
-                voiceLines.volume = Mathf.Lerp(startVolume, 0f, time / duration);
-                yield return null;
-            }
-
-            voiceLines.volume = startVolume;
-            voiceLines.Stop();
-        }
-
+        voiceLines.volume = startVolume;
+        voiceLines.Stop();
+    }
 }

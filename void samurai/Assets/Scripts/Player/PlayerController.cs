@@ -135,6 +135,7 @@ public class PlayerController : MonoBehaviour
     void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+        AudioManager.Instance.PlayJump(); // <-- Added jump sound
     }
 
     void EndPerfectParry() => perfectParryActive = false;
