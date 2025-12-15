@@ -11,7 +11,14 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (Player == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+                Player = playerObj.transform;
+            else
+                Debug.LogError("Player not found in scene");
+        }
     }
 
     // Update is called once per frame
@@ -22,11 +29,9 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
+        Instance = this;
     }
+    
 
     public void SetCheckpoint(GameObject checkpoint)
     {

@@ -15,7 +15,7 @@ public class PlayerStats : MonoBehaviour
     public bool isImmune = false;
     private float immunityTime = 0f;
     public float immunityDuration = 1.5f;
-    public static int score = 0; // The score of the collected Void Steel Ore, it's equal to 0 now because this is the start.
+    public static int score = 0;
 
     private float flickerTime = 0f;
     public float flickerDuration = 0.1f;
@@ -25,9 +25,6 @@ public class PlayerStats : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         pc = GetComponent<PlayerController>();
-
-        slider.maxValue = health;
-        slider.value = health;
 
         if (slider != null)
         {
@@ -57,36 +54,33 @@ public class PlayerStats : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (isImmune) return;
+        if (isImmune || pc == null || pc.IsDead()) return;
 
         health -= damage;
         slider.value = health;
 
-        if (health < 0)
-            health = 0;
+        if (health < 0) health = 0;
 
-        // -------- HIT ANIMATION --------
+        // HIT animation
         anim.SetTrigger("hit");
         anim.SetBool("isHit", true);
-        //pc.SetHitState(true);
-
         Invoke(nameof(EndHit), 0.2f);
 
         if (health == 0)
-        {
-            FindObjectOfType<LevelManager>().RespawnPlayer();
-        }
+            {
+                FindObjectOfType<DeathScreenUI>().ShowDeath();
+            }
 
         Debug.Log("Player Health: " + health);
 
         isImmune = true;
         immunityTime = 0f;
+        Debug.Log("Player Health: " + health);
     }
 
     void EndHit()
     {
         anim.SetBool("isHit", false);
-        //pc.SetHitState(false);
     }
 
     void SpriteFlicker()
@@ -105,9 +99,7 @@ public class PlayerStats : MonoBehaviour
     public void HealFull()
     {
         health = 100;
-
         if (slider != null)
             slider.value = health;
     }
-
 }

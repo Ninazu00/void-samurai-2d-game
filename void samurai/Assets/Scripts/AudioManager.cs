@@ -49,15 +49,7 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         // Make sure the entire game only has one AudioManager throughout
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
     }
 
     // Public in case another object needs to call for a specific sound effect to begin playing
