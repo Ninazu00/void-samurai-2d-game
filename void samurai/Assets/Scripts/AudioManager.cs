@@ -25,11 +25,16 @@ public class AudioManager : MonoBehaviour
     public AudioClip yukiDeath;
     public AudioClip yukiShortLaugh;
 
+
     [Header("Player SFX")]
     public AudioClip lightSlash; // Light attack sound
     public AudioClip heavySlash; // Heavy attack sound
     public AudioClip parry;      // Parry sound
     public AudioClip dash;       // Dash sound
+
+    [Header("Memory Echo")]
+    public AudioClip Memechoaudio;
+
 
     void Start()
     {

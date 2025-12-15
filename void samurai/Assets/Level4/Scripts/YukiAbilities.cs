@@ -32,7 +32,7 @@ public class YukiAbilities : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        worldAblazeWarningCD = worldAblazeCD -2;
+        worldAblazeWarningCD = worldAblazeCD -4;
         //Phase one music
         FindObjectOfType<AudioManager>().playYukiOne();
         FindObjectOfType<AudioManager>().playVoidDrownYou();
