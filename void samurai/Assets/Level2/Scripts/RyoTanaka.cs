@@ -283,6 +283,14 @@ public class RyoTanaka : EnemyController
     protected override void Die()
     {
         Debug.Log("Ryo Tanaka defeated!");
+
+        // --- ADDITION: Unlock Resolve Stance ---
+        PlayerController player = FindObjectOfType<PlayerController>();
+        if (player != null)
+        {
+            player.UnlockResolveStance();
+        }
+
         base.Die();
     }
 }

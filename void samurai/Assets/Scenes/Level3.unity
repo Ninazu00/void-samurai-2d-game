@@ -557,6 +557,10 @@ PrefabInstance:
       propertyPath: Barrel.m_Bits
       value: 128
       objectReference: {fileID: 0}
+    - target: {fileID: 4256423732778244042, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
+      propertyPath: currentStance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4256423732778244043, guid: ff61e61f79aee52488bfff88f809bc2b, type: 3}
       propertyPath: m_Name
       value: Jin
@@ -2659,8 +2663,9 @@ MonoBehaviour:
   musicSource: {fileID: 463645683}
   sfxSource: {fileID: 463645682}
   voiceLines: {fileID: 463645681}
-  overworldMusic: {fileID: 0}
-  extraBackgroundMusic: {fileID: 0}
+  Level1Music: {fileID: 0}
+  Level1ExtraMusic: {fileID: 0}
+  Level2Music: {fileID: 0}
   variousSFX: []
   yukiPhaseOne: {fileID: 0}
   yukiPhaseTwo: {fileID: 0}

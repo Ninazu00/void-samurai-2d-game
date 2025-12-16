@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement; // Needed to check scene name
 
 public enum Stance
 {
@@ -69,6 +70,11 @@ public class PlayerController : MonoBehaviour
     public ParticleSystem resolveAura;
     public ParticleSystem purificationAura;
 
+    // Unlock flags
+    [Header("Stance Unlocks")]
+    public bool resolveUnlocked = false;       // After Ryo
+    public bool purificationUnlocked = false;  // Final Boss
+
     private float lightAttackRangeModifier = 1f;
     private float heavyAttackDamageModifier = 1f;
     private bool ryoGuidanceActive = false;
@@ -79,6 +85,12 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
 
+        // Automatically unlock Purification if Level 4 is loaded
+        if (SceneManager.GetActiveScene().name == "Level4")
+        {
+            UnlockPurificationStance();
+        }
+
         ApplyStanceModifiers();
     }
 
@@ -86,7 +98,7 @@ public class PlayerController : MonoBehaviour
     {
         if (isDead) return;
 
-        // STANCE SWITCH
+        // --- STANCE SWITCH ---
         if (Input.GetKeyDown(KeyCode.Z))
             CycleStance();
 
@@ -106,7 +118,9 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
             anim.SetBool("isParrying", true);
             anim.SetTrigger("parry");
+
             AudioManager.Instance.PlayParry();
+
             Invoke(nameof(EndPerfectParry), perfectParryWindow);
             Invoke(nameof(EndParry), 0.35f);
         }
@@ -122,6 +136,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(L)) xVelocity = -moveSpeed;
         else if (Input.GetKey(R)) xVelocity = moveSpeed;
         rb.velocity = new Vector2(xVelocity, rb.velocity.y);
+
         sr.flipX = Input.GetKey(L);
 
         anim.SetBool("isRunning", Input.GetKey(L) || Input.GetKey(R));
@@ -163,7 +178,7 @@ public class PlayerController : MonoBehaviour
 
     public void LightAttack()
     {
-        float modifiedRange = lightAttackRange * lightAttackRangeModifier;
+        float modifiedRange = lightAttackPoint != null ? lightAttackRange * lightAttackRangeModifier : lightAttackRange;
         lastDamagedEnemy = null;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(lightAttackPoint.position, modifiedRange, Enemy);
         foreach (Collider2D enemy in hitEnemies)
@@ -182,7 +197,7 @@ public class PlayerController : MonoBehaviour
 
     public void HeavyAttack()
     {
-        float modifiedRange = heavyAttackRange * lightAttackRangeModifier;
+        float modifiedRange = heavyAttackPoint != null ? heavyAttackRange * lightAttackRangeModifier : heavyAttackRange;
         lastDamagedEnemy = null;
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(heavyAttackPoint.position, modifiedRange, Enemy);
         foreach (Collider2D enemy in hitEnemies)
@@ -268,9 +283,24 @@ public class PlayerController : MonoBehaviour
     // ---------------- STANCE SYSTEM ----------------
     void CycleStance()
     {
-        if (currentStance == Stance.Regret) currentStance = Stance.Resolve;
-        else if (currentStance == Stance.Resolve) currentStance = Stance.Purification;
-        else currentStance = Stance.Regret;
+        if (currentStance == Stance.Regret)
+        {
+            if (resolveUnlocked)
+                currentStance = Stance.Resolve;
+            else
+                return;
+        }
+        else if (currentStance == Stance.Resolve)
+        {
+            if (purificationUnlocked)
+                currentStance = Stance.Purification;
+            else
+                currentStance = Stance.Regret;
+        }
+        else // Purification
+        {
+            currentStance = Stance.Regret;
+        }
 
         ApplyStanceModifiers();
         Debug.Log("Current Stance: " + currentStance);
@@ -278,7 +308,6 @@ public class PlayerController : MonoBehaviour
 
     void ApplyStanceModifiers()
     {
-        // Stop auras first
         if (resolveAura != null) resolveAura.Stop();
         if (purificationAura != null) purificationAura.Stop();
 
@@ -307,6 +336,19 @@ public class PlayerController : MonoBehaviour
                 ryoGuidanceActive = true;
                 break;
         }
+    }
+
+    // ---------------- STANCE UNLOCK METHODS ----------------
+    public void UnlockResolveStance()
+    {
+        resolveUnlocked = true;
+        Debug.Log("Resolve Stance unlocked!");
+    }
+
+    public void UnlockPurificationStance()
+    {
+        purificationUnlocked = true;
+        Debug.Log("Purification Stance unlocked!");
     }
 
     public void SetInputEnabled(bool enabled)

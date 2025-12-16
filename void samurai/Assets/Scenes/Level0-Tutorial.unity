@@ -8997,9 +8997,7 @@ MonoBehaviour:
   musicSource: {fileID: 1215696584}
   sfxSource: {fileID: 1215696584}
   voiceLines: {fileID: 1215696583}
-  Level1Music: {fileID: 0}
-  Level1ExtraMusic: {fileID: 0}
-  Level2Music: {fileID: 0}
+  overworldMusic: {fileID: 0}
   variousSFX: []
   yukiPhaseOne: {fileID: 0}
   yukiPhaseTwo: {fileID: 0}
