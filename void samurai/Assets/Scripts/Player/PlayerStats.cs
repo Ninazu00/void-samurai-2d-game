@@ -68,7 +68,7 @@ public class PlayerStats : MonoBehaviour
 
         if (health == 0)
             {
-                FindObjectOfType<DeathScreenUI>().ShowDeath();
+                FindObjectOfType<LevelManager>().RespawnPlayer();
             }
 
         Debug.Log("Player Health: " + health);

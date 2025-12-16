@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class DeathScreenUI : MonoBehaviour
 {
     public GameObject panel;
-
     private PlayerController player;
 
     void Start()
@@ -19,7 +18,7 @@ public class DeathScreenUI : MonoBehaviour
     {
         panel.SetActive(true);
         Time.timeScale = 0f;
-        player.SetInputEnabled(false);
+        player.enabled = false;
     }
 
     public void Respawn()
@@ -27,7 +26,7 @@ public class DeathScreenUI : MonoBehaviour
         Time.timeScale = 1f;
 
         FindObjectOfType<LevelManager>().RespawnPlayer();
-        player.SetInputEnabled(true);
+        player.enabled = true;
 
         panel.SetActive(false);
     }
