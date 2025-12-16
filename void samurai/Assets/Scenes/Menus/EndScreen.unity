@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 41570127}
   - component: {fileID: 41570126}
   - component: {fileID: 41570125}
+  - component: {fileID: 41570128}
   m_Layer: 5
   m_Name: MainMenuButton
   m_TagString: Untagged
@@ -206,7 +207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 41570126}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 41570128}
+        m_TargetAssemblyTypeName: EndScreen, Assembly-CSharp
+        m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &41570126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,6 +258,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 41570123}
   m_CullTransparentMesh: 1
+--- !u!114 &41570128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41570123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fa1b9b13547734e80fd16d0c2f1046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &709185679
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,6 +282,7 @@ GameObject:
   - component: {fileID: 709185682}
   - component: {fileID: 709185681}
   - component: {fileID: 709185680}
+  - component: {fileID: 709185684}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -347,6 +373,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &709185684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709185679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36fa1b9b13547734e80fd16d0c2f1046, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &895359077
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,7 +465,7 @@ GameObject:
   - component: {fileID: 1193472596}
   - component: {fileID: 1193472595}
   m_Layer: 5
-  m_Name: Image
+  m_Name: YouWin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
