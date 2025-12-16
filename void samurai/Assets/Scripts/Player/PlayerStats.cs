@@ -57,25 +57,24 @@ public class PlayerStats : MonoBehaviour
         if (isImmune || pc == null || pc.IsDead()) return;
 
         health -= damage;
-        slider.value = health;
-
         if (health < 0) health = 0;
+
+        if (slider != null)
+            slider.value = health;
 
         // HIT animation
         anim.SetTrigger("hit");
         anim.SetBool("isHit", true);
         Invoke(nameof(EndHit), 0.2f);
 
-        if (health == 0)
-            {
-                FindObjectOfType<LevelManager>().RespawnPlayer();
-            }
-
-        Debug.Log("Player Health: " + health);
+        // Notify PlayerController if dead
+        if (health == 0 && !pc.IsDead())
+        {
+            pc.Die();
+        }
 
         isImmune = true;
         immunityTime = 0f;
-        Debug.Log("Player Health: " + health);
     }
 
     void EndHit()
