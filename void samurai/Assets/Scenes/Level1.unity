@@ -2227,7 +2227,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 100000
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -2493,7 +2493,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 20
+      scalar: 50
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -32702,6 +32702,7 @@ MonoBehaviour:
   heavySlash: {fileID: 8300000, guid: 4066cc8765eea38458078a3b6923fe65, type: 3}
   parry: {fileID: 8300000, guid: e20ddf594f7777448bf5f68a7a44c9f1, type: 3}
   dash: {fileID: 8300000, guid: e223b2f24847628459ed8916d648e2c8, type: 3}
+  jumpSound: {fileID: 8300000, guid: edaaabc079e8dff45b29791012963e77, type: 3}
   Memechoaudio: {fileID: 0}
 --- !u!82 &2086324983
 AudioSource:
