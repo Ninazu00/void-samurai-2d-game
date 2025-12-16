@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public int lightDamage = 10;
     public int heavyDamage = 25;
 
-    public float perfectParryWindow = 0.2f;
+    public float perfectParryWindow = 0.3f;
     private bool grounded;
     private bool isParrying;
     private bool perfectParryActive;
@@ -38,8 +38,9 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     bool canHeavyAttack = true;
     bool canLightAttack = true;
-    public int lightAttackCooldown;
-    public int heavyAttackCooldown;
+
+    public float lightAttackCooldown = 0.25f;
+    public float heavyAttackCooldown = 0.6f;
 
     private bool isDead = false;
 
@@ -47,6 +48,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     private EnemyController lastDamagedEnemy;
+
+    private float groundedBuffer = 0.05f;
+    private float groundedTimer;
 
     void Start()
     {
@@ -75,6 +79,8 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isParrying", true);
             anim.SetTrigger("parry");
 
+            AudioManager.Instance.PlayParry();
+
             Invoke(nameof(EndPerfectParry), perfectParryWindow);
             Invoke(nameof(EndParry), 0.35f);
         }
@@ -89,14 +95,12 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(L))
         {
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
-            if (GetComponent<SpriteRenderer>() != null)
-                GetComponent<SpriteRenderer>().flipX = true;
+            GetComponent<SpriteRenderer>().flipX = true;
         }
         else if (Input.GetKey(R))
         {
             rb.velocity = new Vector2(moveSpeed, rb.velocity.y);
-            if (GetComponent<SpriteRenderer>() != null)
-                GetComponent<SpriteRenderer>().flipX = false;
+            GetComponent<SpriteRenderer>().flipX = false;
         }
         else
         {
@@ -104,8 +108,11 @@ public class PlayerController : MonoBehaviour
         }
 
         anim.SetBool("isRunning", Input.GetKey(L) || Input.GetKey(R));
-        anim.SetFloat("yVelocity", rb.velocity.y);
-        anim.SetBool("isGrounded", grounded);
+
+        // Smooth yVelocity for falling
+        float smoothY = Mathf.Lerp(anim.GetFloat("yVelocity"), rb.velocity.y, Time.deltaTime * 10f);
+        anim.SetFloat("yVelocity", smoothY);
+        anim.SetBool("isGrounded", groundedTimer > 0f);
 
         // ATTACK INPUTS
         if (Input.GetKeyDown(LightAttackKey) && canLightAttack)
@@ -126,17 +133,18 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+        groundedTimer = grounded ? groundedBuffer : groundedTimer - Time.fixedDeltaTime;
     }
 
     void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
+        AudioManager.Instance.PlayJump();
     }
 
     void EndPerfectParry() => perfectParryActive = false;
     void EndParry() { isParrying = false; anim.SetBool("isParrying", false); }
 
-    // ATTACK FUNCTIONS
     public void LightAttack()
     {
         lastDamagedEnemy = null;
@@ -159,6 +167,7 @@ public class PlayerController : MonoBehaviour
         }
 
         anim.SetTrigger("lightAttack");
+        AudioManager.Instance.PlayLightSlash();
     }
 
     public void HeavyAttack()
@@ -183,12 +192,12 @@ public class PlayerController : MonoBehaviour
         }
 
         anim.SetTrigger("heavyAttack");
+        AudioManager.Instance.PlayHeavySlash();
     }
 
     void ResetLightAttack() => canLightAttack = true;
     void ResetHeavyAttack() => canHeavyAttack = true;
 
-    // DASH
     private IEnumerator PerformDash(float direction)
     {
         canDash = false;
@@ -196,18 +205,16 @@ public class PlayerController : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(direction * dashDistance / dashDuration, 0f);
-
+        AudioManager.Instance.PlayDash();
         yield return new WaitForSeconds(dashDuration);
-
         rb.velocity = Vector2.zero;
         rb.gravityScale = originalGravity;
         isDashing = false;
-
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
 
-    // DEATH
+    // ---------------- DEATH ----------------
     public void Die()
     {
         if (isDead) return;
@@ -218,7 +225,7 @@ public class PlayerController : MonoBehaviour
         canHeavyAttack = false;
         canDash = false;
 
-        anim.SetTrigger("death");
+        anim.Play("Death"); // ensures death animation starts immediately
         GetComponent<Collider2D>().enabled = false;
 
         StartCoroutine(DeathAndRespawn());
@@ -226,30 +233,33 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator DeathAndRespawn()
     {
-        // Wait until Animator enters Death state
-        while (!anim.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+        // Get the actual length of the Death clip
+        float deathAnimLength = 1f; // fallback
+        foreach (AnimationClip clip in anim.runtimeAnimatorController.animationClips)
         {
-            yield return null;
+            if (clip.name == "Death") // must match clip name exactly
+            {
+                deathAnimLength = clip.length;
+                break;
+            }
         }
 
-        // Wait for full death animation length
-        float deathAnimLength = anim.GetCurrentAnimatorStateInfo(0).length;
+        // Wait for the animation to finish
         yield return new WaitForSeconds(deathAnimLength);
 
         // Respawn player
-        Invoke("Respawn", 3f);
-    }
-
-    private void Respawn()
-    {
         LevelManager.Instance.RespawnPlayer();
 
-        // Reset player state
+        // Reset states
         isDead = false;
         canLightAttack = true;
         canHeavyAttack = true;
         canDash = true;
         GetComponent<Collider2D>().enabled = true;
+
+        // Reset Animator
+        anim.Rebind();
+        anim.Update(0f);
     }
 
     private void OnDrawGizmos()
@@ -263,12 +273,8 @@ public class PlayerController : MonoBehaviour
     public void SetInputEnabled(bool enabled)
     {
         isDead = !enabled;
-        if (!enabled)
-        {
-            rb.velocity = Vector2.zero;   
-        }
+        if (!enabled) rb.velocity = Vector2.zero;
     }
-
 
     public bool IsParrying() => isParrying;
     public bool IsDead() => isDead;
