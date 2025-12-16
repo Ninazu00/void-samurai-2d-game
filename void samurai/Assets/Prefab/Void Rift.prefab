@@ -137,6 +137,8 @@ MonoBehaviour:
   activeDuration: 2.5
   inactiveDuration: 3
   riftActivateSFX: {fileID: 8300000, guid: a1b006bc6cb58444194ded627e81d47f, type: 3}
+  maxHearingDistance: 10
+  maxVolume: 0.8
 --- !u!61 &4615177571122493853
 BoxCollider2D:
   m_ObjectHideFlags: 0

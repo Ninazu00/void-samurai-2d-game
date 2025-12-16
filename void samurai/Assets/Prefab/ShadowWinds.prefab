@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 3667730579897340702}
   - component: {fileID: 3667730579897340697}
   - component: {fileID: 3667730579897340696}
-  - component: {fileID: 9115861015511848805}
   - component: {fileID: -1218956416947432691}
+  - component: {fileID: 850222816692499322}
   m_Layer: 0
   m_Name: ShadowWinds
   m_TagString: Untagged
@@ -107,20 +107,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &9115861015511848805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3667730579897340699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef13dfea383ab764b8deca37386be272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pushDirection: {x: -1, y: 0}
-  pushStrength: 500
 --- !u!61 &-1218956416947432691
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +133,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.12, y: 5.12}
   m_EdgeRadius: 0
+--- !u!114 &850222816692499322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3667730579897340699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef13dfea383ab764b8deca37386be272, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDirection: {x: -1, y: 0}
+  pushStrength: 4
+  maxWindSpeed: 7
