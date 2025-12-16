@@ -4176,7 +4176,8 @@ MonoBehaviour:
   musicSource: {fileID: 1344907364}
   sfxSource: {fileID: 1344907363}
   voiceLines: {fileID: 1344907366}
-  overworldMusic: {fileID: 0}
+  overworldMusic: {fileID: 8300000, guid: 07fdb649e92d8d646acdbfdfbf0e1eda, type: 3}
+  extraBackgroundMusic: {fileID: 0}
   variousSFX: []
   yukiPhaseOne: {fileID: 0}
   yukiPhaseTwo: {fileID: 0}
