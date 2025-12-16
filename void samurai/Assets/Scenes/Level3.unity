@@ -1043,6 +1043,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70babce3f38e93c40b320a1ffab3c8bc, type: 3}
+--- !u!114 &218955236 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7301177436251185568, guid: 70babce3f38e93c40b320a1ffab3c8bc, type: 3}
+  m_PrefabInstance: {fileID: 218955235}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea23defe9d7be6b43bcb32aa1a7da35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &221296640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2649,6 +2660,7 @@ MonoBehaviour:
   sfxSource: {fileID: 463645682}
   voiceLines: {fileID: 463645681}
   overworldMusic: {fileID: 0}
+  extraBackgroundMusic: {fileID: 0}
   variousSFX: []
   yukiPhaseOne: {fileID: 0}
   yukiPhaseTwo: {fileID: 0}
@@ -3267,7 +3279,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &605390430
@@ -4784,7 +4796,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1155860454
@@ -6981,7 +6993,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 2.459136}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1618351017
@@ -7540,7 +7552,7 @@ SpriteRenderer:
   m_Size: {x: 0.16, y: 0.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1810866554
@@ -8605,6 +8617,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 910498616885279505, guid: bc1c1d56cdcfb1a42be6850e4c695fe9, type: 3}
+      propertyPath: requiredShrine
+      value: 
+      objectReference: {fileID: 218955236}
     - target: {fileID: 910498616885279508, guid: bc1c1d56cdcfb1a42be6850e4c695fe9, type: 3}
       propertyPath: m_FlipX
       value: 1
