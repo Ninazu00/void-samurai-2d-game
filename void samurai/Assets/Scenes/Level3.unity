@@ -2663,10 +2663,11 @@ MonoBehaviour:
   yukiTauntPainful: {fileID: 0}
   yukiDeath: {fileID: 0}
   yukiShortLaugh: {fileID: 0}
-  lightSlash: {fileID: 0}
-  heavySlash: {fileID: 0}
-  parry: {fileID: 0}
-  dash: {fileID: 0}
+  lightSlash: {fileID: 8300000, guid: 513302d24c6531949b6ff3e12d97be05, type: 3}
+  heavySlash: {fileID: 8300000, guid: 4066cc8765eea38458078a3b6923fe65, type: 3}
+  parry: {fileID: 8300000, guid: e20ddf594f7777448bf5f68a7a44c9f1, type: 3}
+  dash: {fileID: 8300000, guid: e223b2f24847628459ed8916d648e2c8, type: 3}
+  jumpSound: {fileID: 8300000, guid: edaaabc079e8dff45b29791012963e77, type: 3}
   Memechoaudio: {fileID: 8300000, guid: 3949064c1253ae347be5ab1d410779b4, type: 3}
 --- !u!1 &484920129
 GameObject:
