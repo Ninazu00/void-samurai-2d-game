@@ -9202,7 +9202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   voiceLine: {fileID: 8300000, guid: d4a99212e8601f84d99da997a365f890, type: 3}
   textRenderer: {fileID: 2079502652}
-  textDuration: 3
+  textDuration: 4
 --- !u!1 &1230961200
 GameObject:
   m_ObjectHideFlags: 0
