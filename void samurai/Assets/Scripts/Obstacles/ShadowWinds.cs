@@ -1,42 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class WindPrefab : MonoBehaviour
+public class ShadowWinds : MonoBehaviour
 {
-    [Header("Audio")]
-    public AudioClip windSFX;       
-    public float maxHearingDistance = 15f;
-    public float maxVolume = 1f;           
+    public Vector2 pushDirection = Vector2.left;
+    public float pushStrength = 4f;
+    public float maxWindSpeed = 7f;
 
-    private void Update()
+    private void OnTriggerStay2D(Collider2D other)
     {
-        PlayDistanceBasedSFX();
-    }
+        if (!other.CompareTag("Player")) return;
 
-    private void PlayDistanceBasedSFX()
-    {
-        if (AudioManager.Instance == null || windSFX == null)
-            return;
+        Rigidbody2D rb = other.GetComponent<Rigidbody2D>();
+        if (rb == null) return;
 
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player == null)
-            return;
+        float wind = pushDirection.normalized.x * pushStrength;
 
-        float distance = Vector3.Distance(transform.position, player.transform.position);
-
-        if (distance > maxHearingDistance)
-            return; 
-
-        float volume = Mathf.Lerp(maxVolume, 0f, distance / maxHearingDistance);
-
-        if (!AudioManager.Instance.sfxSource.isPlaying || AudioManager.Instance.sfxSource.clip != windSFX)
-        {
-            AudioManager.Instance.sfxSource.clip = windSFX;
-            AudioManager.Instance.sfxSource.loop = true;
-            AudioManager.Instance.sfxSource.Play();
-        }
-
-        AudioManager.Instance.sfxSource.volume = volume;
+        rb.velocity = new Vector2(
+            Mathf.Clamp(rb.velocity.x + wind, -maxWindSpeed, maxWindSpeed),
+            rb.velocity.y
+        );
     }
 }
