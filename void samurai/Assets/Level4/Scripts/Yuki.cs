@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class Yuki : EnemyController
@@ -103,8 +104,8 @@ public class Yuki : EnemyController
         rb.constraints = RigidbodyConstraints2D.FreezeAll;
         animator.SetTrigger("DIE");
         FindObjectOfType<AudioManager>().playYukiDeath();
-        StartCoroutine(FadeOutAndDestroy());
         FindObjectOfType<AudioManager>().yukiFadeOut();
+        StartCoroutine(FadeOutAndDestroy());
     }
 
     private IEnumerator FadeOutAndDestroy()
@@ -120,6 +121,7 @@ public class Yuki : EnemyController
             yield return null;
         }
         Destroy(gameObject);
+        SceneManager.LoadScene("FinalCutscene");
     }
 
     public override void TakeDamage(int dmg)
