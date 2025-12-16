@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public int lightDamage = 10;
     public int heavyDamage = 25;
 
-    public float perfectParryWindow = 0.3f; // <-- widened slightly for easier parry
+    public float perfectParryWindow = 0.2f;
     private bool grounded;
     private bool isParrying;
     private bool perfectParryActive;
@@ -38,10 +38,8 @@ public class PlayerController : MonoBehaviour
     private bool isDashing = false;
     bool canHeavyAttack = true;
     bool canLightAttack = true;
-
-    // Updated cooldowns
-    public float lightAttackCooldown = 0.25f; // fast and responsive
-    public float heavyAttackCooldown = 0.6f;  // slightly slower, heavy feel
+    public int lightAttackCooldown;
+    public int heavyAttackCooldown;
 
     private bool isDead = false;
 
@@ -49,10 +47,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
 
     private EnemyController lastDamagedEnemy;
-
-    // New variables for smooth falling animation
-    private float groundedBuffer = 0.05f;
-    private float groundedTimer;
 
     void Start()
     {
@@ -80,8 +74,6 @@ public class PlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
             anim.SetBool("isParrying", true);
             anim.SetTrigger("parry");
-
-            AudioManager.Instance.PlayParry();
 
             Invoke(nameof(EndPerfectParry), perfectParryWindow);
             Invoke(nameof(EndParry), 0.35f);
@@ -112,12 +104,8 @@ public class PlayerController : MonoBehaviour
         }
 
         anim.SetBool("isRunning", Input.GetKey(L) || Input.GetKey(R));
-
-        // Smooth yVelocity to prevent flicker
-        float smoothY = Mathf.Lerp(anim.GetFloat("yVelocity"), rb.velocity.y, Time.deltaTime * 10f);
-        anim.SetFloat("yVelocity", smoothY);
-
-        anim.SetBool("isGrounded", groundedTimer > 0f);
+        anim.SetFloat("yVelocity", rb.velocity.y);
+        anim.SetBool("isGrounded", grounded);
 
         // ATTACK INPUTS
         if (Input.GetKeyDown(LightAttackKey) && canLightAttack)
@@ -138,18 +126,11 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
-
-        // Grounded buffer to avoid flicker
-        if (grounded)
-            groundedTimer = groundedBuffer;
-        else
-            groundedTimer -= Time.fixedDeltaTime;
     }
 
     void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
-        AudioManager.Instance.PlayJump(); // <-- Jump sound
     }
 
     void EndPerfectParry() => perfectParryActive = false;
@@ -178,7 +159,6 @@ public class PlayerController : MonoBehaviour
         }
 
         anim.SetTrigger("lightAttack");
-        AudioManager.Instance.PlayLightSlash();
     }
 
     public void HeavyAttack()
@@ -203,7 +183,6 @@ public class PlayerController : MonoBehaviour
         }
 
         anim.SetTrigger("heavyAttack");
-        AudioManager.Instance.PlayHeavySlash();
     }
 
     void ResetLightAttack() => canLightAttack = true;
@@ -217,8 +196,6 @@ public class PlayerController : MonoBehaviour
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 0;
         rb.velocity = new Vector2(direction * dashDistance / dashDuration, 0f);
-
-        AudioManager.Instance.PlayDash();
 
         yield return new WaitForSeconds(dashDuration);
 
@@ -249,14 +226,17 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator DeathAndRespawn()
     {
+        // Wait until Animator enters Death state
         while (!anim.GetCurrentAnimatorStateInfo(0).IsName("Death"))
         {
             yield return null;
         }
 
+        // Wait for full death animation length
         float deathAnimLength = anim.GetCurrentAnimatorStateInfo(0).length;
         yield return new WaitForSeconds(deathAnimLength);
 
+        // Respawn player
         Respawn();
     }
 
@@ -264,6 +244,7 @@ public class PlayerController : MonoBehaviour
     {
         LevelManager.Instance.RespawnPlayer();
 
+        // Reset player state
         isDead = false;
         canLightAttack = true;
         canHeavyAttack = true;
@@ -284,9 +265,10 @@ public class PlayerController : MonoBehaviour
         isDead = !enabled;
         if (!enabled)
         {
-            rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero;   
         }
     }
+
 
     public bool IsParrying() => isParrying;
     public bool IsDead() => isDead;
