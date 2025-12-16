@@ -18154,6 +18154,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 910498616885279505, guid: bc1c1d56cdcfb1a42be6850e4c695fe9, type: 3}
+      propertyPath: requiredShrine
+      value: 
+      objectReference: {fileID: 1275952866}
     - target: {fileID: 910498616885279509, guid: bc1c1d56cdcfb1a42be6850e4c695fe9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -25046,6 +25050,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70babce3f38e93c40b320a1ffab3c8bc, type: 3}
+--- !u!114 &1275952866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7301177436251185568, guid: 70babce3f38e93c40b320a1ffab3c8bc, type: 3}
+  m_PrefabInstance: {fileID: 1275952865}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea23defe9d7be6b43bcb32aa1a7da35c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1288948218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32725,11 +32740,7 @@ MonoBehaviour:
   sfxSource: {fileID: 2086324984}
   voiceLines: {fileID: 0}
   overworldMusic: {fileID: 0}
-<<<<<<< HEAD
-  extraBackgroundMusic: {fileID: 8300000, guid: 81de174da16dc2846897dfad3b0136a2, type: 3}
-=======
   extraBackgroundMusic: {fileID: 0}
->>>>>>> e6b963c66ece26ccd6c0e92421f63d8f16ae79d6
   variousSFX: []
   yukiPhaseOne: {fileID: 0}
   yukiPhaseTwo: {fileID: 0}
