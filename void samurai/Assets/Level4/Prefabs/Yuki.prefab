@@ -4941,6 +4941,7 @@ MonoBehaviour:
   moveSpeed: 2
   damage: 25
   attackRange: 5
+  staggerDuration: 0.6
   target: {fileID: 0}
   phase2Aura: {fileID: 0}
   jumpHeight: 0
@@ -4950,6 +4951,9 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 0
+  attackSpeed: 0
+  YukiManager: {fileID: 0}
+  YukiManagerLocation: {fileID: 0}
 --- !u!61 &451718723665166977
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -4195,6 +4195,7 @@ MonoBehaviour:
   heavySlash: {fileID: 0}
   parry: {fileID: 0}
   dash: {fileID: 0}
+  jumpSound: {fileID: 0}
   Memechoaudio: {fileID: 0}
 --- !u!82 &1344907366
 AudioSource:

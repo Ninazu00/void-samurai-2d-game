@@ -50,6 +50,10 @@ public class PlayerController : MonoBehaviour
 
     private EnemyController lastDamagedEnemy;
 
+    // New variables for smooth falling animation
+    private float groundedBuffer = 0.05f;
+    private float groundedTimer;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -108,8 +112,12 @@ public class PlayerController : MonoBehaviour
         }
 
         anim.SetBool("isRunning", Input.GetKey(L) || Input.GetKey(R));
-        anim.SetFloat("yVelocity", rb.velocity.y);
-        anim.SetBool("isGrounded", grounded);
+
+        // Smooth yVelocity to prevent flicker
+        float smoothY = Mathf.Lerp(anim.GetFloat("yVelocity"), rb.velocity.y, Time.deltaTime * 10f);
+        anim.SetFloat("yVelocity", smoothY);
+
+        anim.SetBool("isGrounded", groundedTimer > 0f);
 
         // ATTACK INPUTS
         if (Input.GetKeyDown(LightAttackKey) && canLightAttack)
@@ -130,12 +138,18 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         grounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+
+        // Grounded buffer to avoid flicker
+        if (grounded)
+            groundedTimer = groundedBuffer;
+        else
+            groundedTimer -= Time.fixedDeltaTime;
     }
 
     void Jump()
     {
         rb.velocity = new Vector2(rb.velocity.x, jumpHeight);
-        AudioManager.Instance.PlayJump(); // <-- Added jump sound
+        AudioManager.Instance.PlayJump(); // <-- Jump sound
     }
 
     void EndPerfectParry() => perfectParryActive = false;
