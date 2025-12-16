@@ -6629,6 +6629,7 @@ MonoBehaviour:
   explosionRadius: 2
   delayBeforeExplosion: 1
   explosionEffect: {fileID: 9054712583337438690, guid: ece59c0d46daeb04a9417bba56e7bba7, type: 3}
+  explosionSFX: {fileID: 8300000, guid: 7ff5757b234835044955df3d99c50faf, type: 3}
   shakeAmount: 0.05
   shakeSpeed: 0.05
 --- !u!61 &108198835
@@ -32697,10 +32698,10 @@ MonoBehaviour:
   yukiTauntPainful: {fileID: 0}
   yukiDeath: {fileID: 0}
   yukiShortLaugh: {fileID: 0}
-  lightSlash: {fileID: 0}
-  heavySlash: {fileID: 0}
-  parry: {fileID: 0}
-  dash: {fileID: 0}
+  lightSlash: {fileID: 8300000, guid: 513302d24c6531949b6ff3e12d97be05, type: 3}
+  heavySlash: {fileID: 8300000, guid: 4066cc8765eea38458078a3b6923fe65, type: 3}
+  parry: {fileID: 8300000, guid: e20ddf594f7777448bf5f68a7a44c9f1, type: 3}
+  dash: {fileID: 8300000, guid: e223b2f24847628459ed8916d648e2c8, type: 3}
   Memechoaudio: {fileID: 0}
 --- !u!82 &2086324983
 AudioSource:
@@ -32812,7 +32813,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

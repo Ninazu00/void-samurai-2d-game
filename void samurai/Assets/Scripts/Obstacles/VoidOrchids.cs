@@ -10,6 +10,9 @@ public class VoidOrchids : MonoBehaviour
     public float delayBeforeExplosion = 2f;
     public GameObject explosionEffect;
 
+    [Header("Audio")]
+    public AudioClip explosionSFX;
+
     [Header("Shake Settings")]
     public float shakeAmount = 0.1f;
     public float shakeSpeed = 0.05f;
@@ -37,7 +40,6 @@ public class VoidOrchids : MonoBehaviour
 
     private IEnumerator ExplosionRoutine()
     {
-     
         StartCoroutine(Shake());
 
         yield return new WaitForSeconds(delayBeforeExplosion);
@@ -58,17 +60,24 @@ public class VoidOrchids : MonoBehaviour
             yield return new WaitForSeconds(shakeSpeed);
         }
 
-        // Reset position before exploding
         transform.position = originalPosition;
     }
 
     private void Explode()
     {
+        // 🔊 Play explosion sound
+        if (AudioManager.Instance != null && explosionSFX != null)
+        {
+            AudioManager.Instance.PlayExplosion(explosionSFX);
+        }
+
+        // 💥 Visual effect
         if (explosionEffect != null)
         {
             Instantiate(explosionEffect, transform.position, Quaternion.identity);
         }
 
+        // 🔥 Damage
         Collider2D[] hitColliders =
             Physics2D.OverlapCircleAll(transform.position, explosionRadius);
 
@@ -88,11 +97,9 @@ public class VoidOrchids : MonoBehaviour
             }
             else if (hit.CompareTag("Barrel"))
             {
-                    BarrelDestroyer barrel = hit.GetComponent<BarrelDestroyer>();
-                    if (barrel != null)
-                    {
-                        barrel.BarrelDamage(); 
-                    }
+                BarrelDestroyer barrel = hit.GetComponent<BarrelDestroyer>();
+                if (barrel != null)
+                    barrel.BarrelDamage();
             }
         }
 

@@ -10,8 +10,6 @@ public abstract class EnemyController : MonoBehaviour
 
     public int damage;
     public float attackRange;
-
-    // ----------- STAGGER SETTINGS -----------
     public float staggerDuration = 0.6f;
     protected bool isStaggered;
 
@@ -37,7 +35,7 @@ public abstract class EnemyController : MonoBehaviour
     protected virtual void Update()
     {
         if (isStaggered)
-            return; // enemy frozen during stagger
+            return;
 
         EnemyBehavior();
     }

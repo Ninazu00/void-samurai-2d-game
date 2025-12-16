@@ -25,6 +25,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip yukiDeath;
     public AudioClip yukiShortLaugh;
 
+
+
     [Header("Player SFX")]
     public AudioClip lightSlash; // Light attack sound
     public AudioClip heavySlash; // Heavy attack sound
@@ -140,6 +142,11 @@ public class AudioManager : MonoBehaviour
     public void playYukiShortLaugh() 
     { 
         PlayVoiceLine(yukiShortLaugh); 
+    }
+    public void PlayExplosion(AudioClip clip)
+    {
+        if (clip != null)
+            sfxSource.PlayOneShot(clip);
     }
 
     public void FadeOutMEFA(float duration) { StartCoroutine(MEFcoroutihne(duration)); }
