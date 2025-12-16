@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class VoidRift : MonoBehaviour
 {
+    [Header("Damage")]
     public int damage = 25;
     public float knockbackForce = 5f;
+
+    [Header("Timing")]
     public float activeDuration = 1f;
     public float inactiveDuration = 1f;
+
+    [Header("Audio (Prefab)")]
+    public AudioClip riftActivateSFX;   // Assign per prefab
 
     private bool isActive = false;
     private Animator anim;
@@ -18,9 +24,7 @@ public class VoidRift : MonoBehaviour
         anim = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
 
-        // Start invisible
         sr.enabled = false;
-
         StartCoroutine(RiftCycle());
     }
 
@@ -40,16 +44,20 @@ public class VoidRift : MonoBehaviour
     {
         isActive = true;
 
-        // Enable the sprite and set Animator Bool
         sr.enabled = true;
-        anim.SetBool("IsActive", true); // Animator handles looping
+        anim.SetBool("IsActive", true);
+
+        // 🔊 Play prefab-specific SFX
+        if (AudioManager.Instance != null && riftActivateSFX != null)
+        {
+            AudioManager.Instance.PlayExplosion(riftActivateSFX);
+        }
     }
 
     private void DeactivateRift()
     {
         isActive = false;
 
-        // Hide the sprite and reset Animator Bool
         sr.enabled = false;
         anim.SetBool("IsActive", false);
     }

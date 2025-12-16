@@ -6629,6 +6629,7 @@ MonoBehaviour:
   explosionRadius: 2
   delayBeforeExplosion: 1
   explosionEffect: {fileID: 9054712583337438690, guid: ece59c0d46daeb04a9417bba56e7bba7, type: 3}
+  explosionSFX: {fileID: 8300000, guid: 7ff5757b234835044955df3d99c50faf, type: 3}
   shakeAmount: 0.05
   shakeSpeed: 0.05
 --- !u!61 &108198835
