@@ -216,12 +216,12 @@ MonoBehaviour:
   moveSpeed: 4
   jumpHeight: 10
   Spacebar: 32
-  L: 276
-  R: 275
-  LightAttackKey: 306
-  HeavyAttackKey: 304
-  ParryKey: 122
-  DashKey: 113
+  L: 97
+  R: 100
+  LightAttackKey: 323
+  HeavyAttackKey: 306
+  ParryKey: 324
+  DashKey: 304
   groundCheck: {fileID: 4256423732421258300}
   groundCheckRadius: 0.4
   whatIsGround:
